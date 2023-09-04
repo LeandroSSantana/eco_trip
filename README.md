@@ -28,6 +28,7 @@ evitando surpresas indesejadas.
 
 6.Dicas de Economia Práticas: Receba dicas úteis sobre como economizar dinheiro durante a viagem, 
 garantindo uma jornada acessível e memorável.
+
 7.Compartilhamento Social Integrado: Compartilhe suas aventuras diretamente do aplicativo, 
 conectando-se com outros viajantes e inspirando pessoas ao redor do mundo.
 
