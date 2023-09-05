@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 
 class CategoryItemWidget extends StatelessWidget {
@@ -7,11 +5,11 @@ class CategoryItemWidget extends StatelessWidget {
   final IconData icon;
   final Color iconColor;
 
-  CategoryItemWidget(
-      {required this.label,
-      required this.icon,
-      required this.iconColor,
-      });
+  CategoryItemWidget({
+    required this.label,
+    required this.icon,
+    required this.iconColor,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -25,17 +23,20 @@ class CategoryItemWidget extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Container(
-            width: 50.0,
-            height: 50.0,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.white, // Cor do círculo branco
-            ),
-            child: Icon(
-              icon,
-              color: iconColor, // Cor do ícone
-              size: 30.0,
+          Padding(
+            padding: const EdgeInsets.only(top: 10.0), // Adicione um espaçamento no topo
+            child: Container(
+              width: 50.0,
+              height: 50.0,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.white, // Cor do círculo branco
+              ),
+              child: Icon(
+                icon,
+                color: iconColor, // Cor do ícone
+                size: 30.0,
+              ),
             ),
           ),
           SizedBox(height: 10.0),
