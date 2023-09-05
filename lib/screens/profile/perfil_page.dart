@@ -1,9 +1,10 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:teste_telas/model/profile/perfil_usuario_model.dart'; // Importe este pacote para controlar o teclado
+import 'package:teste_telas/model/profile/perfil_usuario_model.dart';
+import 'package:teste_telas/screens/home_page/home_page.dart'; // Importe este pacote para controlar o teclado
 
 class PerfilPage extends StatelessWidget {
   final PerfilUsuario perfil;
@@ -166,6 +167,10 @@ class PerfilPage extends StatelessWidget {
           child: CupertinoButton(
             onPressed: () {
               // Lógica para iniciar a viagem
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => HomePage()), // Substitua HomePage() pelo nome correto da classe da tela de destino
+              );
             },
             color: Colors.orange,
             child: Text(

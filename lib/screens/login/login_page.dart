@@ -2,6 +2,8 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:teste_telas/data/perfil_data.dart';
+import 'package:teste_telas/screens/profile/perfil_page.dart';
 
 class LogInPage extends StatelessWidget {
   const LogInPage({Key? key}) : super(key: key);
@@ -141,6 +143,10 @@ class LogInPage extends StatelessWidget {
                   child: CupertinoButton(
                     onPressed: () {
                       // Adicione a lógica para o botão Sign In aqui
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => PerfilPage(perfil: perfilUsuario,)), // Substitua PerfilPage() pelo nome correto da classe da tela de destino
+                      );
                     },
                     color: Color(0xFFFF8c00),
                     borderRadius: BorderRadius.circular(40),

@@ -26,17 +26,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: '/perfil', // Defina a rota inicial como a SplashScreen
+      initialRoute: '/', // Defina a rota inicial como a SplashScreen
       routes: {
-        // '/': (context) => SplashScreen(), // Rota da SplashScreen
-        // '/login': (context) => LogInPage(), // Rota da tela de login
-        // '/signup': (context) => SignUpPage(), // Rota da tela de cadastro
-        // '/forgot_password': (context) => ForgotPasswordPage(), // Rota para a tela de esqueceu senha
-        // '/home_page': (context) => HomePage(), // Rota para a HomePage
-        // '/dicas': (context) => DicasPage(),
-        // '/passeios': (context) => PasseiosPage(),
-        // '/alimentacao': (context) => AlimentacaoPage(),
-        // '/vida_noturna': (context) => VidaNoturnaPage(),
+        '/': (context) => SplashScreen(), // Rota da SplashScreen
+        '/login': (context) => LogInPage(), // Rota da tela de login
+        '/signup': (context) => SignUpPage(), // Rota da tela de cadastro
+        '/forgot_password': (context) => ForgotPasswordPage(), // Rota para a tela de esqueceu senha
+        '/home_page': (context) => HomePage(), // Rota para a HomePage
+        '/dicas': (context) => DicasPage(),
+        '/passeios': (context) => PasseiosPage(),
+        '/alimentacao': (context) => AlimentacaoPage(),
+        '/vida_noturna': (context) => VidaNoturnaPage(),
         '/perfil': (context) => PerfilPage(perfil: perfilUsuario),
       },
     );
