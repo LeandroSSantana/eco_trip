@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:teste_telas/screens/home_page/home_page.dart';
 
 import 'screens/forgot_password/forgot_password_page.dart';
 import 'screens/login/login_page.dart';
@@ -18,13 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: '/', // Defina a rota inicial como a SplashScreen
-      routes: {
-        '/': (context) => SplashScreen(), // Rota da SplashScreen
-        '/login': (context) => LogInPage(), // Rota da tela de login
-        '/signup': (context) => SignUpPage(), // Rota da tela de cadastro
-        '/forgot_password': (context) => ForgotPasswordPage(), // Rota para a tela de esqueceu senha
-      },
+     home: HomePage(),
     );
   }
 }
