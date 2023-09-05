@@ -110,37 +110,47 @@ class PerfilPage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    CupertinoPicker(
-                      itemExtent: 32,
-                      backgroundColor: Colors.transparent,
-                      onSelectedItemChanged: (int index) {
-                        // Lógica para atualizar o estilo de viagem
-                      },
-                      children: <Widget>[
-                        Text(
-                          'Econômica',
-                          style: TextStyle(
-                            color: Colors.grey,
+                    CupertinoTheme(
+                      data: CupertinoThemeData(
+                        textTheme: CupertinoTextThemeData(
+                          pickerTextStyle: TextStyle(
+                            fontSize: 18.0, // Ajuste o tamanho do texto
+                            color: Color(0xFFFF8c00), // Altere a cor do texto
                           ),
                         ),
-                        Text(
-                          'Moderada',
-                          style: TextStyle(
-                            color: Colors.grey,
-                          ),
-                        ),
-                        Text(
-                            'Luxuosa',
-                          style: TextStyle(
-                            color: Colors.grey,
-                          ),
-                        ),
-                      ],
+                      ),
+                      child: CupertinoPicker(
+                        itemExtent: 32,
+                        backgroundColor: Colors.white38,
+                        onSelectedItemChanged: (int index) {},
+                        children: <Widget>[
+                          Text('Econômica'),
+                          Text('Moderada'),
+                          Text('Luxuosa'),
+                        ],
+                      ),
                     ),
                   ],
                 ),
               ),
             ],
+          ),
+        ),
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: CupertinoButton(
+          onPressed: () {
+            // Lógica para iniciar a viagem
+          },
+          color: Colors.orange,
+          child: Text(
+            'Viajar',
+            style: TextStyle(
+              fontSize: 18.0,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
           ),
         ),
       ),
