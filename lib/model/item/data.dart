@@ -12,9 +12,9 @@ class Item {
 
 List<Item> items = [
   Item(
-    imageUrl: 'http://tinyurl.com/map6f9xz',
-    title: 'Havana',
-    description: 'La Habana (Havana), a capital de Cuba, é uma cidade cheia de paradoxos e contradições, cujas principais atrações são a beleza de seu centro histórico, sua arquitetura excepcional, a iconografia revolucionária e cubana (de El Malecón à Plaza de la Revolución, passando por La Giraldilla) e sua ampla oferta cultural fazem da cidade de Havana um dos melhores destinos para se visitar na América Latina',
+    imageUrl: 'http://tinyurl.com/2zfjy2a7',
+    title: 'Miami',
+    description: 'Miami é uma cidade internacional no extremo sudeste da Flórida. Sua influência cubana se reflete nos cafés e lojas de charutos que ocupam a Calle Ocho, em Little Havana. Nas águas de cor azul-turquesa da Biscayne Bay ficam Miami Beach e South Beach, um bairro glamouroso conhecido por suas construções coloridas em art déco, areia branca, hotéis para surfistas e casas noturnas famosas',
   ),
   Item(
     imageUrl: 'url_da_imagem_2',

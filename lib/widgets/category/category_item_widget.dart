@@ -2,12 +2,16 @@
 
 import 'package:flutter/material.dart';
 
-class CategoryItem extends StatelessWidget {
+class CategoryItemWidget extends StatelessWidget {
   final String label;
   final IconData icon;
   final Color iconColor;
 
-  CategoryItem({required this.label, required this.icon, required this.iconColor});
+  CategoryItemWidget(
+      {required this.label,
+      required this.icon,
+      required this.iconColor,
+      });
 
   @override
   Widget build(BuildContext context) {
