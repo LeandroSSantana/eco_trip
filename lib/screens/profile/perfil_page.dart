@@ -113,6 +113,9 @@ class PerfilPage extends StatelessWidget {
                     ),
                   ),
                 ),
+                SizedBox(
+                  height: 20.0,
+                ),
                 Container(
                   margin: EdgeInsets.fromLTRB(0, 0, 40, 10),
                   child: Column(
@@ -129,6 +132,9 @@ class PerfilPage extends StatelessWidget {
                             color: Color(0xFFFF8c00),
                           ),
                         ),
+                      ),
+                      SizedBox(
+                        height: 16.0,
                       ),
                       CupertinoPicker(
                         itemExtent: 32,
