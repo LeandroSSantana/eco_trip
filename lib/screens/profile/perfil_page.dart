@@ -3,6 +3,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:teste_telas/data/perfil_data.dart';
 import 'package:teste_telas/model/profile/perfil_usuario_model.dart';
 import 'package:teste_telas/screens/home_page/home_page.dart'; // Importe este pacote para controlar o teclado
 
@@ -11,184 +12,111 @@ class PerfilPage extends StatelessWidget {
 
   PerfilPage({required this.perfil});
 
-  // Crie um FocusNode para cada campo de entrada
-  final nomeFocus = FocusNode();
-  final destinoFocus = FocusNode();
-  final orcamentoFocus = FocusNode();
-
   @override
   Widget build(BuildContext context) {
-    // Adicione um GestureDetector para detectar toques fora do campo de entrada
-    return GestureDetector(
-      onTap: () {
-        // Use o método unfocus() para fechar o teclado
-        nomeFocus.unfocus();
-        destinoFocus.unfocus();
-        orcamentoFocus.unfocus();
-      },
-      child: Scaffold(
-        // backgroundColor: Color(0xFFFf9f40),
-        body: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.fromLTRB(40, 100, 10, 0),
+    return Scaffold(
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Color(0xFFFFd191),
+        selectedLabelStyle: TextStyle(color: Colors.blue), // Cor do rótulo ativo
+        unselectedLabelStyle: TextStyle(color: Colors.white),
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(
+              CupertinoIcons.money_dollar_circle,
+              color: Color(0xFFFF8c00),
+            ),
+            label: 'Orçamento',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              CupertinoIcons.map_pin_ellipse,
+              color: Color(0xFFFF8c00),
+            ),
+            label: 'Destino',
+          ),
+        ],
+      ),
+      body: Stack(
+        children: [
+          Container(
+            color: Colors.orangeAccent,
+            // color: Color(0xFFe0e0e0),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 100),
+            child: Container(
+              decoration: BoxDecoration(
+                  color: Colors.white38,
+                  borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(60),
+                      bottomRight: Radius.circular(60))),
+            ),
+          ),
+          Container(
+            height: (250),
+            decoration: BoxDecoration(
+                color: Color(0xFFFF8c00),
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(60),
+                    bottomRight: Radius.circular(60))),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  width: 100.0,
-                  height: 100.0,
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      color: Color(0xFFFF8c00),
-                      width: 1.5,
-                    ),
-                    shape: BoxShape.circle,
-                    image: DecorationImage(
-                      image: NetworkImage(perfil.fotoPerfil),
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
-                SizedBox(height: 10.0),
-                Container(
-                  margin: EdgeInsets.fromLTRB(10, 0, 10, 10),
-                  child: Text(
-                    perfil.nomeUsuario,
-                    style: TextStyle(
-                      fontSize: 18.0,
-                      fontFamily: 'Rubik',
-                      fontWeight: FontWeight.w800,
-                      color: Color(0xFFFF8c00),
-                    ),
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.fromLTRB(0, 0, 40, 10),
-                  child: CupertinoFormRow(
-                    prefix: Icon(
-                      Icons.place_outlined,
-                      color: Color(0xFFFF8c00),
-                    ),
-                    child: CupertinoTextField(
-                      focusNode: destinoFocus,
-                      decoration: BoxDecoration(
-                        color: Colors.white38,
-                        border: Border.all(
-                          color: Color(0xFFFF8c00),
-                          width: 1.5,
-                        ),
-                        borderRadius: BorderRadius.circular(10.0),
-                      ),
-                      placeholder: 'Qual Seu Destino?',
-                      onChanged: (value) {
-                        // Lógica para atualizar o destino
-                      },
-                    ),
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.fromLTRB(0, 0, 40, 10),
-                  child: CupertinoFormRow(
-                    prefix: Icon(
-                      Icons.attach_money,
-                      color: Color(0xFFFF8c00),
-                    ),
-                    child: CupertinoTextField(
-                      focusNode: orcamentoFocus,
-                      decoration: BoxDecoration(
-                        color: Colors.white38,
-                        border: Border.all(
-                          color: Color(0xFFFF8c00),
-                          width: 1.5,
-                        ),
-                        borderRadius: BorderRadius.circular(10.0),
-                      ),
-                      placeholder: 'Digite o orçamento da viagem',
-                      onChanged: (value) {
-                        // Lógica para atualizar o orçamento
-                      },
-                      // Restringir o teclado apenas a números
-                      inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-                      keyboardType: TextInputType.number,
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 20.0,
-                ),
-                Container(
-                  margin: EdgeInsets.fromLTRB(0, 0, 40, 10),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                Padding(
+                  padding: const EdgeInsets.only(top: 32),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
-                        child: Text(
-                          'Qual Seu Tipo de Viagem?',
-                          style: TextStyle(
-                            fontSize: 16.0,
-                            fontFamily: 'Rubik',
-                            fontWeight: FontWeight.w800,
-                            color: Color(0xFFFF8c00),
-                          ),
+                        padding: const EdgeInsets.all(16.0),
+                        child: Icon(
+                          Icons.menu_outlined,
+                          size: 30,
+                          color: Colors.white,
                         ),
                       ),
-                      SizedBox(
-                        height: 16.0,
-                      ),
-                      CupertinoPicker(
-                        itemExtent: 32,
-                        backgroundColor: Colors.white38,
-                        onSelectedItemChanged: (int index) {},
-                        children: <Widget>[
-                          Text(
-                            'Econômica',
-                            style: TextStyle(
-                              color: Color(0xFFFF8c00),
-                            ),
-                          ),
-                          Text(
-                            'Moderada',
-                            style: TextStyle(
-                              color: Color(0xFFFF8c00),
-                            ),
-                          ),
-                          Text(
-                            'Luxuosa',
-                            style: TextStyle(
-                              color: Color(0xFFFF8c00),
-                            ),
-                          ),
-                        ],
+                      Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Icon(
+                          Icons.more_horiz,
+                          size: 30,
+                          color: Colors.white,
+                        ),
                       ),
                     ],
                   ),
                 ),
+                Align(
+                  alignment: Alignment.topLeft,
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 16.0),
+                    child: Text(
+                      'Olá ${perfilUsuario.nomeUsuario} !',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'Rubik',
+                        fontWeight: FontWeight.w800,
+                        fontSize: 28,
+                      ),
+                    ),
+                  ),
+                )
               ],
             ),
           ),
-        ),
-        bottomNavigationBar: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: CupertinoButton(
-            onPressed: () {
-              // Lógica para iniciar a viagem
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => HomePage()), // Substitua HomePage() pelo nome correto da classe da tela de destino
-              );
-            },
-            color: Colors.orange,
-            child: Text(
-              'Viajar',
-              style: TextStyle(
-                fontSize: 18.0,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-              ),
-            ),
-          ),
-        ),
+          Positioned(
+              top: 180,
+              left: 16,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(16.0),
+                child: Image.network(
+                  perfilUsuario.fotoPerfil,
+                  // scale: 3.8,
+                  width: 120,
+                  height: 150,
+                  fit: BoxFit.cover,
+                ),
+              ))
+        ],
       ),
     );
   }

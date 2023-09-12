@@ -145,7 +145,7 @@ class LogInPage extends StatelessWidget {
                       // Adicione a lógica para o botão Sign In aqui
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => PerfilPage(perfil: perfilUsuario,)), // Substitua PerfilPage() pelo nome correto da classe da tela de destino
+                        MaterialPageRoute(builder: (context) => PerfilPage(perfil: perfilUsuario,)),
                       );
                     },
                     color: Color(0xFFFF8c00),
