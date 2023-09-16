@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:teste_telas/data/perfil_data.dart';
 import 'package:teste_telas/model/profile/perfil_usuario_model.dart';
+import 'package:teste_telas/widgets/header/header_page.dart';
 
 class PerfilPage extends StatelessWidget {
   final PerfilUsuario perfil;
@@ -13,7 +13,7 @@ class PerfilPage extends StatelessWidget {
     return Container(
       width: 215,
       height: 45,
-      margin: EdgeInsets.only(bottom: 10),
+      margin: EdgeInsets.symmetric(vertical: 5),
       decoration: BoxDecoration(
         color: Color(0xB20047AB),
         borderRadius: BorderRadius.circular(20),
@@ -54,55 +54,12 @@ class PerfilPage extends StatelessWidget {
       Icons.tips_and_updates_outlined,
     ];
 
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Colors.white,
-        body: Column(
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: SingleChildScrollView(
+        child: Column(
           children: [
-            Container(
-              color: Color(0xFF0047AB),
-              width: double.infinity,
-              height: 220,
-              margin: EdgeInsets.only(bottom: 10),
-              child: Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      margin: EdgeInsets.only(top: 10),
-                      width: 125,
-                      height: 125,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        border: Border.all(
-                          color: Colors.white,
-                          width: 3.0,
-                        ),
-                      ),
-                      child: ClipOval(
-                        child: Image.network(
-                          perfilUsuario.fotoPerfil,
-                          width: 110,
-                          height: 110,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    SizedBox(height: 8),
-                    Text(
-                      perfilUsuario.nomeUsuario,
-                      style: TextStyle(
-                        fontFamily: 'Rubik',
-                        fontSize: 24,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
+            headerPage(context),
             Container(
               margin: EdgeInsets.only(bottom: 10, left: 10, right: 10),
               height: 350,
@@ -136,7 +93,7 @@ class PerfilPage extends StatelessWidget {
                   ),
                 ),
                 child: Text(
-                  'viajar',
+                  'Viajar',
                   style: TextStyle(
                     fontSize: 18,
                     fontFamily: 'Rubik',
