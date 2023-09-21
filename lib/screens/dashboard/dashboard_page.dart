@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:teste_telas/model/profile/perfil_usuario_model.dart';
 import 'package:teste_telas/widgets/header/header_page.dart';
 
-class PerfilPage extends StatelessWidget {
+class DashboardPage extends StatelessWidget {
   final PerfilUsuario perfil;
 
-  PerfilPage({required this.perfil});
+  DashboardPage({required this.perfil});
 
   Container buildModifierContainer(String text) {
     return Container(

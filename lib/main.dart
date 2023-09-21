@@ -2,9 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:teste_telas/data/perfil_data.dart';
-import 'package:teste_telas/model/profile/perfil_usuario_model.dart';
+import 'package:teste_telas/screens/dashboard/dashboard_page.dart';
 import 'package:teste_telas/screens/home_page/home_page.dart';
-import 'package:teste_telas/screens/profile/perfil_page.dart';
 
 import 'screens/category/alimentacao_page.dart';
 import 'screens/category/dicas_page.dart';
@@ -18,6 +17,7 @@ import 'screens/splash/splash_screen.dart';
 void main() {
   runApp(MyApp());
 }
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
         '/passeios': (context) => PasseiosPage(),
         '/alimentacao': (context) => AlimentacaoPage(),
         '/vida_noturna': (context) => VidaNoturnaPage(),
-        '/perfil': (context) => PerfilPage(perfil: perfilUsuario),
+        '/dashboard_page': (context) => DashboardPage(perfil: perfilUsuario),
       },
     );
   }

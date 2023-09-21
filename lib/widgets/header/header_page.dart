@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:teste_telas/data/perfil_data.dart';
 
@@ -7,7 +9,7 @@ Stack headerPage(BuildContext context) {
       Container(
         color: Color(0xFF0047AB),
         width: double.infinity,
-        height: 220,
+        height: 250,
         margin: EdgeInsets.only(bottom: 10),
         child: Center(
           child: Column(
@@ -17,7 +19,7 @@ Stack headerPage(BuildContext context) {
                 margin: EdgeInsets.only(top: 10),
                 width: 125,
                 height: 125,
-                decoration: BoxDecoration(
+                decoration: BoxDecoration( //contorno imagem
                   shape: BoxShape.circle,
                   border: Border.all(
                     color: Colors.white,
@@ -47,7 +49,7 @@ Stack headerPage(BuildContext context) {
           ),
         ),
       ),
-      Positioned(
+      Positioned( // icone voltar
         top: 20,
         left: 10,
         child: IconButton(

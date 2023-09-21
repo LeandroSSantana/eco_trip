@@ -3,7 +3,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:teste_telas/data/perfil_data.dart';
-import 'package:teste_telas/screens/profile/perfil_page.dart';
+import 'package:teste_telas/screens/dashboard/dashboard_page.dart';
 
 class LogInPage extends StatelessWidget {
   const LogInPage({Key? key}) : super(key: key);
@@ -145,7 +145,7 @@ class LogInPage extends StatelessWidget {
                       // Adicione a lógica para o botão Sign In aqui
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => PerfilPage(perfil: perfilUsuario,)),
+                        MaterialPageRoute(builder: (context) => DashboardPage(perfil: perfilUsuario,)),
                       );
                     },
                     color: Color(0xFFFF8c00),
