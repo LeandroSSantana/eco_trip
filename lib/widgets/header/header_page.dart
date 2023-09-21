@@ -50,7 +50,7 @@ Stack headerPage(BuildContext context) {
         ),
       ),
       Positioned( // icone voltar
-        top: 20,
+        top: 30,
         left: 10,
         child: IconButton(
           icon: Icon(

@@ -1,10 +1,9 @@
-// ignore_for_file: prefer_const_constructors
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:teste_telas/widgets/category/category_row_widget.dart';
-
-import '../../model/item/data.dart';
+import 'package:teste_telas/model/item/data.dart';
+import 'package:teste_telas/screens/category/alimentacao_page.dart';
+import 'package:teste_telas/screens/category/dicas_page.dart';
+import 'package:teste_telas/screens/category/passeios_page.dart';
+import 'package:teste_telas/screens/category/vida_noturna_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -14,13 +13,9 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  bool showFullDescription = false;
-
   @override
   Widget build(BuildContext context) {
-    final item = items[0];
-    final screenHeight = MediaQuery.of(context).size.height;
-
+    final imageUrl = items[0].imageUrl;
     return Scaffold(
       body: Stack(
         children: [
@@ -28,110 +23,72 @@ class _HomePageState extends State<HomePage> {
             child: Column(
               children: [
                 Container(
-                  margin: EdgeInsets.fromLTRB(10, 35, 10, 10),
-                  height: screenHeight * 0.6,
+                  margin: EdgeInsets.fromLTRB(0, 0, 0, 10),
+                  height: MediaQuery.of(context).size.height * 0.4,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(20.0),
                   ),
-                  child: Stack(
-                    children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(20.0),
-                        child: Image.network(
-                          item.imageUrl,
-                          fit: BoxFit.cover,
-                          width: double.infinity,
-                          height: double.infinity,
-                        ),
-                      ),
-                      Positioned(
-                        bottom: 10.0,
-                        right: 10.0,
-                        child: Container(
-                          width: 40.0,
-                          height: 40.0,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white,
-                          ),
-                          child: Icon(
-                            Icons.favorite,
-                            color: Colors.redAccent,
-                            size: 24.0,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  padding: EdgeInsets.all(16.0),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(20.0),
-                      topRight: Radius.circular(20.0),
+                  child: ClipRRect(
+                    child: Image.network(
+                      items[0].imageUrl,
+                      fit: BoxFit.cover,
+                      width: double.infinity,
+                      height: double.infinity,
                     ),
                   ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        item.title,
-                        style: TextStyle(
-                          fontSize: 20.0,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      SizedBox(height: 10.0),
-                      Text(
-                        showFullDescription
-                            ? item.description
-                            : (item.description.length > 50
-                                ? item.description.substring(0, 50) + '...'
-                                : item.description),
-                      ),
-                      if (item.description.length > 50) SizedBox(height: 10.0),
-                      TextButton(
-                        onPressed: () {
-                          setState(() {
-                            showFullDescription = !showFullDescription;
-                          });
-                        },
-                        child: Text(
-                          showFullDescription ? 'Leia menos' : 'Leia mais',
-                          style: TextStyle(color: Color(0xFFFF8C00)),
-                        ),
-                      ),
-                    ],
-                  ),
                 ),
-                categoryRowWidget(context),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    _buildCustomContainer(
+                      icon: Icons.star,
+                      onTap: () {
+                        // Navegue para a tela desejada quando o quadrado for clicado.
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return AlimentacaoPage();
+                        }));
+                      },
+                    ),
+                    _buildCustomContainer(
+                      icon: Icons.favorite,
+                      onTap: () {
+                        // Navegue para outra tela quando o quadrado for clicado.
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return DicasPage();
+                        }));
+                      },
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    _buildCustomContainer(
+                      icon: Icons.star,
+                      onTap: () {
+                        // Navegue para a tela desejada quando o quadrado for clicado.
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return PasseiosPage();
+                        }));
+                      },
+                    ),
+                    _buildCustomContainer(
+                      icon: Icons.favorite,
+                      onTap: () {
+                        // Navegue para outra tela quando o quadrado for clicado.
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return VidaNoturnaPage();
+                        }));
+                      },
+                    ),
+                  ],
+                )
               ],
-            ),
-          ),
-          Positioned(
-            top: 45.0,
-            left: 20.0,
-            child: Container(
-              width: 40.0,
-              height: 40.0,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: Colors.white,
-                border: Border.all(
-                  color: Colors.white,
-                  width: 2.0,
-                ),
-              ),
-              child: Center(
-                child: CupertinoNavigationBarBackButton(
-                  onPressed: () {
-                    // TODO Implementar ação de voltar aqui
-                  },
-                ),
-              ),
             ),
           ),
         ],
@@ -139,4 +96,28 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
+  // Função para criar o Container personalizado com ícone e destino
+  Widget _buildCustomContainer(
+      {required IconData icon, required VoidCallback onTap}) {
+    return GestureDetector(
+      onTap: onTap,
+      // Chama a função de navegação quando o container for clicado
+      child: Container(
+        width: 140,
+        height: 140,
+        margin: EdgeInsets.all(10),
+        decoration: BoxDecoration(
+          color: Colors.orange,
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Center(
+          child: Icon(
+            icon,
+            size: 50, // Tamanho do ícone ajustável
+            color: Colors.white, // Cor do ícone ajustável
+          ),
+        ),
+      ),
+    );
+  }
 }
