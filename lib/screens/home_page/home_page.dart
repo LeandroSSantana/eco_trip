@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> {
     final imageUrl = items[0].imageUrl;
 
     return Scaffold(
-      backgroundColor: Color(0xFFe9e9e9),
+      backgroundColor: Color(0xFFdcdcdc),
       body: SingleChildScrollView(
         child: Stack(
           children: [
