@@ -2,15 +2,15 @@
 
 import 'package:flutter/material.dart';
 
-class PasseiosPage extends StatelessWidget {
+class ComprasPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Passeios'),
+        title: Text('Compras'),
       ),
       body: Center(
-        child: Text('Conteúdo da página de Passeios'),
+        child: Text('Conteúdo da página de Dicas'),
       ),
     );
   }

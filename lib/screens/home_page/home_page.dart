@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:teste_telas/model/item/data.dart';
 import 'package:teste_telas/screens/category/alimentacao_page.dart';
+import 'package:teste_telas/screens/category/compras_page.dart';
 import 'package:teste_telas/screens/category/dicas_page.dart';
 import 'package:teste_telas/screens/category/passeios_page.dart';
 import 'package:teste_telas/screens/category/vida_noturna_page.dart';
@@ -16,11 +17,13 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     final imageUrl = items[0].imageUrl;
+
     return Scaffold(
-      body: Stack(
-        children: [
-          SingleChildScrollView(
-            child: Column(
+      backgroundColor: Color(0xFFe9e9e9),
+      body: SingleChildScrollView(
+        child: Stack(
+          children: [
+            Column(
               children: [
                 Container(
                   margin: EdgeInsets.fromLTRB(0, 0, 0, 10),
@@ -42,23 +45,21 @@ class _HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     _buildCustomContainer(
-                      icon: Icons.star,
+                      icon: Icons.food_bank_outlined,
                       onTap: () {
-                        // Navegue para a tela desejada quando o quadrado for clicado.
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) {
-                          return AlimentacaoPage();
-                        }));
+                              return AlimentacaoPage();
+                            }));
                       },
                     ),
                     _buildCustomContainer(
                       icon: Icons.favorite,
                       onTap: () {
-                        // Navegue para outra tela quando o quadrado for clicado.
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) {
-                          return DicasPage();
-                        }));
+                              return DicasPage();
+                            }));
                       },
                     ),
                   ],
@@ -67,31 +68,65 @@ class _HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     _buildCustomContainer(
-                      icon: Icons.star,
+                      icon: Icons.beach_access,
                       onTap: () {
-                        // Navegue para a tela desejada quando o quadrado for clicado.
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) {
-                          return PasseiosPage();
-                        }));
+                              return PasseiosPage();
+                            }));
                       },
                     ),
                     _buildCustomContainer(
-                      icon: Icons.favorite,
+                      icon: Icons.wine_bar_outlined,
                       onTap: () {
-                        // Navegue para outra tela quando o quadrado for clicado.
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) {
-                          return VidaNoturnaPage();
-                        }));
+                              return VidaNoturnaPage();
+                            }));
                       },
                     ),
                   ],
-                )
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    _buildCustomContainer(
+                      icon: Icons.shopping_cart,
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                              return ComprasPage();
+                            }));
+                      },
+                    ),
+                    _buildCustomContainer(
+                      icon: Icons.event,
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                              return DicasPage();
+                            }));
+                      },
+                    ),
+                  ],
+                ),
               ],
             ),
-          ),
-        ],
+            Positioned(
+              top: 30,
+              left: 10,
+              child: IconButton(
+                icon: Icon(
+                  Icons.arrow_back,
+                  color: Colors.white,
+                ),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -101,20 +136,19 @@ class _HomePageState extends State<HomePage> {
       {required IconData icon, required VoidCallback onTap}) {
     return GestureDetector(
       onTap: onTap,
-      // Chama a função de navegação quando o container for clicado
       child: Container(
         width: 140,
         height: 140,
         margin: EdgeInsets.all(10),
         decoration: BoxDecoration(
-          color: Colors.orange,
+          color: Colors.white,
           borderRadius: BorderRadius.circular(20),
         ),
         child: Center(
           child: Icon(
             icon,
-            size: 50, // Tamanho do ícone ajustável
-            color: Colors.white, // Cor do ícone ajustável
+            size: 60, // Tamanho do ícone ajustável
+            color: Color(0xFF0047AB),
           ),
         ),
       ),

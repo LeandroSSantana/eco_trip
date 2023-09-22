@@ -5,10 +5,10 @@ class DicasPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Transportes'),
+        title: Text('Dicas'),
       ),
       body: Center(
-        child: Text('Conteúdo da página de Transportes'),
+        child: Text('Conteúdo da página de Dicas'),
       ),
     );
   }
