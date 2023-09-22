@@ -24,6 +24,8 @@ class DashboardPage extends StatelessWidget {
           text,
           style: TextStyle(
             color: Colors.white,
+            fontWeight: FontWeight.w500,
+            fontFamily: 'Roboto-Bold'
           ),
         ),
       ),
@@ -50,13 +52,13 @@ class DashboardPage extends StatelessWidget {
     // ícones que deseja usar
     List<IconData> icons = [
       Icons.calendar_month_rounded,
-      Icons.monetization_on_outlined,
+      Icons.account_balance_wallet_outlined,
       Icons.pin_drop_rounded,
       Icons.tips_and_updates_outlined,
     ];
 
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xFFdcdcdc),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -65,7 +67,7 @@ class DashboardPage extends StatelessWidget {
               margin: EdgeInsets.only(bottom: 10, left: 10, right: 10),
               height: 350,
               decoration: BoxDecoration(
-                color: Color(0xFFD5D9E0),
+                color: Colors.white,
                 borderRadius: BorderRadius.circular(15),
               ),
               child: Column(
@@ -78,14 +80,13 @@ class DashboardPage extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 10),
             Container(
               width: 300,
               height: 60,
               margin: EdgeInsets.symmetric(horizontal: 50),
               child: ElevatedButton(
                 onPressed: () {
-                  // Ação do botão
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => HomePage()),
@@ -101,7 +102,8 @@ class DashboardPage extends StatelessWidget {
                   'Viajar',
                   style: TextStyle(
                     fontSize: 18,
-                    fontFamily: 'Rubik',
+                    fontFamily: 'Roboto',
+                    fontWeight: FontWeight.w600,
                     color: Colors.white,
                   ),
                 ),

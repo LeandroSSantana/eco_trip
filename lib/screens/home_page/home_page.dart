@@ -131,7 +131,6 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  // Função para criar o Container personalizado com ícone e destino
   Widget _buildCustomContainer(
       {required IconData icon, required VoidCallback onTap}) {
     return GestureDetector(

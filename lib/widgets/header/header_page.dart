@@ -16,21 +16,15 @@ Stack headerPage(BuildContext context) {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                margin: EdgeInsets.only(top: 10),
-                width: 125,
-                height: 125,
+                margin: EdgeInsets.only(top: 20),
+                width: 130,
+                height: 130,
                 decoration: BoxDecoration( //contorno imagem
                   shape: BoxShape.circle,
-                  border: Border.all(
-                    color: Colors.white,
-                    width: 3.0,
-                  ),
                 ),
                 child: ClipOval(
                   child: Image.network(
                     perfilUsuario.fotoPerfil,
-                    width: 110,
-                    height: 110,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -39,10 +33,10 @@ Stack headerPage(BuildContext context) {
               Text(
                 perfilUsuario.nomeUsuario,
                 style: TextStyle(
-                  fontFamily: 'Rubik',
+                  fontFamily: 'Roboto',
                   fontSize: 24,
                   fontWeight: FontWeight.w500,
-                  color: Colors.white,
+                  color: Color(0xFFFFFDFD),
                 ),
               ),
             ],
@@ -50,8 +44,8 @@ Stack headerPage(BuildContext context) {
         ),
       ),
       Positioned( // icone voltar
-        top: 30,
-        left: 10,
+        top: 35,
+        left: 12.5,
         child: IconButton(
           icon: Icon(
             Icons.arrow_back,
