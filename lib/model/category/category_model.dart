@@ -11,3 +11,8 @@ class Category {
     required this.iconColor,
   });
 }
+
+final List<Category> categories = [
+  Category(label: '1', icon: Icons.face, iconColor: Colors.black),
+  Category(label: '1', icon: Icons.face, iconColor: Colors.black)
+];
