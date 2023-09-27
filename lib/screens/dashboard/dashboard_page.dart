@@ -87,10 +87,10 @@ class DashboardPage extends StatelessWidget {
               margin: EdgeInsets.symmetric(horizontal: 50),
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => HomePage()),
-                  );
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(builder: (context) => HomePage()),
+                  // );
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Color(0xFF0047AB).withAlpha(190),

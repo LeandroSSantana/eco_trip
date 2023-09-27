@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:teste_telas/model/places/places.dart';
-import 'package:teste_telas/screens/category/featured_places_page.dart';
+import 'package:teste_telas/screens/featured_places/featured_places_page.dart';
 
 class FeaturedPlaces extends StatelessWidget {
   final Places places;
