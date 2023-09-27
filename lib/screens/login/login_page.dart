@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:teste_telas/data/perfil_data.dart';
 import 'package:teste_telas/screens/dashboard/dashboard_page.dart';
+import 'package:teste_telas/screens/profile_page/profile_page.dart';
 import 'package:teste_telas/widgets/elements/top_left_circles.dart';
 
 class LogInPage extends StatelessWidget {
@@ -79,8 +80,8 @@ class LogInPage extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => DashboardPage(
-                          perfil: perfilUsuario,
+                        builder: (context) => ProfilePage(
+                          // perfil: perfilUsuario,
                         ),
                       ),
                     );
