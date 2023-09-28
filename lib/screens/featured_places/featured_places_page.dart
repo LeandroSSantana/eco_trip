@@ -52,7 +52,6 @@ class FeaturedPlacesPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  // Outros detalhes de Places podem ser exibidos aqui
                 ],
               ),
             ),

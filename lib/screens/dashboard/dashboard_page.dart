@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:teste_telas/model/profile/perfil_usuario_model.dart';
-import 'package:teste_telas/screens/home_page/home_page.dart';
+import 'package:teste_telas/screens/travel_page/travel_page.dart';
 import 'package:teste_telas/widgets/header/header_page.dart';
 
 class DashboardPage extends StatelessWidget {
@@ -87,10 +87,10 @@ class DashboardPage extends StatelessWidget {
               margin: EdgeInsets.symmetric(horizontal: 50),
               child: ElevatedButton(
                 onPressed: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => HomePage()),
-                  // );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => TravelPage()),
+                  );
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Color(0xFF0047AB).withAlpha(190),

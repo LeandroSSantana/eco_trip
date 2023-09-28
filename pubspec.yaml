@@ -68,6 +68,9 @@ flutter:
     - images/bg_01.png
     - images/bg_02.png
     - images/cuba.png
+    - images/miami1.png
+    - images/miami2.png
+    - images/miami3.png
     - assets/animation/
 
   # An image asset can refer to one or more resolution-specific "variants", see

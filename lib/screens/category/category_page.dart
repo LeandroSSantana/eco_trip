@@ -23,16 +23,6 @@ class CategoryPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CircleAvatar(
-              radius: 60,
-              backgroundColor: Color(0xFF0047AB),
-              child: Icon(
-                Icons.category,
-                size: 50,
-                color: Colors.white,
-              ),
-            ),
-            SizedBox(height: 20),
             Text(
               'Bem-vindo à categoria $categoryName',
               style: TextStyle(

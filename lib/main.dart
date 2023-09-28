@@ -8,6 +8,7 @@ import 'screens/login/login_page.dart';
 import 'screens/profile_page/profile_page.dart';
 import 'screens/sign_up/sign_up_page.dart';
 import 'screens/splash/splash_screen.dart';
+import 'screens/travel_page/travel_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
         '/login': (context) => LogInPage(),
         '/signup': (context) => SignUpPage(),
         '/forgot_password': (context) => ForgotPasswordPage(),
-        // '/home_page': (context) =>
+        '/home_page': (context) => TravelPage(),
         '/dashboard_page': (context) => DashboardPage(perfil: perfilUsuario),
         '/profile_page': (context) => ProfilePage(),
       },
