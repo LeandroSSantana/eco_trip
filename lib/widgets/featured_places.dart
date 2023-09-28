@@ -105,13 +105,6 @@ class FeaturedPlaces extends StatelessWidget {
                         fontSize: 18.0,
                       ),
                     ),
-                    // Text(
-                    //   'Tipo: ${training.tipoId.toString()}',
-                    //   style: TextStyle(
-                    //     color: Colors.grey,
-                    //     fontSize: 14.0,
-                    //   ),
-                    // ),
                   ],
                 ),
               ),

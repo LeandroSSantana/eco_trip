@@ -41,7 +41,7 @@ class ForgotPasswordPage extends StatelessWidget {
               CupertinoButton(
                 onPressed: () {
                   final email = _emailController.text;
-                  // Aqui você pode adicionar a lógica para enviar o email de redefinição de senha
+                  // lógica para enviar o email de redefinição de senha
                   print('Solicitar redefinição de senha para o email: $email');
                 },
                 color: Color(0xFFFF8c00),

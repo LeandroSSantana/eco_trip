@@ -53,7 +53,7 @@ class SignUpPage extends StatelessWidget {
                   color: Colors.black,
                 ),
                 onSubmitted: (_) {
-                  // Fechar o teclado quando pressionar "Voltar"
+                  // Fecha o teclado quando pressionar "Voltar"
                   SystemChannels.textInput.invokeMethod('TextInput.hide');
                 },
               ),
@@ -78,7 +78,7 @@ class SignUpPage extends StatelessWidget {
               Spacer(), // Espaço flexível para empurrar os botões para baixo
               CupertinoButton(
                 onPressed: () {
-                  // Lógica para realizar o cadastro
+                  // TODO Lógica para realizar o cadastro
                 },
                 color: Color(0xFFFF8c00),
                 borderRadius: BorderRadius.circular(40),
@@ -99,7 +99,7 @@ class SignUpPage extends StatelessWidget {
                 margin: EdgeInsets.only(bottom: 10),
                 child: GestureDetector(
                   onTap: () {
-                    // Adicione ação para o link "Já tem uma conta? Faça login"
+                    // TODO Adicione ação para o link "Já tem uma conta? Faça login"
                   },
                   child: RichText(
                     text: TextSpan(

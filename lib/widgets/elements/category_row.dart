@@ -22,7 +22,7 @@ Widget buildCategoryRow(
         children: [
           CircleAvatar(
             radius: 40,
-            backgroundColor: Color(0xFF0047AB),
+            backgroundColor: Color(0xFF0047AB).withOpacity(0.8),
             child: FaIcon(
               iconData,
               size: 35,
