@@ -82,7 +82,7 @@ class ProfilePage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (_) => DashboardPage(perfil: perfilUsuario),
+                    builder: (_) => DashboardPage(),
                   ),
                 );
               },

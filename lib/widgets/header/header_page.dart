@@ -7,9 +7,9 @@ Stack headerPage(BuildContext context) {
   return Stack(
     children: [
       Container(
-        color: Color(0xFF0047AB),
-        width: double.infinity,
-        height: 250,
+        // color: Color(0xFF0047AB),
+        // width: double.infinity,
+        height: 290,
         margin: EdgeInsets.only(bottom: 10),
         child: Center(
           child: Column(
@@ -33,10 +33,10 @@ Stack headerPage(BuildContext context) {
               Text(
                 perfilUsuario.nomeUsuario,
                 style: TextStyle(
-                  fontFamily: 'Roboto',
-                  fontSize: 24,
-                  fontWeight: FontWeight.w500,
-                  color: Color(0xFFFFFDFD),
+                  fontFamily: 'Roboto-Regular',
+                  fontSize: 25,
+                  fontWeight: FontWeight.w400,
+                  color: Color(0xFF0047AB),
                 ),
               ),
             ],
