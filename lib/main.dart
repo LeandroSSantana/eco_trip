@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         '/signup': (context) => SignUpPage(),
         '/forgot_password': (context) => ForgotPasswordPage(),
         '/home_page': (context) => TravelPage(),
-        '/dashboard_page': (context) => DashboardPage(perfil: perfilUsuario),
+        '/dashboard_page': (context) => DashboardPage(),
         '/profile_page': (context) => ProfilePage(),
       },
     );
