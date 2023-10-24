@@ -2,7 +2,13 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:teste_telas/screens/dashboard/dashboard_page.dart';
+=======
+//import 'package:teste_telas/data/perfil_data.dart';
+//import 'package:teste_telas/screens/dashboard/dashboard_page.dart';
+import 'package:teste_telas/screens/profile_page/profile_page.dart';
+>>>>>>> 1f44b910928bb730a85a9078a994827dd5d0dca7
 import 'package:teste_telas/widgets/elements/top_left_circles.dart';
 
 class LogInPage extends StatelessWidget {
