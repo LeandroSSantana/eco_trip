@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:teste_telas/data/perfil_data.dart';
 import 'package:teste_telas/screens/dashboard/dashboard_page.dart';
 import 'screens/forgot_password/forgot_password_page.dart';
 import 'screens/login/login_page.dart';
@@ -13,7 +12,6 @@ import 'screens/travel_page/travel_page.dart';
 void main() {
   runApp(MyApp());
 }
-
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

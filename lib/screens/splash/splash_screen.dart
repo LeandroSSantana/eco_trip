@@ -1,9 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'dart:async';
-
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
+import 'package:teste_telas/screens/login/login_page.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -14,24 +12,26 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 2, milliseconds: 500), () {
-      Navigator.pushReplacementNamed(context, '/login');
+    Future.delayed(Duration(seconds: 2), () {
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(
+          builder: (context) => LogInPage(),
+        ),
+      );
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-          color: Color(0xFFFF8C00), // Cor laranja (#FF8c00)
-        ),
-        child: Center(
-          child: Lottie.asset(
-            'assets/animation/splash.json',
-            width: 300,
-            height: 300,
-            fit: BoxFit.cover,
+      backgroundColor: Color(0xFF0047AB),
+      body: Center(
+        child: Text(
+          'Bem-vindo à SplashScreen!',
+          style: TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
           ),
         ),
       ),

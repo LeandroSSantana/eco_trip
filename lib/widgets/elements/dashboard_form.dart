@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:teste_telas/screens/travel_page/travel_page.dart';
+import 'package:teste_telas/screens/profile_page/profile_page.dart';
 
 class DashboardForm extends StatefulWidget {
   @override
@@ -58,10 +58,10 @@ class _DashboardFormState extends State<DashboardForm> {
                   child: GestureDetector(
                     onTap: () => _showDatePicker(context, true),
                     child: Container(
-                      // decoration: BoxDecoration(
-                      //   borderRadius: BorderRadius.circular(50.0),
-                      //   border: Border.all(color: Color(0xFF0047AB)),
-                      // ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50.0),
+                        border: Border.all(color: Color(0xFF0047AB)),
+                      ),
                       padding: EdgeInsets.all(10.0),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -190,7 +190,7 @@ class _DashboardFormState extends State<DashboardForm> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => TravelPage(),
+                          builder: (context) => ProfilePage(),
                         ));
                   },
                   style: ElevatedButton.styleFrom(
