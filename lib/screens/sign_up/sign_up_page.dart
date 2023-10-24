@@ -1,8 +1,8 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:teste_telas/screens/profile_page/profile_page.dart';
 
 class SignUpPage extends StatelessWidget {
   const SignUpPage({Key? key}) : super(key: key);
@@ -10,113 +10,181 @@ class SignUpPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CupertinoNavigationBar(
-        middle: Text('Cadastre-se'),
-      ),
-      body: Center(
-        child: Padding(
-          padding: EdgeInsets.all(20),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              CupertinoTextField(
-                placeholder: 'Nome completo',
-                padding: EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.2),
-                  borderRadius: BorderRadius.circular(30),
-                  border: Border.all(
-                    color: Colors.white,
-                    width: 1.5,
+      backgroundColor: Color(0xFFdcdcdc),
+      resizeToAvoidBottomInset: false,
+      body: SafeArea(
+        child: Center(
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                const SizedBox(height: 30),
+                // logo
+          
+                Image.asset(
+                  'images/logo.png',
+                  width: 187,
+                  height: 232,
+                ),
+          
+                // logotipo
+          
+                Text(
+                  'Ecotrip',
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontFamily: 'Roboto-Regular',
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
-                style: TextStyle(
-                  fontFamily: 'Rubik',
-                  color: Colors.black,
-                ),
-              ),
-              SizedBox(height: 10),
-              CupertinoTextField(
-                placeholder: 'Email',
-                padding: EdgeInsets.all(16),
-                keyboardType: TextInputType.emailAddress, // Teclado de email
-                decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.2),
-                  borderRadius: BorderRadius.circular(30),
-                  border: Border.all(
-                    color: Colors.white,
-                    width: 1.5,
-                  ),
-                ),
-                style: TextStyle(
-                  fontFamily: 'Rubik',
-                  color: Colors.black,
-                ),
-                onSubmitted: (_) {
-                  // Fecha o teclado quando pressionar "Voltar"
-                  SystemChannels.textInput.invokeMethod('TextInput.hide');
-                },
-              ),
-              SizedBox(height: 10),
-              CupertinoTextField(
-                placeholder: 'Senha',
-                padding: EdgeInsets.all(16),
-                obscureText: true,
-                decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.2),
-                  borderRadius: BorderRadius.circular(30),
-                  border: Border.all(
-                    color: Colors.white,
-                    width: 1.5,
-                  ),
-                ),
-                style: TextStyle(
-                  fontFamily: 'Rubik',
-                  color: Colors.black,
-                ),
-              ),
-              Spacer(), // Espaço flexível para empurrar os botões para baixo
-              CupertinoButton(
-                onPressed: () {
-                  // TODO Lógica para realizar o cadastro
-                },
-                color: Color(0xFFFF8c00),
-                borderRadius: BorderRadius.circular(40),
-                child: Padding(
-                  padding: EdgeInsets.symmetric(vertical: 5, horizontal: 70),
-                  child: Text(
-                    'Cadastrar',
+          
+                //frase
+          
+                RichText(
+                  text: TextSpan(
+                    text: 'Viaje mais, ',
                     style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 15,
-                      fontFamily: 'Rubik',
+                      color: Colors.black87,
+                      fontSize: 18,
+                      fontFamily: 'Roboto-Regular',
+                    ),
+                    children: const <TextSpan>[
+                      TextSpan(
+                        text: 'Gaste menos!',
+                        style: TextStyle(
+                          color: Color(0xFF1F4AC2),
+                          fontFamily: 'Roboto-Regular',
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+          
+                const SizedBox(height: 30),
+                // nome completo
+          
+                Container(
+                  margin: EdgeInsets.fromLTRB(44, 50, 44, 0),
+                  child: CupertinoTextField(
+                    placeholder: 'nome completo',
+                    padding: EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                      color: Color(0xFFFFFDFD),
+                      borderRadius: BorderRadius.circular(30),
                     ),
                   ),
                 ),
-              ),
-              SizedBox(height: 20),
-              Container(
-                margin: EdgeInsets.only(bottom: 10),
-                child: GestureDetector(
-                  onTap: () {
-                    // TODO Adicione ação para o link "Já tem uma conta? Faça login"
-                  },
-                  child: RichText(
-                    text: TextSpan(
-                      text: 'Já tem uma conta? Faça login',
-                      style: TextStyle(
-                        color: Colors.blue,
-                        decoration: TextDecoration.underline,
-                        fontFamily: 'Rubik',
+          
+                const SizedBox(height: 10),
+                // email
+          
+                Container(
+                  margin: EdgeInsets.fromLTRB(44, 15, 44, 0),
+                  child: CupertinoTextField(
+                    placeholder: 'e-mail',
+                    padding: EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                      color: Color(0xFFFFFDFD),
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                  ),
+                ),
+                
+                const SizedBox(height: 10),
+                // senha
+          
+                Container(
+                  margin: EdgeInsets.fromLTRB(44, 15, 44, 0),
+                  child: CupertinoTextField(
+                    placeholder: 'senha',
+                    padding: EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                      color: Color(0xFFFFFDFD),
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                  ),
+                ),
+          
+                const SizedBox(height: 10),
+                // confirmar senha
+          
+                Container(
+                  margin: EdgeInsets.fromLTRB(44, 15, 44, 0),
+                  child: CupertinoTextField(
+                    placeholder: 'confirmar senha',
+                    padding: EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                      color: Color(0xFFFFFDFD),
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                  ),
+                ),
+          
+                const SizedBox(height: 50),
+                // button registre-se
+          
+                Container(
+                  child: CupertinoButton(
+                    onPressed: () {
+                      Navigator.push(
+                       context,
+                        MaterialPageRoute(
+                          builder: (context) => ProfilePage(),
+                        ),
+                      );
+                    },
+                    color: Color(0xFF0047AB),
+                    borderRadius: BorderRadius.circular(40),
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(vertical: 10, horizontal: 70),
+                      child: Text(
+                        'Registre-se',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
-            ],
+          
+                const SizedBox(height: 25),
+                // login
+          
+                Container(
+                  child: GestureDetector(
+                    onTap: (){
+                      Navigator.pushNamed(context, "/forgot_password");
+                    },
+                    child: RichText(
+                      text: TextSpan(
+                        text: 'Já possui uma conta?',
+                        style: TextStyle(
+                          color: Colors.black87,
+                          fontSize: 18,
+                          fontFamily: 'Roboto-Regular',
+                        ),
+                        children: const <TextSpan>[
+                          TextSpan(
+                            text: 'Sign in',
+                            style: TextStyle(
+                              color: Color(0xFF1F4AC2),
+                              fontSize: 18,
+                              fontFamily: 'Roboto-Regular',
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 10),
+              ],
+            ),
           ),
         ),
-      ),
+      )
     );
   }
 }
