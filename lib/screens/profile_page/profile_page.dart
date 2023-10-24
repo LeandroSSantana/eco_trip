@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:teste_telas/data/perfil_data.dart';
+//import 'package:teste_telas/data/perfil_data.dart';
 import 'package:teste_telas/model/places/places.dart';
 import 'package:teste_telas/screens/dashboard/dashboard_page.dart';
 import 'package:teste_telas/widgets/featured_memories/featured_memories.dart';
