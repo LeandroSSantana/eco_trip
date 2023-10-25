@@ -2,6 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:teste_telas/screens/profile_page/profile_page.dart';
 
 class SignUpPage extends StatelessWidget {
@@ -17,12 +18,12 @@ class SignUpPage extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                const SizedBox(height: 30),
                 // logo
-                Image.asset(
-                  'images/logo.png',
-                  width: 187,
-                  height: 232,
+                SvgPicture.asset(
+                  'images/logo.svg',
+                  width: 350,
+                  height: 350,
+                  color: Color(0xFF1F4AC2),
                 ),
                 // logotipo
                 Text(
@@ -30,7 +31,7 @@ class SignUpPage extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 24,
                     fontFamily: 'Roboto-Regular',
-                    color: Colors.black,
+                    color: Color(0xFF1F4AC2),
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -142,7 +143,7 @@ class SignUpPage extends StatelessWidget {
                     },
                     child: RichText(
                       text: TextSpan(
-                        text: 'Já possui uma conta?',
+                        text: 'Já possui uma conta? ',
                         style: TextStyle(
                           color: Colors.black87,
                           fontSize: 18,

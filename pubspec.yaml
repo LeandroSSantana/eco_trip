@@ -74,8 +74,7 @@ flutter:
     - images/miami2.png
     - images/miami3.png
     - images/check-circle.svg
-    - images/logoW.png
-    - images/logo.png
+    - images/logo.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

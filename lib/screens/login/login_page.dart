@@ -1,9 +1,9 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:teste_telas/screens/dashboard/dashboard_page.dart';
-import 'package:teste_telas/widgets/elements/top_left_circles.dart';
 
 class LogInPage extends StatelessWidget {
   const LogInPage({Key? key}) : super(key: key);
@@ -12,27 +12,34 @@ class LogInPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFFdcdcdc),
-      resizeToAvoidBottomInset: false,
-      body: Stack(
+      resizeToAvoidBottomInset: true,
+      body: ListView(
         children: [
-          buildTopLeftCircles(),
+          // buildTopLeftCircles(),
           Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              SizedBox(height: 10),
+              SvgPicture.asset(
+                'images/logo.svg',
+                width: 120,
+                height: 120,
+                color: Color(0xFF1F4AC2),
+              ),
               Container(
-                margin: EdgeInsets.only(top: 150),
+                margin: EdgeInsets.fromLTRB(40, 20, 40, 10),
                 child: Text(
-                  'Que bom te ver novamente',
+                  'Que bom te ver novamente!',
                   style: TextStyle(
-                    fontSize: 24,
+                    fontSize: 22,
                     fontFamily: 'Roboto-Regular',
-                    color: Colors.black,
-                    fontWeight: FontWeight.w500,
+                    color: Color(0xFF0047AB),
+                    fontWeight: FontWeight.w600,
                   ),
                 ),
               ),
               Container(
-                margin: EdgeInsets.fromLTRB(40, 100, 40, 10),
+                margin: EdgeInsets.fromLTRB(40, 80, 40, 10),
                 child: CupertinoTextField(
                   placeholder: 'Email',
                   padding: EdgeInsets.all(20),
@@ -70,7 +77,6 @@ class LogInPage extends StatelessWidget {
                   ),
                 ),
               ),
-              // Botão Sign In
               Container(
                 margin: EdgeInsets.fromLTRB(40, 10, 40, 20),
                 child: CupertinoButton(
@@ -84,14 +90,14 @@ class LogInPage extends StatelessWidget {
                   },
                   color: Color(0xFF0047AB),
                   borderRadius: BorderRadius.circular(40),
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(vertical: 5, horizontal: 70),
-                    child: Text(
-                      'LOG IN',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 18,
-                          fontWeight: FontWeight.w500),
+                  child: Container(
+                    width: double.infinity,
+                    child: Center(
+                      child: Text('LOG IN',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w500)),
                     ),
                   ),
                 ),
