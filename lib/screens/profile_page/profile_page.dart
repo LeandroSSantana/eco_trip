@@ -1,10 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
-=======
-//import 'package:teste_telas/data/perfil_data.dart';
->>>>>>> 1f44b910928bb730a85a9078a994827dd5d0dca7
 import 'package:teste_telas/model/places/places.dart';
 import 'package:teste_telas/screens/dashboard/dashboard_page.dart';
 import 'package:teste_telas/widgets/featured_memories/featured_memories.dart';
@@ -85,7 +81,7 @@ class ProfilePage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (_) => DashboardPage(perfil: perfilUsuario),
+                    builder: (_) => DashboardPage(),
                   ),
                 );
               },
