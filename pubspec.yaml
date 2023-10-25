@@ -39,6 +39,7 @@ dependencies:
   intl: ^0.18.1
   icons_plus: ^4.0.0
   font_awesome_flutter: ^10.5.0
+  flutter_svg: ^2.0.7
   animated_splash_screen: ^1.1.0
 
 
@@ -72,6 +73,7 @@ flutter:
     - images/miami1.png
     - images/miami2.png
     - images/miami3.png
+    - images/check-circle.svg
     - images/logoW.png
     - images/logo.png
 

@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -19,15 +19,12 @@ class SignUpPage extends StatelessWidget {
               children: [
                 const SizedBox(height: 30),
                 // logo
-          
                 Image.asset(
                   'images/logo.png',
                   width: 187,
                   height: 232,
                 ),
-          
                 // logotipo
-          
                 Text(
                   'Ecotrip',
                   style: TextStyle(
@@ -37,9 +34,7 @@ class SignUpPage extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-          
                 //frase
-          
                 RichText(
                   text: TextSpan(
                     text: 'Viaje mais, ',
@@ -59,10 +54,8 @@ class SignUpPage extends StatelessWidget {
                     ],
                   ),
                 ),
-          
                 const SizedBox(height: 30),
                 // nome completo
-          
                 Container(
                   margin: EdgeInsets.fromLTRB(44, 50, 44, 0),
                   child: CupertinoTextField(
@@ -74,10 +67,8 @@ class SignUpPage extends StatelessWidget {
                     ),
                   ),
                 ),
-          
                 const SizedBox(height: 10),
                 // email
-          
                 Container(
                   margin: EdgeInsets.fromLTRB(44, 15, 44, 0),
                   child: CupertinoTextField(
@@ -89,10 +80,8 @@ class SignUpPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                
                 const SizedBox(height: 10),
                 // senha
-          
                 Container(
                   margin: EdgeInsets.fromLTRB(44, 15, 44, 0),
                   child: CupertinoTextField(
@@ -104,10 +93,8 @@ class SignUpPage extends StatelessWidget {
                     ),
                   ),
                 ),
-          
                 const SizedBox(height: 10),
                 // confirmar senha
-          
                 Container(
                   margin: EdgeInsets.fromLTRB(44, 15, 44, 0),
                   child: CupertinoTextField(
@@ -119,15 +106,13 @@ class SignUpPage extends StatelessWidget {
                     ),
                   ),
                 ),
-          
                 const SizedBox(height: 50),
                 // button registre-se
-          
                 Container(
                   child: CupertinoButton(
                     onPressed: () {
                       Navigator.push(
-                       context,
+                        context,
                         MaterialPageRoute(
                           builder: (context) => ProfilePage(),
                         ),
@@ -148,14 +133,12 @@ class SignUpPage extends StatelessWidget {
                     ),
                   ),
                 ),
-          
                 const SizedBox(height: 25),
                 // login
-          
                 Container(
                   child: GestureDetector(
-                    onTap: (){
-                      Navigator.pushNamed(context, "/forgot_password");
+                    onTap: () {
+                      Navigator.pushNamed(context, "/login");
                     },
                     child: RichText(
                       text: TextSpan(
@@ -184,7 +167,7 @@ class SignUpPage extends StatelessWidget {
             ),
           ),
         ),
-      )
+      ),
     );
   }
 }

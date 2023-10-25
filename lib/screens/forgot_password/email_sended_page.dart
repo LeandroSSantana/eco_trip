@@ -2,13 +2,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:teste_telas/screens/forgot_password/email_sended_page.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:teste_telas/screens/login/login_page.dart';
 import 'package:teste_telas/widgets/elements/top_left_circles.dart';
 
-class ForgotPasswordPage extends StatelessWidget {
-  final TextEditingController _emailController = TextEditingController();
+class EmailSendedPage extends StatelessWidget {
 
-  ForgotPasswordPage({Key? key}) : super(key: key);
+  EmailSendedPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,29 +19,29 @@ class ForgotPasswordPage extends StatelessWidget {
         children: [
           buildTopLeftCircles(),
           Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(height: 150),
               Container(
-                margin: EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10), // Ajuste das margens
+                margin: EdgeInsets.only(left: 20, right: 20, top: 50, bottom: 10), // Ajuste das margens
                 child: Text(
-                  'Digite um e-mail válido para redefinir sua senha.',
+                  'Email Enviado!',
                   style: TextStyle(
                     fontSize: 24,
                     fontFamily: 'Roboto-Regular',
-                    color: Colors.black,
-                    fontWeight: FontWeight.w500,
+                    color: Color(0xFF0047AB),
+                    fontWeight: FontWeight.w600,
                   ),
                 ),
               ),
-              Container(
-                margin: EdgeInsets.only(left: 40, right: 40, top: 50, bottom: 10), // Ajuste das margens
-                child: CupertinoTextField(
-                  placeholder: 'Email',
-                  padding: EdgeInsets.all(20),
-                  decoration: BoxDecoration(
-                    color: Color(0xFFFFFDFD),
-                    borderRadius: BorderRadius.circular(30),
+              Center(
+                child: Container(
+                  margin: EdgeInsets.only(top: 20, bottom: 20),
+                  child: SvgPicture.asset(
+                    'images/check-circle.svg',
+                    width: 100,
+                    height: 100,
+                    color: Color(0xFF0047AB),
                   ),
                 ),
               ),
@@ -52,7 +52,7 @@ class ForgotPasswordPage extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => EmailSendedPage(),
+                        builder: (context) => LogInPage(),
                       ),
                     );
                   },
@@ -63,7 +63,7 @@ class ForgotPasswordPage extends StatelessWidget {
                     width: double.infinity,
                     child: Center(
                       child: Text(
-                        'Enviar Email',
+                        'Retornar para Login',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 18,
