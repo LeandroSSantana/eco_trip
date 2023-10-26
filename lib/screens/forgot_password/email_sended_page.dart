@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:teste_telas/screens/login/login_page.dart';
-import 'package:teste_telas/widgets/elements/top_left_circles.dart';
 
 class EmailSendedPage extends StatelessWidget {
 
@@ -17,7 +16,6 @@ class EmailSendedPage extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       body: Stack(
         children: [
-          buildTopLeftCircles(),
           Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [

@@ -1,14 +1,13 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:teste_telas/data/perfil_data.dart';
 
 Stack headerProfilePage(BuildContext context) {
   return Stack(
     children: [
       Container(
-        color: Color(0xFF0047AB).withOpacity(0.9),
+        color: Color(0xFF0047AB),
         width: double.infinity,
         height: 280,
         margin: EdgeInsets.only(bottom: 10),
@@ -23,8 +22,8 @@ Stack headerProfilePage(BuildContext context) {
                 shape: BoxShape.circle,
               ),
               child: ClipOval(
-                child: Image.network(
-                  perfilUsuario.fotoPerfil,
+                child: Image.asset(
+                  'images/foto.png',
                   fit: BoxFit.cover,
                 ),
               ),

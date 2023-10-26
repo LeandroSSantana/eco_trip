@@ -2,8 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:teste_telas/model/places/places.dart';
-import 'package:teste_telas/screens/dashboard/dashboard_page.dart';
-import 'package:teste_telas/widgets/featured_memories/featured_memories.dart';
 import 'package:teste_telas/widgets/featured_places.dart';
 import 'package:teste_telas/widgets/header/header_profile_page.dart';
 
@@ -27,12 +25,12 @@ class ProfilePage extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.fromLTRB(30, 300, 0, 10),
                       child: Text(
-                        'Lugares em Destaque',
+                        'Destaques',
                         style: TextStyle(
-                          color: Colors.black,
+                          color: Color(0xFF0047AB),
                           fontFamily: 'Roboto-light',
                           fontSize: 25,
-                          fontWeight: FontWeight.w300,
+                          fontWeight: FontWeight.w400,
                         ),
                       ),
                     ),
@@ -44,33 +42,6 @@ class ProfilePage extends StatelessWidget {
                         }).toList(),
                       ),
                     ),
-                    Padding(
-                      padding: EdgeInsets.fromLTRB(30, 15, 0, 10),
-                      child: Text(
-                        'Lembranças em Destaque',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontFamily: 'Roboto-Light',
-                          fontSize: 25,
-                          fontWeight: FontWeight.w300,
-                        ),
-                      ),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            squareRowWidget('Cuba 1', 'images/cuba.png',
-                                'cuba 2', 'images/cuba.png'),
-                            SizedBox(height: 30),
-                            squareRowWidget('Cuba 2', 'images/cuba.png',
-                                'cuba 4', 'images/cuba.png'),
-                          ],
-                        ),
-                      ],
-                    ),
                   ],
                 ),
               ],
@@ -78,12 +49,7 @@ class ProfilePage extends StatelessWidget {
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (_) => DashboardPage(),
-                  ),
-                );
+                Navigator.pushNamed(context, '/dashboard_page');
               },
               child: Text('Meu Botão'),
             ),
