@@ -1,7 +1,10 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:teste_telas/data/perfil_data.dart';
 import 'package:teste_telas/screens/dashboard/dashboard_page.dart';
+import 'package:teste_telas/screens/welcome/welcome_page.dart';
+import 'package:teste_telas/widgets/elements/dashboard_form.dart';
 import 'screens/forgot_password/forgot_password_page.dart';
 import 'screens/login/login_page.dart';
 import 'screens/profile_page/profile_page.dart';
@@ -26,9 +29,11 @@ class MyApp extends StatelessWidget {
         '/login': (context) => LogInPage(),
         '/signup': (context) => SignUpPage(),
         '/forgot_password': (context) => ForgotPasswordPage(),
-        '/home_page': (context) => TravelPage(),
+        '/home_page': (context) => DashboardForm(),
         '/dashboard_page': (context) => DashboardPage(),
         '/profile_page': (context) => ProfilePage(),
+        '/travel_page': (context) => TravelPage(),
+        '/welcome_page': (context) => WelcomePage(perfilUsuario),
       },
     );
   }

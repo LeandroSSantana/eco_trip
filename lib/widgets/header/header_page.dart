@@ -23,8 +23,8 @@ Stack headerPage(BuildContext context) {
                   shape: BoxShape.circle,
                 ),
                 child: ClipOval(
-                  child: Image.network(
-                    perfilUsuario.fotoPerfil,
+                  child: Image.asset(
+                    'images/foto.png',
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -43,20 +43,20 @@ Stack headerPage(BuildContext context) {
           ),
         ),
       ),
-      Positioned( // icone voltar
-        top: 35,
-        left: 12.5,
-        child: IconButton(
-          icon: Icon(
-            Icons.arrow_back,
-            color: Colors.white,
-          ),
-          onPressed: () {
-            // Adicione a lógica para voltar à tela anterior aqui
-            Navigator.pop(context);
-          },
-        ),
-      ),
+      // Positioned( // icone voltar
+      //   top: 10,
+      //   left: 12.5,
+      //   child: IconButton(
+      //     icon: Icon(
+      //       Icons.arrow_back,
+      //       color: Colors.black,
+      //     ),
+      //     onPressed: () {
+      //       // Adicione a lógica para voltar à tela anterior aqui
+      //       Navigator.pop(context);
+      //     },
+      //   ),
+      // ),
     ],
   );
 }

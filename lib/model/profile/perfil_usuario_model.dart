@@ -1,6 +1,8 @@
+import 'package:flutter/material.dart';
+
 class PerfilUsuario {
   final String nomeUsuario;
-  final String fotoPerfil; // URL da foto de perfil
+  final AssetImage fotoPerfil; // URL da foto de perfil
   final double orcamentoViagem; // Orçamento da viagem
   final List<Interesse> interesses; // Atividades de interesse
   final List<MetaViagem> metasViagem; // Metas de viagem

@@ -69,12 +69,12 @@ flutter:
   assets:
     - images/bg_01.png
     - images/bg_02.png
-    - images/cuba.png
-    - images/miami1.png
-    - images/miami2.png
-    - images/miami3.png
+    - images/foto.png
     - images/check-circle.svg
     - images/logo.svg
+    - images/plane.svg
+    - images/bolsa.svg
+    - images/mala.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
