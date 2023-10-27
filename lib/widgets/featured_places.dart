@@ -33,7 +33,6 @@ class FeaturedPlaces extends StatelessWidget {
           ),
           child: Stack(
             children: [
-              // Imagem do treino
               Positioned.fill(
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(10.0),
