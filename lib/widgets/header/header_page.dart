@@ -43,20 +43,20 @@ Stack headerPage(BuildContext context) {
           ),
         ),
       ),
-      // Positioned( // icone voltar
-      //   top: 10,
-      //   left: 12.5,
-      //   child: IconButton(
-      //     icon: Icon(
-      //       Icons.arrow_back,
-      //       color: Colors.black,
-      //     ),
-      //     onPressed: () {
-      //       // Adicione a lógica para voltar à tela anterior aqui
-      //       Navigator.pop(context);
-      //     },
-      //   ),
-      // ),
+      Positioned( // icone voltar
+        top: 40,
+        left: 12.5,
+        child: IconButton(
+          icon: Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+          ),
+          onPressed: () {
+            // Adicione a lógica para voltar à tela anterior aqui
+            Navigator.pop(context);
+          },
+        ),
+      ),
     ],
   );
 }

@@ -1,25 +1,48 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:teste_telas/model/places/places.dart';
 import 'package:teste_telas/widgets/featured_places.dart';
-import 'package:teste_telas/widgets/header/header_profile_page.dart';
+import 'package:teste_telas/widgets/header/header_page.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage();
+
+  Widget customButton(BuildContext context, String text, String route) {
+    return ElevatedButton(
+      onPressed: () {
+        Navigator.pushNamed(context, route);
+      },
+      style: ElevatedButton.styleFrom(
+        primary: Color(0xFF0047AB),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(50.0),
+        ),
+      ),
+      child: Padding(
+        padding: EdgeInsets.symmetric(vertical: 30, horizontal: 30),
+        child: Text(
+          text,
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 15,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFFdcdcdc),
       body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
         child: Column(
           children: [
             Stack(
               children: [
-                headerProfilePage(context),
+                headerPage(context),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -35,27 +58,44 @@ class ProfilePage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: Row(
-                        children: fPlaces.map((place) {
-                          return FeaturedPlaces(places: place);
-                        }).toList(),
-                      ),
-                    ),
+                    Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            FeaturedPlaces(places: fPlaces[0]),
+                            FeaturedPlaces(places: fPlaces[1]),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            FeaturedPlaces(places: fPlaces[2]),
+                            FeaturedPlaces(places: fPlaces[3]),
+                          ],
+                        ),
+                      ],
+                    )
                   ],
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(20),
+                  child:
+                      customButton(context, 'Salvar', '/travelling_data_page'),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: customButton(context, 'Calcular', '/dashboard_page'),
                 ),
               ],
             ),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.pushNamed(context, '/dashboard_page');
-        },
-        child: Icon(Icons.add),
-        backgroundColor: Color(0xFF0047AB),
       ),
     );
   }

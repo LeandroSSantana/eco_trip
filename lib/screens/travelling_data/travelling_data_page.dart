@@ -103,6 +103,20 @@ class TravellingDataPage extends StatelessWidget {
                       ),
                     ),
                   ),
+                  Positioned( // icone voltar
+                    top: 40,
+                    left: 20,
+                    child: IconButton(
+                      icon: Icon(
+                        Icons.arrow_back,
+                        color: Color(0xFF0047AB),
+                      ),
+                      onPressed: () {
+                        // Adicione a lógica para voltar à tela anterior aqui
+                        Navigator.pop(context);
+                      },
+                    ),
+                  ),
                 ],
               ),
             ),
