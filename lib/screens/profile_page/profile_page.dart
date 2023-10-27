@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:teste_telas/model/places/places.dart';
 import 'package:teste_telas/widgets/featured_places.dart';
@@ -25,7 +26,7 @@ class ProfilePage extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.fromLTRB(30, 300, 0, 10),
                       child: Text(
-                        'Destaques',
+                        'Suas Viagens',
                         style: TextStyle(
                           color: Color(0xFF0047AB),
                           fontFamily: 'Roboto-light',
@@ -46,15 +47,15 @@ class ProfilePage extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/dashboard_page');
-              },
-              child: Text('Meu Botão'),
-            ),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pushNamed(context, '/dashboard_page');
+        },
+        child: Icon(Icons.add),
+        backgroundColor: Color(0xFF0047AB),
       ),
     );
   }

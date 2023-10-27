@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:teste_telas/data/perfil_data.dart';
 import 'package:teste_telas/screens/dashboard/dashboard_page.dart';
+import 'package:teste_telas/screens/travelling_data/travelling_data_page.dart';
 import 'package:teste_telas/screens/welcome/welcome_page.dart';
 import 'package:teste_telas/widgets/elements/dashboard_form.dart';
 import 'screens/forgot_password/forgot_password_page.dart';
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
         '/dashboard_page': (context) => DashboardPage(),
         '/profile_page': (context) => ProfilePage(),
         '/travel_page': (context) => TravelPage(),
+        '/travelling_data_page': (context) => TravellingDataPage(),
         '/welcome_page': (context) => WelcomePage(perfilUsuario),
       },
     );
