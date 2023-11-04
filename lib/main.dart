@@ -3,7 +3,14 @@
 import 'package:flutter/material.dart';
 import 'package:teste_telas/data/perfil_data.dart';
 import 'package:teste_telas/screens/dashboard/dashboard_page.dart';
+import 'package:teste_telas/screens/typesTrip/alimentationPage.dart';
 import 'package:teste_telas/screens/travelling_data/travelling_data_page.dart';
+import 'package:teste_telas/screens/typesTrip/barPage.dart';
+import 'package:teste_telas/screens/typesTrip/culturePage.dart';
+import 'package:teste_telas/screens/typesTrip/esportPage.dart';
+import 'package:teste_telas/screens/typesTrip/eventsPage.dart';
+import 'package:teste_telas/screens/typesTrip/hotelPage.dart';
+import 'package:teste_telas/screens/typesTrip/outingPage.dart';
 import 'package:teste_telas/screens/welcome/welcome_page.dart';
 import 'package:teste_telas/widgets/elements/dashboard_form.dart';
 import 'screens/forgot_password/forgot_password_page.dart';
@@ -36,6 +43,13 @@ class MyApp extends StatelessWidget {
         '/travel_page': (context) => TravelPage(),
         '/travelling_data_page': (context) => TravellingDataPage(),
         '/welcome_page': (context) => WelcomePage(perfilUsuario),
+        '/alimentationPage': (context) => AlimentationPage(),
+        '/outingPage': (context) => OutingPage(),
+        '/culturePage': (context) => CulturePage(),
+        '/barPage': (context) => BarPage(),
+        '/esportPage': (context) => EsportPage(),
+        '/hotelPage': (context) => HotelPage(),
+        '/eventsPage': (context) => EventsPage(),
       },
     );
   }

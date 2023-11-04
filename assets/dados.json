@@ -1,0 +1,502 @@
+[
+    {
+        "AtracaoNome": "Café da Esquina",
+        "Descricao": "Um café acolhedor com uma variedade de opções de café da manhã.",
+        "Categoria": "Alimentação",
+        "Localizacao": "Rua das Flores, Lisboa, Portugal",
+        "Custo": "Econômico",
+        "Avaliacao": "4.2 Estrelas"
+      },
+      {
+        "AtracaoNome": "Pizzaria da Família",
+        "Descricao": "Pizza deliciosa em um ambiente familiar.",
+        "Categoria": "Alimentação",
+        "Localizacao": "Avenida Principal, Roma, Itália",
+        "Custo": "Econômico",
+        "Avaliacao": "4.0 Estrelas"
+      },
+      {
+        "AtracaoNome": "Lanchonete da Praia",
+        "Descricao": "Lanches rápidos e refrescantes perto da praia.",
+        "Categoria": "Alimentação",
+        "Localizacao": "Avenida Beira-Mar, Copacabana, Brasil",
+        "Custo": "Econômico",
+        "Avaliacao": "4.1 Estrelas"
+      },
+      {
+        "AtracaoNome": "Restaurante do Chef",
+        "Descricao": "Pratos elaborados pelo chef renomado da cidade.",
+        "Categoria": "Alimentação",
+        "Localizacao": "Rua Gastronômica, Paris, França",
+        "Custo": "Moderado",
+        "Avaliacao": "4.5 Estrelas"
+      },
+      {
+        "AtracaoNome": "Churrascaria da Esquina",
+        "Descricao": "Carnes suculentas grelhadas com uma variedade de acompanhamentos.",
+        "Categoria": "Alimentação",
+        "Localizacao": "Avenida dos Sabores, Buenos Aires, Argentina",
+        "Custo": "Moderado",
+        "Avaliacao": "4.4 Estrelas"
+      },
+      {
+        "AtracaoNome": "Sushi Zen",
+        "Descricao": "Sushi fresco e pratos japoneses autênticos em um ambiente zen.",
+        "Categoria": "Alimentação",
+        "Localizacao": "Avenida Sushi, Tóquio, Japão",
+        "Custo": "Moderado",
+        "Avaliacao": "4.6 Estrelas"
+      },
+      {
+        "AtracaoNome": "Restaurante Estrelado Michelin",
+        "Descricao": "Jantar de classe mundial em um restaurante premiado com estrelas Michelin.",
+        "Categoria": "Alimentação",
+        "Localizacao": "Avenida Gourmet, Nova Iorque, Estados Unidos",
+        "Custo": "Luxuoso",
+        "Avaliacao": "4.9 Estrelas"
+      },
+      {
+        "AtracaoNome": "Bistrô Elegante",
+        "Descricao": "Culinária gourmet e vinhos finos em um ambiente elegante.",
+        "Categoria": "Alimentação",
+        "Localizacao": "Rua Elegância, Paris, França",
+        "Custo": "Luxuoso",
+        "Avaliacao": "4.8 Estrelas"
+      },
+      {
+        "AtracaoNome": "Restaurante à Beira-Mar",
+        "Descricao": "Frutos do mar frescos e vistas deslumbrantes à beira-mar.",
+        "Categoria": "Alimentação",
+        "Localizacao": "Avenida Oceânica, Sydney, Austrália",
+        "Custo": "Luxuoso",
+        "Avaliacao": "4.7 Estrelas"
+      },
+      {
+        "AtracaoNome": "Passeio no Parque das Flores",
+        "Descricao": "Desfrute de um dia tranquilo explorando a beleza natural.",
+        "Categoria": "Passeios",
+        "Localizacao": "Rua das Flores, Lisboa, Portugal",
+        "Custo": "Econômico",
+        "Avaliacao": "4.2 Estrelas"
+      },
+      {
+        "AtracaoNome": "Caminhada pelo Bosque Encantado",
+        "Descricao": "Trilhas serenas em meio à natureza intocada.",
+        "Categoria": "Passeios",
+        "Localizacao": "Avenida da Floresta, Brasília, Brasil",
+        "Custo": "Econômico",
+        "Avaliacao": "4.0 Estrelas"
+      },
+      {
+        "AtracaoNome": "Visita ao Museu Histórico",
+        "Descricao": "Descubra a história da cidade em um museu acessível.",
+        "Categoria": "Passeios",
+        "Localizacao": "Rua da História, Madri, Espanha",
+        "Custo": "Econômico",
+        "Avaliacao": "4.1 Estrelas"
+      },
+      {
+        "AtracaoNome": "Passeio de Barco no Rio Sereno",
+        "Descricao": "Navegue pelas águas tranquilas com vistas panorâmicas.",
+        "Categoria": "Passeios",
+        "Localizacao": "Avenida da Marina, Veneza, Itália",
+        "Custo": "Moderado",
+        "Avaliacao": "4.5 Estrelas"
+      },
+      {
+        "AtracaoNome": "Excursão ao Castelo Antigo",
+        "Descricao": "Explore as muralhas e história de um castelo histórico.",
+        "Categoria": "Passeios",
+        "Localizacao": "Rua do Castelo, Edimburgo, Escócia",
+        "Custo": "Moderado",
+        "Avaliacao": "4.4 Estrelas"
+      },
+      {
+        "AtracaoNome": "Visita ao Jardim Botânico",
+        "Descricao": "Passeie por um jardim exuberante e diversificado.",
+        "Categoria": "Passeios",
+        "Localizacao": "Avenida das Plantas, Sydney, Austrália",
+        "Custo": "Moderado",
+        "Avaliacao": "4.6 Estrelas"
+      },
+      {
+        "AtracaoNome": "Tour de Helicóptero pela Cidade",
+        "Descricao": "Explore a cidade do alto com um emocionante passeio de helicóptero.",
+        "Categoria": "Passeios",
+        "Localizacao": "Rua do Céu, Nova Iorque, Estados Unidos",
+        "Custo": "Luxuoso",
+        "Avaliacao": "4.9 Estrelas"
+      },
+      {
+        "AtracaoNome": "Jantar no Cruzeiro de Luxo",
+        "Descricao": "Um jantar requintado a bordo de um cruzeiro de luxo.",
+        "Categoria": "Passeios",
+        "Localizacao": "Avenida do Mar, Paris, França",
+        "Custo": "Luxuoso",
+        "Avaliacao": "4.8 Estrelas"
+      },
+      {
+        "AtracaoNome": "Expedição de Safári na Savana",
+        "Descricao": "Uma aventura inesquecível na savana africana com acomodações de luxo.",
+        "Categoria": "Passeios",
+        "Localizacao": "Avenida da Vida Selvagem, Nairóbi, Quênia",
+        "Custo": "Luxuoso",
+        "Avaliacao": "4.7 Estrelas"
+      },
+      {
+        "AtracaoNome": "Museu da História Local",
+        "Descricao": "Descubra a história da cidade em um museu acessível.",
+        "Categoria": "Cultura",
+        "Localizacao": "Rua da História, Lisboa, Portugal",
+        "Custo": "Econômico",
+        "Avaliacao": "4.2 Estrelas"
+      },
+      {
+        "AtracaoNome": "Galeria de Arte do Bairro",
+        "Descricao": "Exposições de artistas locais em um espaço cultural acessível.",
+        "Categoria": "Cultura",
+        "Localizacao": "Avenida das Artes, Buenos Aires, Argentina",
+        "Custo": "Econômico",
+        "Avaliacao": "4.0 Estrelas"
+      },
+      {
+        "AtracaoNome": "Visita à Casa Histórica",
+        "Descricao": "Explore a casa de uma figura histórica local.",
+        "Categoria": "Cultura",
+        "Localizacao": "Rua da Casa, Madrid, Espanha",
+        "Custo": "Econômico",
+        "Avaliacao": "4.1 Estrelas"
+      },
+      {
+        "AtracaoNome": "Museu de Arte Contemporânea",
+        "Descricao": "Admire obras de artistas contemporâneos em um museu renomado.",
+        "Categoria": "Cultura",
+        "Localizacao": "Avenida da Arte, Paris, França",
+        "Custo": "Moderado",
+        "Avaliacao": "4.5 Estrelas"
+      },
+      {
+        "AtracaoNome": "Teatro de Ópera da Cidade",
+        "Descricao": "Assista a espetáculos de ópera e teatro em um local cultural.",
+        "Categoria": "Cultura",
+        "Localizacao": "Rua do Teatro, Roma, Itália",
+        "Custo": "Moderado",
+        "Avaliacao": "4.4 Estrelas"
+      },
+      {
+        "AtracaoNome": "Visita ao Museu de Ciências",
+        "Descricao": "Explore o mundo da ciência em um museu interativo.",
+        "Categoria": "Cultura",
+        "Localizacao": "Avenida da Ciência, Sidney, Austrália",
+        "Custo": "Moderado",
+        "Avaliacao": "4.6 Estrelas"
+      },
+      {
+        "AtracaoNome": "Visita ao Museu de Arte Renomado",
+        "Descricao": "Admire obras-primas de artistas famosos em um museu de renome.",
+        "Categoria": "Cultura",
+        "Localizacao": "Avenida da Arte Renomada, Nova Iorque, EUA",
+        "Custo": "Luxuoso",
+        "Avaliacao": "4.9 Estrelas"
+      },
+      {
+        "AtracaoNome": "Ópera de Classe Mundial",
+        "Descricao": "Assista a espetáculos de ópera de classe mundial em um teatro luxuoso.",
+        "Categoria": "Cultura",
+        "Localizacao": "Rua da Ópera, Viena, Áustria",
+        "Custo": "Luxuoso",
+        "Avaliacao": "4.8 Estrelas"
+      },
+      {
+        "AtracaoNome": "Visita ao Museu de Arte Moderna",
+        "Descricao": "Explore o mundo da arte moderna em um museu luxuoso.",
+        "Categoria": "Cultura",
+        "Localizacao": "Avenida da Arte Moderna, Londres, Reino Unido",
+        "Custo": "Luxuoso",
+        "Avaliacao": "4.7 Estrelas"
+      },
+      {
+        "AtracaoNome": "Bar da Esquina",
+        "Descricao": "Um bar acolhedor com música ao vivo e preços acessíveis.",
+        "Categoria": "Bares",
+        "Localizacao": "Rua da Alegria, Lisboa, Portugal",
+        "Custo": "Econômico",
+        "Avaliacao": "4.2 Estrelas"
+      },
+      {
+        "AtracaoNome": "Bar Local",
+        "Descricao": "Um ponto de encontro popular para os moradores locais.",
+        "Categoria": "Bares",
+        "Localizacao": "Avenida da Diversão, Buenos Aires, Argentina",
+        "Custo": "Econômico",
+        "Avaliacao": "4.0 Estrelas"
+      },
+      {
+        "AtracaoNome": "Pub da Cidade",
+        "Descricao": "Um pub clássico com cervejas artesanais e preços acessíveis.",
+        "Categoria": "Bares",
+        "Localizacao": "Rua da Cerveja, Madri, Espanha",
+        "Custo": "Econômico",
+        "Avaliacao": "4.1 Estrelas"
+      },
+      {
+        "AtracaoNome": "Lounge com Terraço",
+        "Descricao": "Um lounge elegante com vistas deslumbrantes e coquetéis exclusivos.",
+        "Categoria": "Bares",
+        "Localizacao": "Avenida dos Coquetéis, Paris, França",
+        "Custo": "Moderado",
+        "Avaliacao": "4.5 Estrelas"
+      },
+      {
+        "AtracaoNome": "Bar de Vinhos",
+        "Descricao": "Um bar especializado em vinhos de qualidade e petiscos gourmet.",
+        "Categoria": "Bares",
+        "Localizacao": "Rua do Vinho, Roma, Itália",
+        "Custo": "Moderado",
+        "Avaliacao": "4.4 Estrelas"
+      },
+      {
+        "AtracaoNome": "Coquetelaria da Cidade",
+        "Descricao": "Um lugar moderno para desfrutar de coquetéis criativos e música ao vivo.",
+        "Categoria": "Bares",
+        "Localizacao": "Avenida dos Coquetéis, Sidney, Austrália",
+        "Custo": "Moderado",
+        "Avaliacao": "4.6 Estrelas"
+      },
+      {
+        "AtracaoNome": "Bar do Rooftop",
+        "Descricao": "Um bar no topo de um arranha-céu com vistas espetaculares e bebidas de alta qualidade.",
+        "Categoria": "Bares",
+        "Localizacao": "Rua das Alturas, Nova Iorque, EUA",
+        "Custo": "Luxuoso",
+        "Avaliacao": "4.9 Estrelas"
+      },
+      {
+        "AtracaoNome": "Lounge de Champanhe",
+        "Descricao": "Um lounge sofisticado que serve champanhe e petiscos gourmet.",
+        "Categoria": "Bares",
+        "Localizacao": "Avenida do Champanhe, Londres, Reino Unido",
+        "Custo": "Luxuoso",
+        "Avaliacao": "4.0 Estrelas"
+    },
+    {
+        "AtracaoNome": "Campo de Futebol Comunitário",
+        "Descricao": "Um campo público para jogar futebol com amigos.",
+        "Categoria": "Esportes",
+        "Localizacao": "Rua do Futebol, Lisboa, Portugal",
+        "Custo": "Econômico",
+        "Avaliacao": "4.2 Estrelas"
+    },
+    {
+        "AtracaoNome": "Pista de Corrida Local",
+        "Descricao": "Uma pista de corrida ao ar livre aberta a todos.",
+        "Categoria": "Esportes",
+        "Localizacao": "Avenida da Corrida, Buenos Aires, Argentina",
+        "Custo": "Econômico",
+        "Avaliacao": "4.0 Estrelas"
+    },
+    {
+        "AtracaoNome": "Quadra de Tênis Pública",
+        "Descricao": "Quadras de tênis públicas para jogar partidas amistosas.",
+        "Categoria": "Esportes",
+        "Localizacao": "Rua das Raquetes, Madri, Espanha",
+        "Custo": "Econômico",
+        "Avaliacao": "4.1 Estrelas"
+    },
+    {
+        "AtracaoNome": "Clube de Golfe Local",
+        "Descricao": "Um clube de golfe com campos bem cuidados e instalações de qualidade.",
+        "Categoria": "Esportes",
+        "Localizacao": "Avenida do Golfe, Paris, França",
+        "Custo": "Moderado",
+        "Avaliacao": "4.5 Estrelas"
+    },      
+    {
+        "AtracaoNome": "Complexo Esportivo",
+        "Descricao": "Um complexo com várias opções esportivas, incluindo piscina e academia.",
+        "Categoria": "Esportes",
+        "Localizacao": "Rua do Esporte, Roma, Itália",
+        "Custo": "Moderado",
+        "Avaliacao": "4.4 Estrelas"
+    },                                                                                                                                                                          
+    {
+        "AtracaoNome": "Centro de Boliche",
+        "Descricao": "Desfrute de uma tarde de boliche com amigos e familiares.",
+        "Categoria": "Esportes",
+        "Localizacao": "Avenida das Pistas, Sidney, Austrália",
+        "Custo": "Moderado",
+        "Avaliacao": "4.6 Estrelas"
+    },              
+    {
+        "AtracaoNome": "Clube de Tênis de Prestígio",
+        "Descricao": "Um clube de tênis de prestígio com instalações de classe mundial.",
+        "Categoria": "Esportes",
+        "Localizacao": "Rua do Tênis, Nova Iorque, EUA",
+        "Custo": "Luxuoso",
+        "Avaliacao": "4.9 Estrelas"
+    },
+    {
+        "AtracaoNome": "Clube de Iatismo de Elite",
+        "Descricao": "Um clube de iatismo exclusivo com barcos de luxo e serviços de primeira classe.",
+        "Categoria": "Esportes",
+        "Localizacao": "Avenida dos Iatistas, Londres, Reino Unido",
+        "Custo": "Luxuoso",
+        "Avaliacao": "4.8 Estrelas"
+    },
+    {
+        "AtracaoNome": "Campos de Golfe de Campeonato",
+        "Descricao": "Campos de golfe de campeonato projetados por renomados arquitetos de golfe.",
+        "Categoria": "Esportes",
+        "Localizacao": "Avenida dos Campeões, Los Angeles, EUA",
+        "Custo": "Luxuoso",
+        "Avaliacao": "4.7 Estrelas"
+    },      
+    {
+        "AtracaoNome": "Hotel Central",
+        "Descricao": "Um hotel confortável no coração da cidade.",
+        "Categoria": "Hotel",
+        "Localizacao": "Rua do Centro, Lisboa, Portugal",
+        "Custo": "Econômico",
+        "Avaliacao": "3.8 Estrelas"
+    },
+    {
+        "AtracaoNome": "Hotel da Praia",
+        "Descricao": "Um hotel próximo à praia, ideal para férias em família.",
+        "Categoria": "Hotel",
+        "Localizacao": "Avenida da Praia, Barcelona, Espanha",
+        "Custo": "Econômico",
+        "Avaliacao": "3.9 Estrelas"
+    },
+    {
+        "AtracaoNome": "Hotel da Cidade Velha",
+        "Descricao": "Um hotel aconchegante em uma parte histórica da cidade.",
+        "Categoria": "Hotel",
+        "Localizacao": "Rua das Histórias, Roma, Itália",
+        "Custo": "Econômico",
+        "Avaliacao": "4.0 Estrelas"
+    },
+    {
+        "AtracaoNome": "Hotel Executivo",
+        "Descricao": "Um hotel com comodidades para viajantes de negócios.",
+        "Categoria": "Hotel",
+        "Localizacao": "Avenida dos Negócios, Paris, França",
+        "Custo": "Moderado",
+        "Avaliacao": "4.2 Estrelas"
+    },
+    {
+        "AtracaoNome": "Hotel Panorâmico",
+        "Descricao": "Um hotel com vistas deslumbrantes da cidade.",
+        "Categoria": "Hotel",
+        "Localizacao": "Rua das Vistas, Sydney, Austrália",
+        "Custo": "Moderado",
+        "Avaliacao": "4.3 Estrelas"
+    },
+    {
+        "AtracaoNome": "Hotel Moderno",
+        "Descricao": "Um hotel contemporâneo com instalações de primeira classe.",
+        "Categoria": "Hotel",
+        "Localizacao": "Avenida Moderna, Londres, Reino Unido",
+        "Custo": "Moderado",
+        "Avaliacao": "4.4 Estrelas"
+      },
+      {
+        "AtracaoNome": "Hotel de Luxo",
+        "Descricao": "Um hotel de luxo com spa e restaurantes gourmet.",
+        "Categoria": "Hotel",
+        "Localizacao": "Rua dos Sonhos, Nova Iorque, EUA",
+        "Custo": "Luxuoso",
+        "Avaliacao": "4.7 Estrelas"
+      },
+      {
+        "AtracaoNome": "Resort à Beira-Mar",
+        "Descricao": "Um resort de alto padrão à beira-mar com piscinas e entretenimento.",
+        "Categoria": "Hotel",
+        "Localizacao": "Avenida do Mar, Cancún, México",
+        "Custo": "Luxuoso",
+        "Avaliacao": "4.8 Estrelas"
+      },
+      {
+        "AtracaoNome": "Hotel de Montanha",
+        "Descricao": "Um hotel de luxo nas montanhas com atividades ao ar livre.",
+        "Categoria": "Hotel",
+        "Localizacao": "Rua das Montanhas, Interlaken, Suíça",
+        "Custo": "Luxuoso",
+        "Avaliacao": "4.9 Estrelas"
+      },
+      {
+        "AtracaoNome": "Feira de Artesanato da Rua Principal",
+        "Descricao": "Uma feira de artesanato com produtos locais e músicos de rua.",
+        "Categoria": "Eventos",
+        "Localizacao": "Rua Principal, Lisboa, Portugal",
+        "Custo": "Econômico",
+        "Avaliacao": "4.0 Estrelas"
+      },
+      {
+        "AtracaoNome": "Concerto no Parque da Cidade",
+        "Descricao": "Um concerto gratuito no parque com artistas locais.",
+        "Categoria": "Eventos",
+        "Localizacao": "Parque da Cidade, Barcelona, Espanha",
+        "Custo": "Econômico",
+        "Avaliacao": "3.8 Estrelas"
+      },
+      {
+        "AtracaoNome": "Feira de Alimentos Locais",
+        "Descricao": "Uma feira de alimentos com produtos frescos da região.",
+        "Categoria": "Eventos",
+        "Localizacao": "Rua dos Sabores, Roma, Itália",
+        "Custo": "Econômico",
+        "Avaliacao": "3.9 Estrelas"
+      },
+      {
+        "AtracaoNome": "Festival de Música da Cidade",
+        "Descricao": "Um festival de música de um dia com bandas populares.",
+        "Categoria": "Eventos",
+        "Localizacao": "Parque Musical, Paris, França",
+        "Custo": "Moderado",
+        "Avaliacao": "4.2 Estrelas"
+      },
+      {
+        "AtracaoNome": "Conferência de Inovação",
+        "Descricao": "Uma conferência com palestras sobre tecnologia e inovação.",
+        "Categoria": "Eventos",
+        "Localizacao": "Centro de Convenções, Sydney, Austrália",
+        "Custo": "Moderado",
+        "Avaliacao": "4.3 Estrelas"
+      },
+      {
+        "AtracaoNome": "Exposição de Arte Contemporânea",
+        "Descricao": "Uma exposição de arte com obras de artistas renomados.",
+        "Categoria": "Eventos",
+        "Localizacao": "Galeria de Arte Moderna, Londres, Reino Unido",
+        "Custo": "Moderado",
+        "Avaliacao": "4.4 Estrelas"
+      },
+      {
+        "AtracaoNome": "Gala de Caridade de Celebridades",
+        "Descricao": "Uma gala de caridade com presença de celebridades e chefs famosos.",
+        "Categoria": "Eventos",
+        "Localizacao": "Mansão das Estrelas, Nova Iorque, EUA",
+        "Custo": "Luxuoso",
+        "Avaliacao": "4.8 Estrelas"
+      },
+      {
+        "AtracaoNome": "Festival de Vinhos Exclusivo",
+        "Descricao": "Um festival de vinhos com degustações de safras raras.",
+        "Categoria": "Eventos",
+        "Localizacao": "Vinícola Premium, Bordeaux, França",
+        "Custo": "Luxuoso",
+        "Avaliacao": "4.7 Estrelas"
+      },
+      {
+        "AtracaoNome": "Baile de Máscaras de Gala",
+        "Descricao": "Um baile de máscaras em um palácio histórico.",
+        "Categoria": "Eventos",
+        "Localizacao": "Palácio Real, Veneza, Itália",
+        "Custo": "Luxuoso",
+        "Avaliacao": "4.9 Estrelas"
+    }                                                                                                                      
+      
+      
+      
+      
+]
