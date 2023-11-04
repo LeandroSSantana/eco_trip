@@ -42,7 +42,7 @@ class OutingPageState extends State<OutingPage> {
     loadJsonData().then((data) {
       setState(() {
         jsonData = json.decode(data);
-        jsonData = jsonData.where((item) => item['Categoria'] ==  'Alimentação').toList();
+        jsonData = jsonData.where((item) => item['Categoria'] ==  'Passeios').toList();
       });
     });
   }
