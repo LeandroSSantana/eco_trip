@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:teste_telas/model/item/data.dart';
 import 'package:teste_telas/screens/category/category_page.dart';
+import 'package:teste_telas/screens/typesTrip/alimentationPage.dart';
+import 'package:teste_telas/screens/typesTrip/barPage.dart';
+import 'package:teste_telas/screens/typesTrip/culturePage.dart';
+import 'package:teste_telas/screens/typesTrip/esportPage.dart';
+import 'package:teste_telas/screens/typesTrip/eventsPage.dart';
+import 'package:teste_telas/screens/typesTrip/hotelPage.dart';
+import 'package:teste_telas/screens/typesTrip/outingPage.dart';
 
 class TravelPage extends StatefulWidget {
   final String localValue;
@@ -20,7 +27,8 @@ class _TravelPageState extends State<TravelPage> {
     'Cultura',
     'Bares',
     'Esportes',
-    'Teste',
+    'Hotel',
+    'Eventos'
   ];
 
   @override
@@ -67,18 +75,53 @@ class _TravelPageState extends State<TravelPage> {
 }
 
 // Função para criar um item clicável da lista
-Widget buildCategoryListTile(
-    BuildContext context, String label) {
+Widget buildCategoryListTile(BuildContext context, String label) {
   return ListTile(
     title: Text(label),
     onTap: () {
-      Navigator.of(context).push(
-        MaterialPageRoute(
-          builder: (context) => CategoryPage(
-            categoryName: label,
+      if (label == 'Alimentação') {
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => AlimentationPage(),
           ),
-        ),
-      );
+        );
+      } else if (label == 'Passeios') {
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => OutingPage(),
+          ),
+        );
+      } else if (label == 'Cultura') {
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => CulturePage(),
+          ),
+        );
+      } else if (label == 'Bares') {
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => BarPage(),
+          ),
+        );
+      }else if (label == 'Esportes') {
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => EsportPage(),
+          ),
+        );
+      }else if (label == 'Hotel') {
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => HotelPage(),
+          ),
+        );
+      } else if (label == 'Eventos') {
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => EventsPage(),
+          ),
+        );
+      }
     },
   );
 }
