@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:teste_telas/data/perfil_data.dart';
 import 'package:teste_telas/screens/dashboard/dashboard_page.dart';
 import 'package:teste_telas/screens/travelling_data/travelling_data_page.dart';
@@ -13,9 +14,17 @@ import 'screens/sign_up/sign_up_page.dart';
 import 'screens/splash/splash_screen.dart';
 import 'screens/travel_page/travel_page.dart';
 
-void main() {
-  runApp(MyApp());
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Supabase.initialize(
+    url: 'https://httgkbprivubryaczudo.supabase.co',
+    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh0dGdrYnByaXZ1YnJ5YWN6dWRvIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTg3NTc5OTAsImV4cCI6MjAxNDMzMzk5MH0.jCJdjEP_0pSScl-52sdjc8Ebbl5xG4olLHgrf6Itlag',
+  );
+  runApp(const MyApp());
 }
+
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

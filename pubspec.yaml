@@ -40,7 +40,10 @@ dependencies:
   icons_plus: ^4.0.0
   font_awesome_flutter: ^10.5.0
   flutter_svg: ^2.0.7
-  animated_splash_screen: ^1.1.0
+  supabase_flutter: ^1.10.24
+  http: ^1.1.0
+  image_picker: ^1.0.4
+  money_formatter: ^0.0.5
 
 
 dev_dependencies:

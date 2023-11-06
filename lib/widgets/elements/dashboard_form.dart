@@ -106,7 +106,7 @@ class _DashboardFormState extends State<DashboardForm> {
                   ),
                 ),
                 child: Text(
-                  'Viajar',
+                  'Calcule sua Viagem',
                   style: TextStyle(
                     fontSize: 18.0,
                     color: Colors.white,

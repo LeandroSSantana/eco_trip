@@ -56,7 +56,6 @@ class _TravelPageState extends State<TravelPage> {
                 return buildCategoryListTile(
                   context,
                   categories[index]
-
                 );
               },
             ),
