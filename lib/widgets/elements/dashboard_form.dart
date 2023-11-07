@@ -18,7 +18,7 @@ class _DashboardFormState extends State<DashboardForm> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(height: 20),
+          SizedBox(height: 10),
           Container(
             margin: EdgeInsets.only(bottom: 20.0),
             child: TextFormField(
@@ -76,7 +76,7 @@ class _DashboardFormState extends State<DashboardForm> {
                 ),
                 labelText: 'Tipo de viagem',
               ),
-              items: ['Simples', 'Moderada', 'Luxuosa'].map((String value) {
+              items: ['Economica', 'Moderada', 'Luxuosa'].map((String value) {
                 return DropdownMenuItem<String>(
                   value: value,
                   child: Text(value),
@@ -87,8 +87,8 @@ class _DashboardFormState extends State<DashboardForm> {
           ),
           Center(
             child: SizedBox(
-              width: 300.0,
-              height: 60.0,
+              width: 210.0,
+              height: 50.0,
               child: ElevatedButton(
                 onPressed: () {
                   Navigator.push(
@@ -108,7 +108,7 @@ class _DashboardFormState extends State<DashboardForm> {
                 child: Text(
                   'Calcule sua Viagem',
                   style: TextStyle(
-                    fontSize: 18.0,
+                    fontSize: 15,
                     color: Colors.white,
                   ),
                 ),

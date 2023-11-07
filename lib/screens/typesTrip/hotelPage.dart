@@ -51,7 +51,7 @@ class HotelPageState extends State<HotelPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Dados do JSON'),
+        title: Text('Hotéis'),
       ),
       body: SafeArea(
         child: Center(

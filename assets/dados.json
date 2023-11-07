@@ -310,7 +310,7 @@
         "Localizacao": "Avenida do Golfe, Paris, França",
         "Custo": "Moderado",
         "Avaliacao": "4.5 Estrelas"
-    },      
+    },
     {
         "AtracaoNome": "Complexo Esportivo",
         "Descricao": "Um complexo com várias opções esportivas, incluindo piscina e academia.",
@@ -318,7 +318,7 @@
         "Localizacao": "Rua do Esporte, Roma, Itália",
         "Custo": "Moderado",
         "Avaliacao": "4.4 Estrelas"
-    },                                                                                                                                                                          
+    },
     {
         "AtracaoNome": "Centro de Boliche",
         "Descricao": "Desfrute de uma tarde de boliche com amigos e familiares.",
@@ -326,7 +326,7 @@
         "Localizacao": "Avenida das Pistas, Sidney, Austrália",
         "Custo": "Moderado",
         "Avaliacao": "4.6 Estrelas"
-    },              
+    },
     {
         "AtracaoNome": "Clube de Tênis de Prestígio",
         "Descricao": "Um clube de tênis de prestígio com instalações de classe mundial.",
@@ -350,7 +350,7 @@
         "Localizacao": "Avenida dos Campeões, Los Angeles, EUA",
         "Custo": "Luxuoso",
         "Avaliacao": "4.7 Estrelas"
-    },      
+    },
     {
         "AtracaoNome": "Hotel Central",
         "Descricao": "Um hotel confortável no coração da cidade.",
@@ -494,9 +494,9 @@
         "Localizacao": "Palácio Real, Veneza, Itália",
         "Custo": "Luxuoso",
         "Avaliacao": "4.9 Estrelas"
-    }                                                                                                                      
-      
-      
-      
-      
+    }
+
+
+
+
 ]

@@ -84,12 +84,12 @@ class ProfilePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(20),
+                  padding: const EdgeInsets.all(15),
                   child:
                       customButton(context, 'Salvar', '/travelling_data_page'),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(20),
+                  padding: const EdgeInsets.all(15),
                   child: customButton(context, 'Calcular', '/dashboard_page'),
                 ),
               ],

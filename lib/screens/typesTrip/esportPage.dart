@@ -51,7 +51,7 @@ class EsportPageState extends State<EsportPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Dados do JSON'),
+        title: Text('Atividades Esportivas'),
       ),
       body: SafeArea(
         child: Center(

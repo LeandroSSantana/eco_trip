@@ -1,19 +1,21 @@
+import 'package:flutter/material.dart';
+
 class Item {
-  final String imageUrl;
+  final AssetImage placeImage;
   final String title;
   final String description;
 
   Item({
-    required this.imageUrl,
-    required this.title,
-    required this.description,
-  });
+  required this.placeImage,
+  required this.title,
+  required this.description,
+});
 }
 
 List<Item> items = [
   Item(
-    imageUrl: 'https://tinyurl.com/3cvazxff',
-    title: 'Miami',
+    placeImage: AssetImage('images/bg_02.png'),
+    title: 'Nova York',
     description: '',
   ),
 ];

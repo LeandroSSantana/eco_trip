@@ -122,19 +122,19 @@ class SignUpPage extends StatelessWidget {
                       color: Color(0xFF0047AB),
                       borderRadius: BorderRadius.circular(40),
                       child: Padding(
-                        padding: EdgeInsets.symmetric(vertical: 10, horizontal: 70),
+                        padding: EdgeInsets.symmetric(vertical: 5, horizontal: 40),
                         child: Text(
                           'Registre-se',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 18,
+                            fontSize: 15,
                             fontWeight: FontWeight.w500,
                           ),
                         ),
                       ),
                     ),
                   ),
-                  const SizedBox(height: 25),
+                  const SizedBox(height: 20),
                   // login
                   Container(
                     child: GestureDetector(
@@ -146,7 +146,7 @@ class SignUpPage extends StatelessWidget {
                           text: 'Já possui uma conta? ',
                           style: TextStyle(
                             color: Colors.black87,
-                            fontSize: 18,
+                            fontSize: 15,
                             fontFamily: 'Roboto-Regular',
                           ),
                           children: const <TextSpan>[

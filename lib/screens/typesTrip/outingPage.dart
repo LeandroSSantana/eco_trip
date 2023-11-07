@@ -51,7 +51,7 @@ class OutingPageState extends State<OutingPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Dados do JSON'),
+        title: Text('Passeios'),
       ),
       body: SafeArea(
         child: Center(

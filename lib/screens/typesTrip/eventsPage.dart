@@ -51,7 +51,7 @@ class EventsPageState extends State<EventsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Dados do JSON'),
+        title: Text('Eventos'),
       ),
       body: SafeArea(
         child: Center(

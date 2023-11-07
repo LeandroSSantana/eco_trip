@@ -51,7 +51,7 @@ class BarPageState extends State<BarPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Dados do JSON'),
+        title: Text('Bares'),
       ),
       body: SafeArea(
         child: Center(

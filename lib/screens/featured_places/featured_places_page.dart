@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors, unnecessary_string_interpolations
-
 import 'package:flutter/material.dart';
 import 'package:teste_telas/model/places/places.dart';
 
@@ -35,6 +33,15 @@ class FeaturedPlacesPage extends StatelessWidget {
                   SizedBox(height: 8),
                   Text(
                     places.description,
+                    style: TextStyle(fontSize: 16),
+                  ),
+                  SizedBox(height: 8),
+                  Text(
+                    'Days: ${places.days}', // Exibir os dias
+                    style: TextStyle(fontSize: 16),
+                  ),
+                  Text(
+                    'Budget: \$${places.budget.toStringAsFixed(2)}', // Exibir o orçamento
                     style: TextStyle(fontSize: 16),
                   ),
                   SizedBox(height: 16),
