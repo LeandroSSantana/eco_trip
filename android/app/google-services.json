@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "890896695734",
+    "project_id": "ecotrip-b7637",
+    "storage_bucket": "ecotrip-b7637.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:890896695734:android:36925857bab5eee1998117",
+        "android_client_info": {
+          "package_name": "com.example.eco_trip"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMDDxIQOj3d0lQu9Y12YRUrg5j4-oaJvU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

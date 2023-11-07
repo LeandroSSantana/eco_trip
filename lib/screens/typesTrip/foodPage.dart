@@ -12,14 +12,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: AlimentationPage(),
+      home: FoodPage(),
     );
   }
 }
 
-class AlimentationPage extends StatefulWidget {
+class FoodPage extends StatefulWidget {
   @override
-  AlimentationPageState createState() => AlimentationPageState();
+  FoodPageState createState() => FoodPageState();
 }
 
 // Função para carregar o arquivo JSON
@@ -33,7 +33,7 @@ Future<String> loadJsonData() async {
 }
 
 
-class AlimentationPageState extends State<AlimentationPage> {
+class FoodPageState extends State<FoodPage> {
   List<dynamic> jsonData = [];
 
   @override
@@ -51,7 +51,7 @@ class AlimentationPageState extends State<AlimentationPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Dados do JSON'),
+        title: Text('Alimentação'),
       ),
       body: SafeArea(
         child: Center(

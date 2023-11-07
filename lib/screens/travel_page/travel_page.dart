@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:teste_telas/model/item/data.dart';
-import 'package:teste_telas/screens/category/category_page.dart';
-import 'package:teste_telas/screens/typesTrip/alimentationPage.dart';
 import 'package:teste_telas/screens/typesTrip/barPage.dart';
 import 'package:teste_telas/screens/typesTrip/culturePage.dart';
 import 'package:teste_telas/screens/typesTrip/esportPage.dart';
 import 'package:teste_telas/screens/typesTrip/eventsPage.dart';
+import 'package:teste_telas/screens/typesTrip/foodPage.dart';
 import 'package:teste_telas/screens/typesTrip/hotelPage.dart';
 import 'package:teste_telas/screens/typesTrip/outingPage.dart';
 
@@ -46,12 +45,7 @@ class _TravelPageState extends State<TravelPage> {
                 borderRadius: BorderRadius.circular(20.0),
               ),
               child: ClipRRect(
-                child: Image.network(
-                  items[0].imageUrl,
-                  fit: BoxFit.cover,
-                  width: double.infinity,
-                  height: double.infinity,
-                ),
+                child: Image(image: items[0].placeImage, fit: BoxFit.cover),
               ),
             ),
             SizedBox(height: 10),
@@ -62,9 +56,8 @@ class _TravelPageState extends State<TravelPage> {
               separatorBuilder: (context, index) => Divider(),
               itemBuilder: (context, index) {
                 return buildCategoryListTile(
-                  context,
-                  categories[index]
-
+                    context,
+                    categories[index]
                 );
               },
             ),
@@ -83,7 +76,7 @@ Widget buildCategoryListTile(BuildContext context, String label) {
       if (label == 'Alimentação') {
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (context) => AlimentationPage(),
+            builder: (context) => FoodPage(),
           ),
         );
       } else if (label == 'Passeios') {

@@ -51,7 +51,7 @@ class CulturePageState extends State<CulturePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Dados do JSON'),
+        title: Text('Cultura'),
       ),
       body: SafeArea(
         child: Center(

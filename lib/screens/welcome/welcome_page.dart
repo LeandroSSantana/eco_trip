@@ -72,7 +72,7 @@ class WelcomePage extends StatelessWidget {
                     child: Text('Começar Agora',
                         style: TextStyle(
                             color: Colors.white,
-                            fontSize: 18,
+                            fontSize: 15,
                             fontWeight: FontWeight.w500)),
                   ),
                 ),

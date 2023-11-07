@@ -1,10 +1,11 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:teste_telas/data/perfil_data.dart';
 import 'package:teste_telas/screens/dashboard/dashboard_page.dart';
-import 'package:teste_telas/screens/typesTrip/alimentationPage.dart';
 import 'package:teste_telas/screens/travelling_data/travelling_data_page.dart';
+import 'package:teste_telas/screens/typesTrip/foodPage.dart';
 import 'package:teste_telas/screens/typesTrip/barPage.dart';
 import 'package:teste_telas/screens/typesTrip/culturePage.dart';
 import 'package:teste_telas/screens/typesTrip/esportPage.dart';
@@ -20,9 +21,13 @@ import 'screens/sign_up/sign_up_page.dart';
 import 'screens/splash/splash_screen.dart';
 import 'screens/travel_page/travel_page.dart';
 
-void main() {
-  runApp(MyApp());
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  // await Firebase.initializeApp();
+  runApp(const MyApp());
 }
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -43,7 +48,7 @@ class MyApp extends StatelessWidget {
         '/travel_page': (context) => TravelPage(),
         '/travelling_data_page': (context) => TravellingDataPage(),
         '/welcome_page': (context) => WelcomePage(perfilUsuario),
-        '/alimentationPage': (context) => AlimentationPage(),
+        '/alimentationPage': (context) => FoodPage(),
         '/outingPage': (context) => OutingPage(),
         '/culturePage': (context) => CulturePage(),
         '/barPage': (context) => BarPage(),

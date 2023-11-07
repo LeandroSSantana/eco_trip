@@ -25,12 +25,10 @@ enum Interesse {
   cultura,
   aoArLivre,
   descobertas,
-  // Adicionar outros interesses conforme necessário
 }
 
 enum MetaViagem {
   descobrir,
   relaxar,
   agitar,
-  // Adicionar outras metas de viagem conforme necessário
 }
