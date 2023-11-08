@@ -1,502 +1,842 @@
 [
-    {
-        "AtracaoNome": "Café da Esquina",
-        "Descricao": "Um café acolhedor com uma variedade de opções de café da manhã.",
-        "Categoria": "Alimentação",
-        "Localizacao": "Rua das Flores, Lisboa, Portugal",
-        "Custo": "Econômico",
-        "Avaliacao": "4.2 Estrelas"
-      },
-      {
-        "AtracaoNome": "Pizzaria da Família",
-        "Descricao": "Pizza deliciosa em um ambiente familiar.",
-        "Categoria": "Alimentação",
-        "Localizacao": "Avenida Principal, Roma, Itália",
-        "Custo": "Econômico",
-        "Avaliacao": "4.0 Estrelas"
-      },
-      {
-        "AtracaoNome": "Lanchonete da Praia",
-        "Descricao": "Lanches rápidos e refrescantes perto da praia.",
-        "Categoria": "Alimentação",
-        "Localizacao": "Avenida Beira-Mar, Copacabana, Brasil",
-        "Custo": "Econômico",
-        "Avaliacao": "4.1 Estrelas"
-      },
-      {
-        "AtracaoNome": "Restaurante do Chef",
-        "Descricao": "Pratos elaborados pelo chef renomado da cidade.",
-        "Categoria": "Alimentação",
-        "Localizacao": "Rua Gastronômica, Paris, França",
-        "Custo": "Moderado",
-        "Avaliacao": "4.5 Estrelas"
-      },
-      {
-        "AtracaoNome": "Churrascaria da Esquina",
-        "Descricao": "Carnes suculentas grelhadas com uma variedade de acompanhamentos.",
-        "Categoria": "Alimentação",
-        "Localizacao": "Avenida dos Sabores, Buenos Aires, Argentina",
-        "Custo": "Moderado",
-        "Avaliacao": "4.4 Estrelas"
-      },
-      {
-        "AtracaoNome": "Sushi Zen",
-        "Descricao": "Sushi fresco e pratos japoneses autênticos em um ambiente zen.",
-        "Categoria": "Alimentação",
-        "Localizacao": "Avenida Sushi, Tóquio, Japão",
-        "Custo": "Moderado",
-        "Avaliacao": "4.6 Estrelas"
-      },
-      {
-        "AtracaoNome": "Restaurante Estrelado Michelin",
-        "Descricao": "Jantar de classe mundial em um restaurante premiado com estrelas Michelin.",
-        "Categoria": "Alimentação",
-        "Localizacao": "Avenida Gourmet, Nova Iorque, Estados Unidos",
-        "Custo": "Luxuoso",
-        "Avaliacao": "4.9 Estrelas"
-      },
-      {
-        "AtracaoNome": "Bistrô Elegante",
-        "Descricao": "Culinária gourmet e vinhos finos em um ambiente elegante.",
-        "Categoria": "Alimentação",
-        "Localizacao": "Rua Elegância, Paris, França",
-        "Custo": "Luxuoso",
-        "Avaliacao": "4.8 Estrelas"
-      },
-      {
-        "AtracaoNome": "Restaurante à Beira-Mar",
-        "Descricao": "Frutos do mar frescos e vistas deslumbrantes à beira-mar.",
-        "Categoria": "Alimentação",
-        "Localizacao": "Avenida Oceânica, Sydney, Austrália",
-        "Custo": "Luxuoso",
-        "Avaliacao": "4.7 Estrelas"
-      },
-      {
-        "AtracaoNome": "Passeio no Parque das Flores",
-        "Descricao": "Desfrute de um dia tranquilo explorando a beleza natural.",
-        "Categoria": "Passeios",
-        "Localizacao": "Rua das Flores, Lisboa, Portugal",
-        "Custo": "Econômico",
-        "Avaliacao": "4.2 Estrelas"
-      },
-      {
-        "AtracaoNome": "Caminhada pelo Bosque Encantado",
-        "Descricao": "Trilhas serenas em meio à natureza intocada.",
-        "Categoria": "Passeios",
-        "Localizacao": "Avenida da Floresta, Brasília, Brasil",
-        "Custo": "Econômico",
-        "Avaliacao": "4.0 Estrelas"
-      },
-      {
-        "AtracaoNome": "Visita ao Museu Histórico",
-        "Descricao": "Descubra a história da cidade em um museu acessível.",
-        "Categoria": "Passeios",
-        "Localizacao": "Rua da História, Madri, Espanha",
-        "Custo": "Econômico",
-        "Avaliacao": "4.1 Estrelas"
-      },
-      {
-        "AtracaoNome": "Passeio de Barco no Rio Sereno",
-        "Descricao": "Navegue pelas águas tranquilas com vistas panorâmicas.",
-        "Categoria": "Passeios",
-        "Localizacao": "Avenida da Marina, Veneza, Itália",
-        "Custo": "Moderado",
-        "Avaliacao": "4.5 Estrelas"
-      },
-      {
-        "AtracaoNome": "Excursão ao Castelo Antigo",
-        "Descricao": "Explore as muralhas e história de um castelo histórico.",
-        "Categoria": "Passeios",
-        "Localizacao": "Rua do Castelo, Edimburgo, Escócia",
-        "Custo": "Moderado",
-        "Avaliacao": "4.4 Estrelas"
-      },
-      {
-        "AtracaoNome": "Visita ao Jardim Botânico",
-        "Descricao": "Passeie por um jardim exuberante e diversificado.",
-        "Categoria": "Passeios",
-        "Localizacao": "Avenida das Plantas, Sydney, Austrália",
-        "Custo": "Moderado",
-        "Avaliacao": "4.6 Estrelas"
-      },
-      {
-        "AtracaoNome": "Tour de Helicóptero pela Cidade",
-        "Descricao": "Explore a cidade do alto com um emocionante passeio de helicóptero.",
-        "Categoria": "Passeios",
-        "Localizacao": "Rua do Céu, Nova Iorque, Estados Unidos",
-        "Custo": "Luxuoso",
-        "Avaliacao": "4.9 Estrelas"
-      },
-      {
-        "AtracaoNome": "Jantar no Cruzeiro de Luxo",
-        "Descricao": "Um jantar requintado a bordo de um cruzeiro de luxo.",
-        "Categoria": "Passeios",
-        "Localizacao": "Avenida do Mar, Paris, França",
-        "Custo": "Luxuoso",
-        "Avaliacao": "4.8 Estrelas"
-      },
-      {
-        "AtracaoNome": "Expedição de Safári na Savana",
-        "Descricao": "Uma aventura inesquecível na savana africana com acomodações de luxo.",
-        "Categoria": "Passeios",
-        "Localizacao": "Avenida da Vida Selvagem, Nairóbi, Quênia",
-        "Custo": "Luxuoso",
-        "Avaliacao": "4.7 Estrelas"
-      },
-      {
-        "AtracaoNome": "Museu da História Local",
-        "Descricao": "Descubra a história da cidade em um museu acessível.",
-        "Categoria": "Cultura",
-        "Localizacao": "Rua da História, Lisboa, Portugal",
-        "Custo": "Econômico",
-        "Avaliacao": "4.2 Estrelas"
-      },
-      {
-        "AtracaoNome": "Galeria de Arte do Bairro",
-        "Descricao": "Exposições de artistas locais em um espaço cultural acessível.",
-        "Categoria": "Cultura",
-        "Localizacao": "Avenida das Artes, Buenos Aires, Argentina",
-        "Custo": "Econômico",
-        "Avaliacao": "4.0 Estrelas"
-      },
-      {
-        "AtracaoNome": "Visita à Casa Histórica",
-        "Descricao": "Explore a casa de uma figura histórica local.",
-        "Categoria": "Cultura",
-        "Localizacao": "Rua da Casa, Madrid, Espanha",
-        "Custo": "Econômico",
-        "Avaliacao": "4.1 Estrelas"
-      },
-      {
-        "AtracaoNome": "Museu de Arte Contemporânea",
-        "Descricao": "Admire obras de artistas contemporâneos em um museu renomado.",
-        "Categoria": "Cultura",
-        "Localizacao": "Avenida da Arte, Paris, França",
-        "Custo": "Moderado",
-        "Avaliacao": "4.5 Estrelas"
-      },
-      {
-        "AtracaoNome": "Teatro de Ópera da Cidade",
-        "Descricao": "Assista a espetáculos de ópera e teatro em um local cultural.",
-        "Categoria": "Cultura",
-        "Localizacao": "Rua do Teatro, Roma, Itália",
-        "Custo": "Moderado",
-        "Avaliacao": "4.4 Estrelas"
-      },
-      {
-        "AtracaoNome": "Visita ao Museu de Ciências",
-        "Descricao": "Explore o mundo da ciência em um museu interativo.",
-        "Categoria": "Cultura",
-        "Localizacao": "Avenida da Ciência, Sidney, Austrália",
-        "Custo": "Moderado",
-        "Avaliacao": "4.6 Estrelas"
-      },
-      {
-        "AtracaoNome": "Visita ao Museu de Arte Renomado",
-        "Descricao": "Admire obras-primas de artistas famosos em um museu de renome.",
-        "Categoria": "Cultura",
-        "Localizacao": "Avenida da Arte Renomada, Nova Iorque, EUA",
-        "Custo": "Luxuoso",
-        "Avaliacao": "4.9 Estrelas"
-      },
-      {
-        "AtracaoNome": "Ópera de Classe Mundial",
-        "Descricao": "Assista a espetáculos de ópera de classe mundial em um teatro luxuoso.",
-        "Categoria": "Cultura",
-        "Localizacao": "Rua da Ópera, Viena, Áustria",
-        "Custo": "Luxuoso",
-        "Avaliacao": "4.8 Estrelas"
-      },
-      {
-        "AtracaoNome": "Visita ao Museu de Arte Moderna",
-        "Descricao": "Explore o mundo da arte moderna em um museu luxuoso.",
-        "Categoria": "Cultura",
-        "Localizacao": "Avenida da Arte Moderna, Londres, Reino Unido",
-        "Custo": "Luxuoso",
-        "Avaliacao": "4.7 Estrelas"
-      },
-      {
-        "AtracaoNome": "Bar da Esquina",
-        "Descricao": "Um bar acolhedor com música ao vivo e preços acessíveis.",
-        "Categoria": "Bares",
-        "Localizacao": "Rua da Alegria, Lisboa, Portugal",
-        "Custo": "Econômico",
-        "Avaliacao": "4.2 Estrelas"
-      },
-      {
-        "AtracaoNome": "Bar Local",
-        "Descricao": "Um ponto de encontro popular para os moradores locais.",
-        "Categoria": "Bares",
-        "Localizacao": "Avenida da Diversão, Buenos Aires, Argentina",
-        "Custo": "Econômico",
-        "Avaliacao": "4.0 Estrelas"
-      },
-      {
-        "AtracaoNome": "Pub da Cidade",
-        "Descricao": "Um pub clássico com cervejas artesanais e preços acessíveis.",
-        "Categoria": "Bares",
-        "Localizacao": "Rua da Cerveja, Madri, Espanha",
-        "Custo": "Econômico",
-        "Avaliacao": "4.1 Estrelas"
-      },
-      {
-        "AtracaoNome": "Lounge com Terraço",
-        "Descricao": "Um lounge elegante com vistas deslumbrantes e coquetéis exclusivos.",
-        "Categoria": "Bares",
-        "Localizacao": "Avenida dos Coquetéis, Paris, França",
-        "Custo": "Moderado",
-        "Avaliacao": "4.5 Estrelas"
-      },
-      {
-        "AtracaoNome": "Bar de Vinhos",
-        "Descricao": "Um bar especializado em vinhos de qualidade e petiscos gourmet.",
-        "Categoria": "Bares",
-        "Localizacao": "Rua do Vinho, Roma, Itália",
-        "Custo": "Moderado",
-        "Avaliacao": "4.4 Estrelas"
-      },
-      {
-        "AtracaoNome": "Coquetelaria da Cidade",
-        "Descricao": "Um lugar moderno para desfrutar de coquetéis criativos e música ao vivo.",
-        "Categoria": "Bares",
-        "Localizacao": "Avenida dos Coquetéis, Sidney, Austrália",
-        "Custo": "Moderado",
-        "Avaliacao": "4.6 Estrelas"
-      },
-      {
-        "AtracaoNome": "Bar do Rooftop",
-        "Descricao": "Um bar no topo de um arranha-céu com vistas espetaculares e bebidas de alta qualidade.",
-        "Categoria": "Bares",
-        "Localizacao": "Rua das Alturas, Nova Iorque, EUA",
-        "Custo": "Luxuoso",
-        "Avaliacao": "4.9 Estrelas"
-      },
-      {
-        "AtracaoNome": "Lounge de Champanhe",
-        "Descricao": "Um lounge sofisticado que serve champanhe e petiscos gourmet.",
-        "Categoria": "Bares",
-        "Localizacao": "Avenida do Champanhe, Londres, Reino Unido",
-        "Custo": "Luxuoso",
-        "Avaliacao": "4.0 Estrelas"
-    },
-    {
-        "AtracaoNome": "Campo de Futebol Comunitário",
-        "Descricao": "Um campo público para jogar futebol com amigos.",
-        "Categoria": "Esportes",
-        "Localizacao": "Rua do Futebol, Lisboa, Portugal",
-        "Custo": "Econômico",
-        "Avaliacao": "4.2 Estrelas"
-    },
-    {
-        "AtracaoNome": "Pista de Corrida Local",
-        "Descricao": "Uma pista de corrida ao ar livre aberta a todos.",
-        "Categoria": "Esportes",
-        "Localizacao": "Avenida da Corrida, Buenos Aires, Argentina",
-        "Custo": "Econômico",
-        "Avaliacao": "4.0 Estrelas"
-    },
-    {
-        "AtracaoNome": "Quadra de Tênis Pública",
-        "Descricao": "Quadras de tênis públicas para jogar partidas amistosas.",
-        "Categoria": "Esportes",
-        "Localizacao": "Rua das Raquetes, Madri, Espanha",
-        "Custo": "Econômico",
-        "Avaliacao": "4.1 Estrelas"
-    },
-    {
-        "AtracaoNome": "Clube de Golfe Local",
-        "Descricao": "Um clube de golfe com campos bem cuidados e instalações de qualidade.",
-        "Categoria": "Esportes",
-        "Localizacao": "Avenida do Golfe, Paris, França",
-        "Custo": "Moderado",
-        "Avaliacao": "4.5 Estrelas"
-    },
-    {
-        "AtracaoNome": "Complexo Esportivo",
-        "Descricao": "Um complexo com várias opções esportivas, incluindo piscina e academia.",
-        "Categoria": "Esportes",
-        "Localizacao": "Rua do Esporte, Roma, Itália",
-        "Custo": "Moderado",
-        "Avaliacao": "4.4 Estrelas"
-    },
-    {
-        "AtracaoNome": "Centro de Boliche",
-        "Descricao": "Desfrute de uma tarde de boliche com amigos e familiares.",
-        "Categoria": "Esportes",
-        "Localizacao": "Avenida das Pistas, Sidney, Austrália",
-        "Custo": "Moderado",
-        "Avaliacao": "4.6 Estrelas"
-    },
-    {
-        "AtracaoNome": "Clube de Tênis de Prestígio",
-        "Descricao": "Um clube de tênis de prestígio com instalações de classe mundial.",
-        "Categoria": "Esportes",
-        "Localizacao": "Rua do Tênis, Nova Iorque, EUA",
-        "Custo": "Luxuoso",
-        "Avaliacao": "4.9 Estrelas"
-    },
-    {
-        "AtracaoNome": "Clube de Iatismo de Elite",
-        "Descricao": "Um clube de iatismo exclusivo com barcos de luxo e serviços de primeira classe.",
-        "Categoria": "Esportes",
-        "Localizacao": "Avenida dos Iatistas, Londres, Reino Unido",
-        "Custo": "Luxuoso",
-        "Avaliacao": "4.8 Estrelas"
-    },
-    {
-        "AtracaoNome": "Campos de Golfe de Campeonato",
-        "Descricao": "Campos de golfe de campeonato projetados por renomados arquitetos de golfe.",
-        "Categoria": "Esportes",
-        "Localizacao": "Avenida dos Campeões, Los Angeles, EUA",
-        "Custo": "Luxuoso",
-        "Avaliacao": "4.7 Estrelas"
-    },
-    {
-        "AtracaoNome": "Hotel Central",
-        "Descricao": "Um hotel confortável no coração da cidade.",
-        "Categoria": "Hotel",
-        "Localizacao": "Rua do Centro, Lisboa, Portugal",
-        "Custo": "Econômico",
-        "Avaliacao": "3.8 Estrelas"
-    },
-    {
-        "AtracaoNome": "Hotel da Praia",
-        "Descricao": "Um hotel próximo à praia, ideal para férias em família.",
-        "Categoria": "Hotel",
-        "Localizacao": "Avenida da Praia, Barcelona, Espanha",
-        "Custo": "Econômico",
-        "Avaliacao": "3.9 Estrelas"
-    },
-    {
-        "AtracaoNome": "Hotel da Cidade Velha",
-        "Descricao": "Um hotel aconchegante em uma parte histórica da cidade.",
-        "Categoria": "Hotel",
-        "Localizacao": "Rua das Histórias, Roma, Itália",
-        "Custo": "Econômico",
-        "Avaliacao": "4.0 Estrelas"
-    },
-    {
-        "AtracaoNome": "Hotel Executivo",
-        "Descricao": "Um hotel com comodidades para viajantes de negócios.",
-        "Categoria": "Hotel",
-        "Localizacao": "Avenida dos Negócios, Paris, França",
-        "Custo": "Moderado",
-        "Avaliacao": "4.2 Estrelas"
-    },
-    {
-        "AtracaoNome": "Hotel Panorâmico",
-        "Descricao": "Um hotel com vistas deslumbrantes da cidade.",
-        "Categoria": "Hotel",
-        "Localizacao": "Rua das Vistas, Sydney, Austrália",
-        "Custo": "Moderado",
-        "Avaliacao": "4.3 Estrelas"
-    },
-    {
-        "AtracaoNome": "Hotel Moderno",
-        "Descricao": "Um hotel contemporâneo com instalações de primeira classe.",
-        "Categoria": "Hotel",
-        "Localizacao": "Avenida Moderna, Londres, Reino Unido",
-        "Custo": "Moderado",
-        "Avaliacao": "4.4 Estrelas"
-      },
-      {
-        "AtracaoNome": "Hotel de Luxo",
-        "Descricao": "Um hotel de luxo com spa e restaurantes gourmet.",
-        "Categoria": "Hotel",
-        "Localizacao": "Rua dos Sonhos, Nova Iorque, EUA",
-        "Custo": "Luxuoso",
-        "Avaliacao": "4.7 Estrelas"
-      },
-      {
-        "AtracaoNome": "Resort à Beira-Mar",
-        "Descricao": "Um resort de alto padrão à beira-mar com piscinas e entretenimento.",
-        "Categoria": "Hotel",
-        "Localizacao": "Avenida do Mar, Cancún, México",
-        "Custo": "Luxuoso",
-        "Avaliacao": "4.8 Estrelas"
-      },
-      {
-        "AtracaoNome": "Hotel de Montanha",
-        "Descricao": "Um hotel de luxo nas montanhas com atividades ao ar livre.",
-        "Categoria": "Hotel",
-        "Localizacao": "Rua das Montanhas, Interlaken, Suíça",
-        "Custo": "Luxuoso",
-        "Avaliacao": "4.9 Estrelas"
-      },
-      {
-        "AtracaoNome": "Feira de Artesanato da Rua Principal",
-        "Descricao": "Uma feira de artesanato com produtos locais e músicos de rua.",
-        "Categoria": "Eventos",
-        "Localizacao": "Rua Principal, Lisboa, Portugal",
-        "Custo": "Econômico",
-        "Avaliacao": "4.0 Estrelas"
-      },
-      {
-        "AtracaoNome": "Concerto no Parque da Cidade",
-        "Descricao": "Um concerto gratuito no parque com artistas locais.",
-        "Categoria": "Eventos",
-        "Localizacao": "Parque da Cidade, Barcelona, Espanha",
-        "Custo": "Econômico",
-        "Avaliacao": "3.8 Estrelas"
-      },
-      {
-        "AtracaoNome": "Feira de Alimentos Locais",
-        "Descricao": "Uma feira de alimentos com produtos frescos da região.",
-        "Categoria": "Eventos",
-        "Localizacao": "Rua dos Sabores, Roma, Itália",
-        "Custo": "Econômico",
-        "Avaliacao": "3.9 Estrelas"
-      },
-      {
-        "AtracaoNome": "Festival de Música da Cidade",
-        "Descricao": "Um festival de música de um dia com bandas populares.",
-        "Categoria": "Eventos",
-        "Localizacao": "Parque Musical, Paris, França",
-        "Custo": "Moderado",
-        "Avaliacao": "4.2 Estrelas"
-      },
-      {
-        "AtracaoNome": "Conferência de Inovação",
-        "Descricao": "Uma conferência com palestras sobre tecnologia e inovação.",
-        "Categoria": "Eventos",
-        "Localizacao": "Centro de Convenções, Sydney, Austrália",
-        "Custo": "Moderado",
-        "Avaliacao": "4.3 Estrelas"
-      },
-      {
-        "AtracaoNome": "Exposição de Arte Contemporânea",
-        "Descricao": "Uma exposição de arte com obras de artistas renomados.",
-        "Categoria": "Eventos",
-        "Localizacao": "Galeria de Arte Moderna, Londres, Reino Unido",
-        "Custo": "Moderado",
-        "Avaliacao": "4.4 Estrelas"
-      },
-      {
-        "AtracaoNome": "Gala de Caridade de Celebridades",
-        "Descricao": "Uma gala de caridade com presença de celebridades e chefs famosos.",
-        "Categoria": "Eventos",
-        "Localizacao": "Mansão das Estrelas, Nova Iorque, EUA",
-        "Custo": "Luxuoso",
-        "Avaliacao": "4.8 Estrelas"
-      },
-      {
-        "AtracaoNome": "Festival de Vinhos Exclusivo",
-        "Descricao": "Um festival de vinhos com degustações de safras raras.",
-        "Categoria": "Eventos",
-        "Localizacao": "Vinícola Premium, Bordeaux, França",
-        "Custo": "Luxuoso",
-        "Avaliacao": "4.7 Estrelas"
-      },
-      {
-        "AtracaoNome": "Baile de Máscaras de Gala",
-        "Descricao": "Um baile de máscaras em um palácio histórico.",
-        "Categoria": "Eventos",
-        "Localizacao": "Palácio Real, Veneza, Itália",
-        "Custo": "Luxuoso",
-        "Avaliacao": "4.9 Estrelas"
-    }
-
-
-
-
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Joe's Pizza",
+    "Descricao": "Uma fatia autêntica de pizza nova-iorquina.",
+    "Categoria": "Alimentação",
+    "Localizacao": "7 Carmine St, Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Econômico",
+    "Valor": 10.00,
+    "Avaliacao": 1
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Shake Shack",
+    "Descricao": "Hamburgueria famosa por seus hambúrgueres e milkshakes.",
+    "Categoria": "Alimentação",
+    "Localizacao": "691 8th Ave, Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Econômico",
+    "Valor": 12.00,
+    "Avaliacao": 1
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Murray's Bagels",
+    "Descricao": "Autênticos bagels nova-iorquinos em uma cafeteria acolhedora.",
+    "Categoria": "Alimentação",
+    "Localizacao": "500 Avenue of the Americas, Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Econômico",
+    "Valor": 8.00,
+    "Avaliacao": 2
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Gray's Papaya",
+    "Descricao": "Um clássico da comida de rua com cachorros-quentes e sucos.",
+    "Categoria": "Alimentação",
+    "Localizacao": "2090 Broadway, Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Econômico",
+    "Valor": 11.00,
+    "Avaliacao": 2
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Carmine's Italian Restaurant",
+    "Descricao": "Experimente a autêntica culinária italiana em um restaurante aconchegante.",
+    "Categoria": "Alimentação",
+    "Localizacao": "200 W 44th St, Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Moderado",
+    "Valor": 40.00,
+    "Avaliacao": 3
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "The Smith",
+    "Descricao": "Um restaurante moderno com opções de pratos variados e coquetéis.",
+    "Categoria": "Alimentação",
+    "Localizacao": "1900 Broadway, Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Moderado",
+    "Valor": 35.00,
+    "Avaliacao": 3
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Jazz Standard",
+    "Descricao": "Coma e divirta-se ao som do jazz neste restaurante animado.",
+    "Categoria": "Alimentação",
+    "Localizacao": "116 E 27th St, Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Moderado",
+    "Valor": 45.00,
+    "Avaliacao": 4
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Eleven Madison Park",
+    "Descricao": "Uma experiência gastronômica sofisticada em um restaurante renomado.",
+    "Categoria": "Alimentação",
+    "Localizacao": "11 Madison Ave, Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Moderado",
+    "Valor": 75.00,
+    "Avaliacao": 4
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Per Se",
+    "Descricao": "Desfrute de uma experiência gastronômica de alto nível com vistas espetaculares da cidade.",
+    "Categoria": "Alimentação",
+    "Localizacao": "10 Columbus Cir, Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Luxuoso",
+    "Valor": 250.00,
+    "Avaliacao": 5
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Le Bernardin",
+    "Descricao": "Um restaurante com estrela Michelin, conhecido por sua culinária excepcional e serviço impecável.",
+    "Categoria": "Alimentação",
+    "Localizacao": "155 W 51st St, Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Luxuoso",
+    "Valor": 300.00,
+    "Avaliacao": 5
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Daniel",
+    "Descricao": "Uma experiência gastronômica requintada com um menu degustação exclusivo.",
+    "Categoria": "Alimentação",
+    "Localizacao": "60 E 65th St, Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Luxuoso",
+    "Valor": 400.00,
+    "Avaliacao": 5
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Jean-Georges",
+    "Descricao": "Saboreie pratos gourmet em um restaurante premiado com três estrelas Michelin.",
+    "Categoria": "Alimentação",
+    "Localizacao": "1 Central Park West, Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Luxuoso",
+    "Valor": 350.00,
+    "Avaliacao": 5
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Passeio a Pé Autoguiado",
+    "Descricao": "Explore os principais pontos turísticos de Nova Iorque em um passeio a pé autoguiado.",
+    "Categoria": "Passeios",
+    "Localizacao": "Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Econômico",
+    "Valor": 10.00,
+    "Avaliacao": 1
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Refeição Econômica em Times Square",
+    "Descricao": "Desfrute de uma refeição econômica em Times Square enquanto observa as luzes brilhantes da cidade.",
+    "Categoria": "Alimentação",
+    "Localizacao": "Times Square, Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Econômico",
+    "Valor": 20.00,
+    "Avaliacao": 2
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Passeio de Ônibus Turístico",
+    "Descricao": "Explore a cidade de Nova Iorque em um passeio de ônibus turístico acessível.",
+    "Categoria": "Passeios",
+    "Localizacao": "Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Econômico",
+    "Valor": 12.00,
+    "Avaliacao": 2
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Museu de Arte Econômico",
+    "Descricao": "Visite um museu de arte acessível com uma coleção impressionante.",
+    "Categoria": "Cultura",
+    "Localizacao": "5th Avenue, nº 200, Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Econômico",
+    "Valor": 15.00,
+    "Avaliacao": 1
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Excursão de Vinho no Vale do Hudson",
+    "Descricao": "Descubra vinhedos e prove vinhos deliciosos em uma excursão pelo Vale do Hudson.",
+    "Categoria": "Passeios",
+    "Localizacao": "Vale do Hudson, Nova Iorque, EUA",
+    "Estilo de Viagem": "Moderado",
+    "Valor": 85.00,
+    "Avaliacao": 4
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Visita Guiada à Estátua da Liberdade",
+    "Descricao": "Explore a Estátua da Liberdade com um guia turístico especializado.",
+    "Categoria": "Passeios",
+    "Localizacao": "Ilha da Liberdade, Nova Iorque, EUA",
+    "Estilo de Viagem": "Moderado",
+    "Valor": 70.00,
+    "Avaliacao": 4
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Cruzeiro ao Entardecer no Rio Hudson",
+    "Descricao": "Desfrute de um romântico cruzeiro ao entardecer no Rio Hudson.",
+    "Categoria": "Passeios",
+    "Localizacao": "Pier 83, Nova Iorque, EUA",
+    "Estilo de Viagem": "Moderado",
+    "Valor": 80.00,
+    "Avaliacao": 4
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Passeio de Bicicleta pelo Central Park",
+    "Descricao": "Explore o Central Park em uma relaxante aventura de bicicleta.",
+    "Categoria": "Passeios",
+    "Localizacao": "Central Park, Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Moderado",
+    "Valor": 60.00,
+    "Avaliacao": 4
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Helicóptero sobre Manhattan",
+    "Descricao": "Desfrute de um passeio de helicóptero sobre Manhattan e veja a cidade de um ângulo inigualável.",
+    "Categoria": "Passeios",
+    "Localizacao": "Downtown Manhattan Heliport, Nova Iorque, EUA",
+    "Estilo de Viagem": "Luxuoso",
+    "Valor": 500.00,
+    "Avaliacao": 5
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Iate Privado no Rio Hudson",
+    "Descricao": "Passeie em um iate privado pelo Rio Hudson com vistas deslumbrantes da cidade.",
+    "Categoria": "Passeios",
+    "Localizacao": "Rio Hudson, Nova Iorque, EUA",
+    "Estilo de Viagem": "Luxuoso",
+    "Valor": 600.00,
+    "Avaliacao": 5
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Tour Privado no Museu Metropolitano de Arte",
+    "Descricao": "Explore o Museu Metropolitano de Arte com um guia privado e tenha uma experiência exclusiva.",
+    "Categoria": "Passeios",
+    "Localizacao": "1000 5th Ave, Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Luxuoso",
+    "Valor": 350.00,
+    "Avaliacao": 5
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Jantar em um Telhado com Estrelas Michelin",
+    "Descricao": "Desfrute de um jantar requintado em um restaurante no telhado com estrelas Michelin.",
+    "Categoria": "Passeios",
+    "Localizacao": "Nova Iorque, EUA",
+    "Estilo de Viagem": "Luxuoso",
+    "Valor": 450.00,
+    "Avaliacao": 5
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Central Park - Passeio de Barco a Remo",
+    "Descricao": "Desfrute de um passeio de barco a remo relaxante no Central Park por um preço acessível.",
+    "Categoria": "Cultura",
+    "Localizacao": "Central Park, Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Econômico",
+    "Valor": 15.00,
+    "Avaliacao": 3
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Museu do Transporte Público",
+    "Descricao": "Explore a história dos transportes públicos de Nova Iorque em um museu econômico.",
+    "Categoria": "Cultura",
+    "Localizacao": "Brooklyn, Nova Iorque, EUA",
+    "Estilo de Viagem": "Econômico",
+    "Valor": 12.00,
+    "Avaliacao": 2
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Visita Autoguiada ao Distrito Financeiro",
+    "Descricao": "Explore o coração financeiro de Nova Iorque em uma visita autoguiada econômica.",
+    "Categoria": "Cultura",
+    "Localizacao": "Financial District, Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Econômico",
+    "Valor": 10.00,
+    "Avaliacao": 1
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Tour a Pé pela Arte de Rua",
+    "Descricao": "Descubra a arte de rua de Nova Iorque em um tour a pé econômico pelas ruas da cidade.",
+    "Categoria": "Cultura",
+    "Localizacao": "Diversas localizações em Nova Iorque, EUA",
+    "Estilo de Viagem": "Econômico",
+    "Valor": 10.00,
+    "Avaliacao": 2
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Museu de Arte Moderna (MoMA)",
+    "Descricao": "Explore uma vasta coleção de obras-primas da arte moderna no MoMA.",
+    "Categoria": "Cultura",
+    "Localizacao": "Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Moderado",
+    "Valor": 25.00,
+    "Avaliacao": 4
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Visita à Estátua da Liberdade e Ilha Ellis",
+    "Descricao": "Explore os símbolos icônicos da liberdade americana com um tour moderado pela Estátua da Liberdade e Ilha Ellis.",
+    "Categoria": "Cultura",
+    "Localizacao": "Baía de Nova Iorque, Nova Iorque, EUA",
+    "Estilo de Viagem": "Moderado",
+    "Valor": 50.00,
+    "Avaliacao": 4
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Teatro da Broadway",
+    "Descricao": "Assista a uma emocionante peça de teatro na famosa Broadway de Nova Iorque.",
+    "Categoria": "Cultura",
+    "Localizacao": "Broadway, Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Moderado",
+    "Valor": 40.00,
+    "Avaliacao": 4
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Museu Americano de História Natural",
+    "Descricao": "Explore a história natural e a ciência em um dos maiores museus do mundo.",
+    "Categoria": "Cultura",
+    "Localizacao": "Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Moderado",
+    "Valor": 35.00,
+    "Avaliacao": 4
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Museu de Arte Moderna - VIP Experience",
+    "Descricao": "Desfrute de uma experiência VIP no Museu de Arte Moderna, incluindo guia particular e acesso exclusivo às exposições.",
+    "Categoria": "Cultura",
+    "Localizacao": "Midtown Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Luxuoso",
+    "Valor": 250.00,
+    "Avaliacao": 5
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Visita Privada ao Museu Guggenheim",
+    "Descricao": "Explore o Museu Guggenheim em uma visita privada com um guia especializado e acesso exclusivo a obras-primas da arte moderna.",
+    "Categoria": "Cultura",
+    "Localizacao": "Upper East Side, Nova Iorque, EUA",
+    "Estilo de Viagem": "Luxuoso",
+    "Valor": 300.00,
+    "Avaliacao": 5
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Tour de Arte em Chelsea - Guia Particular",
+    "Descricao": "Descubra as galerias de arte de Chelsea com um guia particular que o levará pelas últimas exposições em um estilo de viagem luxuoso.",
+    "Categoria": "Cultura",
+    "Localizacao": "Chelsea, Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Luxuoso",
+    "Valor": 220.00,
+    "Avaliacao": 5
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Excursão de Helicóptero pela Cidade",
+    "Descricao": "Desfrute de uma vista panorâmica da cidade em um emocionante passeio de helicóptero de luxo.",
+    "Categoria": "Cultura",
+    "Localizacao": "Heliporto no Rio Hudson, Nova Iorque, EUA",
+    "Estilo de Viagem": "Luxuoso",
+    "Valor": 500.00,
+    "Avaliacao": 5
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Bar de Cerveja Artesanal no Brooklyn",
+    "Descricao": "Experimente cervejas locais em um bar descontraído e econômico no Brooklyn.",
+    "Categoria": "Bares",
+    "Localizacao": "Brooklyn, Nova Iorque, EUA",
+    "Estilo de Viagem": "Econômico",
+    "Valor": 12.00,
+    "Avaliacao": 2
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Bar de Vinhos Acessível em Manhattan",
+    "Descricao": "Saboreie vinhos a preços acessíveis em um bar aconchegante em Manhattan.",
+    "Categoria": "Bares",
+    "Localizacao": "Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Econômico",
+    "Valor": 14.00,
+    "Avaliacao": 1
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Bar de Karaokê no East Village",
+    "Descricao": "Divirta-se cantando karaokê e desfrutando de bebidas acessíveis em um bar do East Village.",
+    "Categoria": "Bares",
+    "Localizacao": "East Village, Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Econômico",
+    "Valor": 15.00,
+    "Avaliacao": 1
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Bar de Cerveja Artesanal no Brooklyn",
+    "Descricao": "Experimente cervejas locais em um bar descontraído e econômico no Brooklyn.",
+    "Categoria": "Bares",
+    "Localizacao": "Brooklyn, Nova Iorque, EUA",
+    "Estilo de Viagem": "Econômico",
+    "Valor": 12.00,
+    "Avaliacao": 2
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Bar com Terraço em Williamsburg",
+    "Descricao": "Desfrute de vistas panorâmicas e coquetéis em um bar com terraço em Williamsburg, Brooklyn.",
+    "Categoria": "Bares",
+    "Localizacao": "Williamsburg, Brooklyn, Nova Iorque, EUA",
+    "Estilo de Viagem": "Moderado",
+    "Valor": 45.00,
+    "Avaliacao": 4
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Bar de Coquetéis em Hell's Kitchen",
+    "Descricao": "Saboreie coquetéis artesanais em um bar moderno de Hell's Kitchen com ambiente descontraído.",
+    "Categoria": "Bares",
+    "Localizacao": "Hell's Kitchen, Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Moderado",
+    "Valor": 40.00,
+    "Avaliacao": 4
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Bar de Vinhos em Williamsburg",
+    "Descricao": "Explore vinhos locais e internacionais em um bar aconchegante em Williamsburg, Brooklyn.",
+    "Categoria": "Bares",
+    "Localizacao": "Williamsburg, Brooklyn, Nova Iorque, EUA",
+    "Estilo de Viagem": "Moderado",
+    "Valor": 40.00,
+    "Avaliacao": 3
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Bar do Jazz no Greenwich Village",
+    "Descricao": "Desfrute de música ao vivo de jazz e coquetéis exclusivos em um bar no coração do Greenwich Village.",
+    "Categoria": "Bares",
+    "Localizacao": "Greenwich Village, Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Moderado",
+    "Valor": 35.00,
+    "Avaliacao": 3
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Cocktails no Roof Garden Bar",
+    "Descricao": "Desfrute de coquetéis artesanais com vista panorâmica no Roof Garden Bar do Met Museum.",
+    "Categoria": "Bares",
+    "Localizacao": "Metropolitan Museum of Art, Upper East Side, Nova Iorque, EUA",
+    "Estilo de Viagem": "Luxuoso",
+    "Valor": 45.00,
+    "Avaliacao": 5
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Jazz ao Vivo no Blue Note",
+    "Descricao": "Curta uma noite de jazz ao vivo no famoso clube Blue Note, com coquetéis de luxo.",
+    "Categoria": "Bares",
+    "Localizacao": "Blue Note, Greenwich Village, Nova Iorque, EUA",
+    "Estilo de Viagem": "Luxuoso",
+    "Valor": 75.00,
+    "Avaliacao": 5
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Coquetéis no The Skylark",
+    "Descricao": "Relaxe com coquetéis exclusivos no elegante bar The Skylark com vistas deslumbrantes.",
+    "Categoria": "Bares",
+    "Localizacao": "The Skylark, Midtown Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Luxuoso",
+    "Valor": 60.00,
+    "Avaliacao": 5
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Noite de Champanhe no Press Lounge",
+    "Descricao": "Desfrute de uma noite de champanhe e vistas espetaculares na cobertura do Press Lounge.",
+    "Categoria": "Bares",
+    "Localizacao": "Press Lounge, Hell's Kitchen, Nova Iorque, EUA",
+    "Estilo de Viagem": "Luxuoso",
+    "Valor": 80.00,
+    "Avaliacao": 5
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Corrida no Central Park",
+    "Descricao": "Faça uma corrida matinal econômica pelo Central Park e aproveite a beleza natural.",
+    "Categoria": "Esportes",
+    "Localizacao": "Central Park, Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Econômico",
+    "Valor": 15.00,
+    "Avaliacao": 1
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Aluguel de Raquetes de Tênis",
+    "Descricao": "Jogue tênis em Nova Iorque com aluguel de raquetes econômicas em diversos parques da cidade.",
+    "Categoria": "Esportes",
+    "Localizacao": "Vários locais em Nova Iorque, EUA",
+    "Estilo de Viagem": "Econômico",
+    "Valor": 12.00,
+    "Avaliacao": 2
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Aula de Yoga ao Ar Livre",
+    "Descricao": "Participe de uma aula de yoga econômica ao ar livre e encontre paz e relaxamento.",
+    "Categoria": "Esportes",
+    "Localizacao": "Pier 46, Hudson River Park, Nova Iorque, EUA",
+    "Estilo de Viagem": "Econômico",
+    "Valor": 18.00,
+    "Avaliacao": 2
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Aluguel de Bicicletas no Prospect Park",
+    "Descricao": "Explore Prospect Park de bicicleta com aluguel econômico e aproveite as trilhas cênicas.",
+    "Categoria": "Esportes",
+    "Localizacao": "Prospect Park, Brooklyn, Nova Iorque, EUA",
+    "Estilo de Viagem": "Econômico",
+    "Valor": 20.00,
+    "Avaliacao": 1
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Aula de Surfe em Rockaway Beach",
+    "Descricao": "Aprenda a surfar nas águas de Rockaway Beach com instrutores experientes.",
+    "Categoria": "Esportes",
+    "Localizacao": "Rockaway Beach, Queens, Nova Iorque, EUA",
+    "Estilo de Viagem": "Moderado",
+    "Valor": 60.00,
+    "Avaliacao": 3
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Partida de Tênis em Chelsea Piers",
+    "Descricao": "Jogue tênis em Chelsea Piers com quadras de qualidade e equipamentos disponíveis.",
+    "Categoria": "Esportes",
+    "Localizacao": "Chelsea Piers, Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Moderado",
+    "Valor": 45.00,
+    "Avaliacao": 4
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Caiaque no Rio Hudson",
+    "Descricao": "Aventure-se em um passeio de caiaque no Rio Hudson e desfrute das vistas da cidade.",
+    "Categoria": "Esportes",
+    "Localizacao": "Pier 40, Hudson River Park, Nova Iorque, EUA",
+    "Estilo de Viagem": "Moderado",
+    "Valor": 55.00,
+    "Avaliacao": 3
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Partida de Golfe em Van Cortlandt Park",
+    "Descricao": "Jogue golfe em um cenário arborizado no Van Cortlandt Park, uma opção de esporte relaxante.",
+    "Categoria": "Esportes",
+    "Localizacao": "Van Cortlandt Park, Bronx, Nova Iorque, EUA",
+    "Estilo de Viagem": "Moderado",
+    "Valor": 50.00,
+    "Avaliacao": 4
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Aula de Esqui em Hunter Mountain",
+    "Descricao": "Desfrute de aulas de esqui de alto nível na famosa Hunter Mountain, uma experiência luxuosa nas montanhas.",
+    "Categoria": "Esportes",
+    "Localizacao": "Hunter Mountain, Catskills, Nova Iorque, EUA",
+    "Estilo de Viagem": "Luxuoso",
+    "Valor": 150.00,
+    "Avaliacao": 5
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Partida de Golfe no Winged Foot Golf Club",
+    "Descricao": "Jogue golfe em um dos clubes mais exclusivos, o Winged Foot Golf Club, para uma experiência de golfe de luxo.",
+    "Categoria": "Esportes",
+    "Localizacao": "Winged Foot Golf Club, Mamaroneck, Nova Iorque, EUA",
+    "Estilo de Viagem": "Luxuoso",
+    "Valor": 200.00,
+    "Avaliacao": 5
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Partida de Tênis no USTA Billie Jean King National Tennis Center",
+    "Descricao": "Jogue tênis nas quadras de classe mundial do USTA Billie Jean King National Tennis Center, uma experiência luxuosa para os amantes do tênis.",
+    "Categoria": "Esportes",
+    "Localizacao": "USTA Billie Jean King National Tennis Center, Queens, Nova Iorque, EUA",
+    "Estilo de Viagem": "Luxuoso",
+    "Valor": 180.00,
+    "Avaliacao": 5
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Passeio de Iate Privado em Nova Iorque",
+    "Descricao": "Curta as águas de Nova Iorque em grande estilo com um passeio de iate particular, uma experiência de luxo inesquecível.",
+    "Categoria": "Esportes",
+    "Localizacao": "Marina de Nova Iorque, Nova Iorque, EUA",
+    "Estilo de Viagem": "Luxuoso",
+    "Valor": 350.00,
+    "Avaliacao": 5
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Show de Jazz no Village Vanguard",
+    "Descricao": "Assista a um emocionante show de jazz no icônico clube noturno Village Vanguard em Nova Iorque.",
+    "Categoria": "Eventos",
+    "Localizacao": "Village Vanguard, Greenwich Village, Nova Iorque, EUA",
+    "Estilo de Viagem": "Econômico",
+    "Valor": 30.00,
+    "Avaliacao": 1
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Apresentação de Broadway - 'O Fantasma da Ópera'",
+    "Descricao": "Desfrute de uma noite inesquecível assistindo à famosa peça da Broadway, 'O Fantasma da Ópera'.",
+    "Categoria": "Eventos",
+    "Localizacao": "Majestic Theatre, Broadway, Nova Iorque, EUA",
+    "Estilo de Viagem": "Econômico",
+    "Valor": 35.00,
+    "Avaliacao": 1
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Passeio de Barco pelo Rio Hudson",
+    "Descricao": "Faça um passeio de barco relaxante pelo Rio Hudson e desfrute das vistas deslumbrantes da cidade.",
+    "Categoria": "Eventos",
+    "Localizacao": "Pier 40, Hudson River Park, Nova Iorque, EUA",
+    "Estilo de Viagem": "Econômico",
+    "Valor": 25.00,
+    "Avaliacao": 2
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Visita a Museu de Cera de Celebridades",
+    "Descricao": "Veja suas celebridades favoritas em cera no Museu de Cera de Nova Iorque.",
+    "Categoria": "Eventos",
+    "Localizacao": "Times Square, Nova Iorque, EUA",
+    "Estilo de Viagem": "Econômico",
+    "Valor": 20.00,
+    "Avaliacao": 2
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Espetáculo da Broadway - 'O Rei Leão'",
+    "Descricao": "Assista a uma incrível produção da Broadway com o espetáculo 'O Rei Leão'. Uma experiência imperdível!",
+    "Categoria": "Eventos",
+    "Localizacao": "Minskoff Theatre, Broadway, Nova Iorque, EUA",
+    "Estilo de Viagem": "Moderado",
+    "Valor": 75.00,
+    "Avaliacao": 3
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Concerto na Filarmônica de Nova Iorque",
+    "Descricao": "Desfrute de uma noite com música clássica de alta qualidade na Filarmônica de Nova Iorque.",
+    "Categoria": "Eventos",
+    "Localizacao": "David Geffen Hall, Lincoln Center, Nova Iorque, EUA",
+    "Estilo de Viagem": "Moderado",
+    "Valor": 80.00,
+    "Avaliacao": 4
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Visita ao Museu de Arte Moderna (MoMA)",
+    "Descricao": "Explore a vasta coleção de arte moderna no renomado Museu de Arte Moderna de Nova Iorque (MoMA).",
+    "Categoria": "Eventos",
+    "Localizacao": "MoMA, Midtown Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Moderado",
+    "Valor": 70.00,
+    "Avaliacao": 3
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Ingressos para o Observatório Top of the Rock",
+    "Descricao": "Tenha uma vista panorâmica deslumbrante da cidade a partir do Observatório Top of the Rock no Rockefeller Center.",
+    "Categoria": "Eventos",
+    "Localizacao": "Top of the Rock, Rockefeller Center, Nova Iorque, EUA",
+    "Estilo de Viagem": "Moderado",
+    "Valor": 65.00,
+    "Avaliacao": 4
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Ópera no Metropolitan Opera House",
+    "Descricao": "Desfrute de uma noite elegante com uma produção de ópera no icônico Metropolitan Opera House.",
+    "Categoria": "Eventos",
+    "Localizacao": "Metropolitan Opera House, Lincoln Center, Nova Iorque, EUA",
+    "Estilo de Viagem": "Luxuoso",
+    "Valor": 250.00,
+    "Avaliacao": 5
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Ingressos VIP para um Show Exclusivo no Barclays Center",
+    "Descricao": "Experimente um show exclusivo no Barclays Center com assentos VIP e tratamento especial.",
+    "Categoria": "Eventos",
+    "Localizacao": "Barclays Center, Brooklyn, Nova Iorque, EUA",
+    "Estilo de Viagem": "Luxuoso",
+    "Valor": 300.00,
+    "Avaliacao": 5
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Experiência de Jantar Estrela Michelin",
+    "Descricao": "Desfrute de uma experiência gastronômica de alto nível em um restaurante com estrela Michelin em Nova Iorque.",
+    "Categoria": "Eventos",
+    "Localizacao": "Restaurante Estrela Michelin, Nova Iorque, EUA",
+    "Estilo de Viagem": "Luxuoso",
+    "Valor": 350.00,
+    "Avaliacao": 5
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Noite de Gala no Lincoln Center",
+    "Descricao": "Participe de uma noite de gala no Lincoln Center com apresentações de classe mundial e jantar de luxo.",
+    "Categoria": "Eventos",
+    "Localizacao": "Lincoln Center, Nova Iorque, EUA",
+    "Estilo de Viagem": "Luxuoso",
+    "Valor": 400.00,
+    "Avaliacao": 5
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Hotel Econômico Central Park",
+    "Descricao": "Hospede-se em um hotel econômico com uma localização conveniente perto do Central Park.",
+    "Categoria": "Hotel",
+    "Localizacao": "123th Street, Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Econômico",
+    "Valor": 80.00,
+    "Avaliacao": 2
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Hotel Acessível Times Square",
+    "Descricao": "Aproveite a acessibilidade deste hotel próximo à Times Square e desfrute de uma estadia confortável.",
+    "Categoria": "Hotel",
+    "Localizacao": "Times Square, Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Econômico",
+    "Valor": 75.00,
+    "Avaliacao": 2
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Hostel em Nova Iorque",
+    "Descricao": "Economize dinheiro com uma estadia em um albergue amigável em Nova Iorque.",
+    "Categoria": "Hotel",
+    "Localizacao": "5th Avenue, Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Econômico",
+    "Valor": 60.00,
+    "Avaliacao": 1
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Hotel Econômico Brooklyn",
+    "Descricao": "Explore o bairro do Brooklyn a partir deste hotel econômico e confortável.",
+    "Categoria": "Hotel",
+    "Localizacao": "Brooklyn, Nova Iorque, EUA",
+    "Estilo de Viagem": "Econômico",
+    "Valor": 70.00,
+    "Avaliacao": 2
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Hotel Midtown Manhattan",
+    "Descricao": "Desfrute de uma estadia confortável em um hotel no coração de Midtown Manhattan.",
+    "Categoria": "Hotel",
+    "Localizacao": "Midtown Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Moderado",
+    "Valor": 150.00,
+    "Avaliacao": 4
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Boutique Hotel no SoHo",
+    "Descricao": "Experimente o charme de um boutique hotel no bairro do SoHo, em Nova Iorque.",
+    "Categoria": "Hotel",
+    "Localizacao": "SoHo, Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Moderado",
+    "Valor": 180.00,
+    "Avaliacao": 4
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Hotel com Vista para o Central Park",
+    "Descricao": "Tenha uma vista espetacular do Central Park ao se hospedar neste hotel de luxo.",
+    "Categoria": "Hotel",
+    "Localizacao": "Central Park, Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Moderado",
+    "Valor": 200.00,
+    "Avaliacao": 4
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Hotel no Distrito Financeiro",
+    "Descricao": "Fique em um hotel confortável no Distrito Financeiro, próximo a atrações como a Estátua da Liberdade.",
+    "Categoria": "Hotel",
+    "Localizacao": "Distrito Financeiro, Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Moderado",
+    "Valor": 160.00,
+    "Avaliacao": 3
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Hotel de Luxo na Quinta Avenida",
+    "Descricao": "Experimente o luxo em um hotel de classe mundial na Quinta Avenida.",
+    "Categoria": "Hotel",
+    "Localizacao": "Quinta Avenida, Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Luxuoso",
+    "Valor": 350.00,
+    "Avaliacao": 5
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "The Ritz-Carlton, Central Park",
+    "Descricao": "Mime-se com uma estadia de alto padrão no The Ritz-Carlton com vista para o Central Park.",
+    "Categoria": "Hotel",
+    "Localizacao": "Central Park, Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Luxuoso",
+    "Valor": 450.00,
+    "Avaliacao": 5
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "Hotel de Luxo à Beira do Rio Hudson",
+    "Descricao": "Relaxe em um hotel de luxo à beira do Rio Hudson e aproveite vistas deslumbrantes da cidade.",
+    "Categoria": "Hotel",
+    "Localizacao": "Rio Hudson, Nova Iorque, EUA",
+    "Estilo de Viagem": "Luxuoso",
+    "Valor": 400.00,
+    "Avaliacao": 5
+  },
+  {
+    "Cidade": "Nova Iorque",
+    "AtracaoNome": "The St. Regis New York",
+    "Descricao": "Desfrute de uma experiência inigualável no The St. Regis, um dos hotéis mais luxuosos de Nova Iorque.",
+    "Categoria": "Hotel",
+    "Localizacao": "Central Park, Manhattan, Nova Iorque, EUA",
+    "Estilo de Viagem": "Luxuoso",
+    "Valor": 500.00,
+    "Avaliacao": 5
+  }
 ]
