@@ -1,18 +1,66 @@
 // ignore_for_file: prefer_const_constructors
-
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class SignUpPage extends StatelessWidget {
+class SignUpPage extends StatefulWidget {
   const SignUpPage({Key? key}) : super(key: key);
+
+  @override
+  State<SignUpPage> createState() => _SignUpPageState();
+}
+
+class _SignUpPageState extends State<SignUpPage> {
+  final fullNameController = TextEditingController();
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+  final confirmPasswordController = TextEditingController();
+  final FirebaseFirestore _dbFirebase = FirebaseFirestore.instance;
+
+  Future<void> _saveDataToFirebase() async {
+    try {
+      if (formKeyFullName.currentState!.validate() &&
+          formKeyEmail.currentState!.validate() &&
+          formKeyPassword.currentState!.validate() &&
+          formKeyConfirmPassword.currentState!.validate()) {
+        formKeyFullName.currentState!.save();
+        formKeyEmail.currentState!.save();
+        formKeyPassword.currentState!.save();
+        formKeyConfirmPassword.currentState!.save();
+
+        // Data validation successful, save to Firebase
+        String fullName = fullNameController.text;
+        String email = emailController.text;
+        String password = passwordController.text;
+        String confirmPassword = confirmPasswordController.text;
+
+        await _dbFirebase.collection('users').add({
+          'fullName': fullName,
+          'email': email,
+          'password': password,
+          'confirmPassword': confirmPassword,
+        });
+        // ignore: use_build_context_synchronously
+        Navigator.pushNamed(context, "/welcome_page");
+      }
+    } catch (e) {
+      // Handle any error that occurs during the registration process
+      print('Erro ao registrar usuário: $e');
+    }
+  }
+
+  final formKeyFullName = GlobalKey<FormState>();
+  final formKeyEmail = GlobalKey<FormState>();
+  final formKeyPassword = GlobalKey<FormState>();
+  final formKeyConfirmPassword = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-        onTap: () {
-          FocusScope.of(context).unfocus();
-        },
+      onTap: () {
+        FocusScope.of(context).unfocus();
+      },
       child: Scaffold(
         backgroundColor: Color(0xFFdcdcdc),
         body: SafeArea(
@@ -61,55 +109,113 @@ class SignUpPage extends StatelessWidget {
                   const SizedBox(height: 30),
                   // nome completo
                   Container(
-                    margin: EdgeInsets.fromLTRB(44, 10, 44, 0),
-                    child: CupertinoTextField(
-                      placeholder: 'nome completo',
-                      padding: EdgeInsets.all(20),
-                      decoration: BoxDecoration(
-                        color: Color(0xFFFFFDFD),
-                        borderRadius: BorderRadius.circular(30),
-                      ),
-                    ),
-                  ),
+                      margin: EdgeInsets.fromLTRB(44, 15, 44, 0),
+                      child: Form(
+                        key: formKeyFullName,
+                        child: TextFormField(
+                          controller: fullNameController,
+                          decoration: InputDecoration(
+                            labelText: 'Nome Completo',
+                            filled: true,
+                            fillColor: Colors.white,
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(30.0),
+                            ),
+                          ),
+                          style: TextStyle(color: Colors.black),
+                          keyboardType: TextInputType.text,
+                          // Adicione outras propriedades de estilo, se necessário
+                          validator: (String? value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Este campo é obrigatório';
+                            }
+                            return null;
+                          },
+                        ),
+                      )),
                   const SizedBox(height: 10),
                   // email
                   Container(
-                    margin: EdgeInsets.fromLTRB(44, 15, 44, 0),
-                    child: CupertinoTextField(
-                      placeholder: 'e-mail',
-                      padding: EdgeInsets.all(20),
-                      decoration: BoxDecoration(
-                        color: Color(0xFFFFFDFD),
-                        borderRadius: BorderRadius.circular(30),
-                      ),
-                    ),
-                  ),
+                      margin: EdgeInsets.fromLTRB(44, 15, 44, 0),
+                      child: Form(
+                        key: formKeyEmail,
+                        child: TextFormField(
+                          controller: emailController,
+                          decoration: InputDecoration(
+                            labelText: ' E-mail',
+                            filled: true,
+                            fillColor: Colors.white,
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(30.0),
+                            ),
+                          ),
+                          style: TextStyle(color: Colors.black),
+                          keyboardType: TextInputType.emailAddress,
+                          // Adicione outras propriedades de estilo, se necessário
+                          validator: (String? value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Por favor, insira um e-mail';
+                            }
+                            return null;
+                          },
+                        ),
+                      )),
                   const SizedBox(height: 10),
                   // senha
                   Container(
-                    margin: EdgeInsets.fromLTRB(44, 15, 44, 0),
-                    child: CupertinoTextField(
-                      placeholder: 'senha',
-                      padding: EdgeInsets.all(20),
-                      decoration: BoxDecoration(
-                        color: Color(0xFFFFFDFD),
-                        borderRadius: BorderRadius.circular(30),
-                      ),
-                      obscureText: true,
-                    ),
-                  ),
+                      margin: EdgeInsets.fromLTRB(44, 15, 44, 0),
+                      child: Form(
+                        key: formKeyPassword,
+                        child: TextFormField(
+                          controller: passwordController,
+                          decoration: InputDecoration(
+                            labelText: 'Senha',
+                            filled: true,
+                            fillColor: Colors.white,
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(30.0),
+                            ),
+                          ),
+                          style: TextStyle(color: Colors.black),
+                          keyboardType: TextInputType.text,
+                          obscureText: true,
+                          validator: (String? value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Por favor, insira uma senha';
+                            }
+                            return null;
+                          },
+                        ),
+                      )),
                   const SizedBox(height: 10),
                   // confirmar senha
                   Container(
                     margin: EdgeInsets.fromLTRB(44, 15, 44, 0),
-                    child: CupertinoTextField(
-                      placeholder: 'confirmar senha',
-                      padding: EdgeInsets.all(20),
-                      decoration: BoxDecoration(
-                        color: Color(0xFFFFFDFD),
-                        borderRadius: BorderRadius.circular(30),
+                    child: Form(
+                      key: formKeyConfirmPassword,
+                      child: TextFormField(
+                        controller: confirmPasswordController,
+                        decoration: InputDecoration(
+                          labelText: 'Confirmar Senha',
+                          filled: true,
+                          fillColor: Colors.white,
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(30.0),
+                          ),
+                        ),
+                        style: TextStyle(color: Colors.black),
+                        keyboardType: TextInputType.text,
+                        obscureText: true,
+                        validator: (String? value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Por favor, insira a senha';
+                          }
+                          if (value != passwordController.text) {
+                            return 'As senhas não coincidem';
+                          }
+                          return null;
+                        },
                       ),
-                      obscureText: true,
                     ),
                   ),
                   const SizedBox(height: 50),
@@ -117,12 +223,17 @@ class SignUpPage extends StatelessWidget {
                   Container(
                     child: CupertinoButton(
                       onPressed: () {
-                        Navigator.pushNamed(context, "/welcome_page");
+                        formKeyFullName.currentState?.validate();
+                        formKeyEmail.currentState?.validate();
+                        formKeyPassword.currentState?.validate();
+                        formKeyConfirmPassword.currentState?.validate();
+                        _saveDataToFirebase();
                       },
                       color: Color(0xFF0047AB),
                       borderRadius: BorderRadius.circular(40),
                       child: Padding(
-                        padding: EdgeInsets.symmetric(vertical: 5, horizontal: 40),
+                        padding:
+                            EdgeInsets.symmetric(vertical: 5, horizontal: 40),
                         child: Text(
                           'Registre-se',
                           style: TextStyle(

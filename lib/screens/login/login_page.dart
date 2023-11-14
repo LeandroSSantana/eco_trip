@@ -3,9 +3,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class LogInPage extends StatelessWidget {
-  const LogInPage({Key? key}) : super(key: key);
+  LogInPage({Key? key}) : super(key: key);
+
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -42,25 +46,35 @@ class LogInPage extends StatelessWidget {
                 ),
                 Container(
                   margin: EdgeInsets.fromLTRB(40, 20, 40, 10),
-                  child: CupertinoTextField(
-                    placeholder: 'Email',
-                    padding: EdgeInsets.all(20),
-                    decoration: BoxDecoration(
-                      color: Color(0xFFFFFDFD),
-                      borderRadius: BorderRadius.circular(30),
+                  child: Form(
+                    child: TextFormField(
+                      controller: emailController,
+                      decoration: InputDecoration(
+                        labelText: 'Email',
+                        filled: true,
+                        fillColor: Color(0xFFFFFDFD),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30),
+                        ),
+                      ),
                     ),
                   ),
                 ),
                 Container(
                   margin: EdgeInsets.fromLTRB(40, 10, 40, 60),
-                  child: CupertinoTextField(
-                    placeholder: 'Senha',
-                    padding: EdgeInsets.all(20),
-                    decoration: BoxDecoration(
-                      color: Color(0xFFFFFDFD),
-                      borderRadius: BorderRadius.circular(30),
+                  child: Form(
+                    child: TextFormField(
+                      controller: passwordController,
+                      decoration: InputDecoration(
+                        labelText: 'Senha',
+                        filled: true,
+                        fillColor: Color(0xFFFFFDFD),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30),
+                        ),
+                      ),
+                      obscureText: true,
                     ),
-                    obscureText: true,
                   ),
                 ),
                 SizedBox(height: 16),

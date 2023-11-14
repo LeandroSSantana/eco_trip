@@ -1,5 +1,4 @@
 // ignore_for_file: prefer_const_constructors
-
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:teste_telas/data/perfil_data.dart';
@@ -21,13 +20,20 @@ import 'screens/sign_up/sign_up_page.dart';
 import 'screens/splash/splash_screen.dart';
 import 'screens/travel_page/travel_page.dart';
 
+const firebaseConfig = FirebaseOptions(
+    apiKey: "AIzaSyDSeGDGUSBoDDwsXb4bI7ioZSoy9K7YRps",
+    authDomain: "ecotripp-4e5db.firebaseapp.com",
+    projectId: "ecotripp-4e5db",
+    storageBucket: "ecotripp-4e5db.appspot.com",
+    messagingSenderId: "750820710962",
+    appId: "1:750820710962:web:8117e8e61386298acafa2b");
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: firebaseConfig);
   // await Firebase.initializeApp();
   runApp(const MyApp());
 }
-
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

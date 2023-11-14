@@ -66,13 +66,17 @@ class EsportPageState extends State<EsportPage> {
                         children: [
                           Text('${e['AtracaoNome']}', style: const TextStyle(color: Color(0xFF1F4AC2), fontFamily: 'Roboto-Regular'),),
                           const SizedBox(height: 5),
+                          Text('Cidade: ${e['Cidade']}'),
+                          const SizedBox(height: 5),
                           Text('Descricao: ${e['Descricao']}'),
                           const SizedBox(height: 5),
                           Text('Categoria: ${e['Categoria']}'),
                           const SizedBox(height: 5),
                           Text('Localizacao: ${e['Localizacao']}'),
                           const SizedBox(height: 5),
-                          Text('Custo: ${e['Custo']}'),
+                          Text('Estilo de Viagem: ${e['Estilo de Viagem']}'),
+                          const SizedBox(height: 5),
+                          Text('Custo: ${e['Valor']}'),
                           const SizedBox(height: 5),
                           Text('Avaliacao: ${e['Avaliacao']}'),
                           Divider(), // Add a divider between each data set
