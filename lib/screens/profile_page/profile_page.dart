@@ -47,9 +47,9 @@ class ProfilePage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: EdgeInsets.fromLTRB(30, 300, 0, 10),
+                      padding: EdgeInsets.fromLTRB(30, 270, 0, 10),
                       child: Text(
-                        'Suas Viagens',
+                        'Minhas Viagens',
                         style: TextStyle(
                           color: Color(0xFF0047AB),
                           fontFamily: 'Roboto-light',
@@ -86,11 +86,11 @@ class ProfilePage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(15),
                   child:
-                      customButton(context, 'Salvar', '/travelling_data_page'),
+                      customButton(context, 'Salvar', '/save_travel_page'),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(15),
-                  child: customButton(context, 'Calcular', '/dashboard_page'),
+                  child: customButton(context, 'Calcular', '/travel_filter_page'),
                 ),
               ],
             ),
