@@ -32,7 +32,6 @@ Future<String> loadJsonData() async {
   }
 }
 
-
 class BarPageState extends State<BarPage> {
   List<dynamic> jsonData = [];
 
@@ -42,7 +41,8 @@ class BarPageState extends State<BarPage> {
     loadJsonData().then((data) {
       setState(() {
         jsonData = json.decode(data);
-        jsonData = jsonData.where((item) => item['Categoria'] ==  'Bares').toList();
+        jsonData =
+            jsonData.where((item) => item['Categoria'] == 'Bares').toList();
       });
     });
   }
@@ -64,7 +64,14 @@ class BarPageState extends State<BarPage> {
                       return Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('${e['AtracaoNome']}', style: const TextStyle(color: Color(0xFF1F4AC2), fontFamily: 'Roboto-Regular'),),
+                          Text(
+                            '${e['AtracaoNome']}',
+                            style: const TextStyle(
+                                color: Color(0xFF1F4AC2),
+                                fontFamily: 'Roboto-Regular'),
+                          ),
+                          const SizedBox(height: 5),
+                          Text('Cidade: ${e['Cidade']}'),
                           const SizedBox(height: 5),
                           Text('Descricao: ${e['Descricao']}'),
                           const SizedBox(height: 5),
@@ -72,7 +79,9 @@ class BarPageState extends State<BarPage> {
                           const SizedBox(height: 5),
                           Text('Localizacao: ${e['Localizacao']}'),
                           const SizedBox(height: 5),
-                          Text('Custo: ${e['Custo']}'),
+                          Text('Estilo de Viagem: ${e['Estilo de Viagem']}'),
+                          const SizedBox(height: 5),
+                          Text('Custo: ${e['Valor']}'),
                           const SizedBox(height: 5),
                           Text('Avaliacao: ${e['Avaliacao']}'),
                           Divider(), // Add a divider between each data set
@@ -87,5 +96,3 @@ class BarPageState extends State<BarPage> {
     );
   }
 }
-
-

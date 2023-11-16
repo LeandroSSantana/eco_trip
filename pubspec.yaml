@@ -42,10 +42,11 @@ dependencies:
   flutter_svg: ^2.0.7
   image_picker: ^1.0.4
   money_formatter: ^0.0.5
-  firebase_core: ^2.21.0
+  firebase_core: ^2.22.0
   firebase_auth: ^4.12.1
   cloud_firestore: ^4.12.2
   firebase_database: ^10.3.3
+  provider: ^6.1.1
   supabase: ^1.11.11
   supabase_flutter: ^1.10.25
   http: ^1.1.0
