@@ -1,4 +1,5 @@
 // ignore_for_file: prefer_const_constructors
+import 'package:firebase_core/firebase_core.dart';
 
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
@@ -21,9 +22,18 @@ import 'screens/splash/splash_screen.dart';
 import 'screens/travel_filter_page/travel_filter_page.dart';
 import 'screens/travel_page/travel_page.dart';
 
+const firebaseConfig = FirebaseOptions(
+    apiKey: "AIzaSyDSeGDGUSBoDDwsXb4bI7ioZSoy9K7YRps",
+    authDomain: "ecotripp-4e5db.firebaseapp.com",
+    projectId: "ecotripp-4e5db",
+    storageBucket: "ecotripp-4e5db.appspot.com",
+    messagingSenderId: "750820710962",
+    appId: "1:750820710962:web:8117e8e61386298acafa2b");
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: firebaseConfig);
+  // await Firebase.initializeApp();
   await Supabase.initialize(
     url: 'https://stwidkgzdzfsqtswlwhd.supabase.co',
     anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0d2lka2d6ZHpmc3F0c3dsd2hkIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTk5NjYzMDgsImV4cCI6MjAxNTU0MjMwOH0.8jcwVzCLnaNikRNjzgPTwrAAfQcKPzeTKkiYeL5_6iQ',
