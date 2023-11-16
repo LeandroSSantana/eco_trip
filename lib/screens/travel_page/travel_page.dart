@@ -1,121 +1,83 @@
 import 'package:flutter/material.dart';
-import 'package:teste_telas/model/item/data.dart';
-import 'package:teste_telas/screens/typesTrip/barPage.dart';
-import 'package:teste_telas/screens/typesTrip/culturePage.dart';
-import 'package:teste_telas/screens/typesTrip/esportPage.dart';
-import 'package:teste_telas/screens/typesTrip/eventsPage.dart';
-import 'package:teste_telas/screens/typesTrip/foodPage.dart';
-import 'package:teste_telas/screens/typesTrip/hotelPage.dart';
-import 'package:teste_telas/screens/typesTrip/outingPage.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
-class TravelPage extends StatefulWidget {
-  final String localValue;
-
-  TravelPage({String? localValue, Key? key})
-      : localValue = localValue ?? '',
-        super(key: key);
-
-  @override
-  _TravelPageState createState() => _TravelPageState();
-}
-
-class _TravelPageState extends State<TravelPage> {
-  List<String> categories = [
-    'Alimentação',
-    'Passeios',
-    'Cultura',
-    'Bares',
-    'Esportes',
-    'Hotel',
-    'Eventos'
-  ];
+class TravelPage extends StatelessWidget {
+  TravelPage({Key? key});
+  final supabase = Supabase.instance.client;
 
   @override
   Widget build(BuildContext context) {
+    final _stream = supabase
+        .from('locais')
+        .stream(primaryKey: ['id'])
+        .order('cidade', ascending: true);
+
     return Scaffold(
-      backgroundColor: Color(0xFFdcdcdc),
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Container(
-              height: MediaQuery.of(context).size.height * 0.4,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(20.0),
+      appBar: AppBar(
+          title: Text("Locais"),
+        backgroundColor: Color(0xFF0047AB),
+      ),
+      body: StreamBuilder<List<Map<String, dynamic>>>(
+        stream: _stream,
+        builder: (context, snapshot) {
+          if (!snapshot.hasData || snapshot.hasError) {
+            return const Center(child: CircularProgressIndicator());
+          }
+          final locais = snapshot.data!;
+
+          return ListView(
+            children: locais
+                .map(
+                  (local) => Card(
+                child: ListTile(
+                  title: Text(
+                    'Destino: ${local['atracaonome']}',
+                    style: TextStyle(
+                      color: Color(0xFF0047AB),
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  subtitle: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      _buildText('Cidade', local['cidade']),
+                      _buildText('Localização', local['localizacao']),
+                      _buildText('Categoria', local['categoria']),
+                      _buildText('Valores', local['valor']),
+                      _buildText('Estilo', local['estilodeviagem']),
+                      _buildText('Descrição', local['descricao']),
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.star,
+                            color: Colors.yellow,
+                          ),
+                          _buildText('Avaliação', local['avaliacao']),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
               ),
-              child: ClipRRect(
-                child: Image(image: items[0].placeImage, fit: BoxFit.cover),
-              ),
-            ),
-            SizedBox(height: 10),
-            ListView.separated(
-              shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
-              itemCount: categories.length,
-              separatorBuilder: (context, index) => Divider(),
-              itemBuilder: (context, index) {
-                return buildCategoryListTile(
-                    context,
-                    categories[index]
-                );
-              },
-            ),
-          ],
-        ),
+            )
+                .toList(),
+          );
+        },
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: () => Navigator.of(context).pushNamed('/save_local_page'),
       ),
     );
   }
-}
 
-// Função para criar um item clicável da lista
-Widget buildCategoryListTile(BuildContext context, String label) {
-  return ListTile(
-    title: Text(label),
-    onTap: () {
-      if (label == 'Alimentação') {
-        Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (context) => FoodPage(),
-          ),
-        );
-      } else if (label == 'Passeios') {
-        Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (context) => OutingPage(),
-          ),
-        );
-      } else if (label == 'Cultura') {
-        Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (context) => CulturePage(),
-          ),
-        );
-      } else if (label == 'Bares') {
-        Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (context) => BarPage(),
-          ),
-        );
-      }else if (label == 'Esportes') {
-        Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (context) => EsportPage(),
-          ),
-        );
-      }else if (label == 'Hotel') {
-        Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (context) => HotelPage(),
-          ),
-        );
-      } else if (label == 'Eventos') {
-        Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (context) => EventsPage(),
-          ),
-        );
-      }
-    },
-  );
+  Widget _buildText(String label, dynamic content) {
+    return Text(
+      '$label: $content',
+      style: TextStyle(
+        color: Color(0xFF0047AB),
+        fontWeight: FontWeight.w500,
+      ),
+    );
+  }
 }

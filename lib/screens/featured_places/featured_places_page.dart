@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:teste_telas/model/places/places.dart';
 
@@ -12,7 +14,7 @@ class FeaturedPlacesPage extends StatelessWidget {
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
-            expandedHeight: MediaQuery.of(context).size.height * 0.25, // 25% da tela a partir do topo
+            expandedHeight: MediaQuery.of(context).size.height * 0.25,
             flexibleSpace: FlexibleSpaceBar(
               background: Image.asset(
                 places.placeImage,
@@ -41,7 +43,7 @@ class FeaturedPlacesPage extends StatelessWidget {
                     style: TextStyle(fontSize: 16),
                   ),
                   Text(
-                    'Budget: \$${places.budget.toStringAsFixed(2)}', // Exibir o orçamento
+                    'Budget: \$${places.budget.toStringAsFixed(2)}',
                     style: TextStyle(fontSize: 16),
                   ),
                   SizedBox(height: 16),

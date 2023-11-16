@@ -1,33 +1,35 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:teste_telas/data/perfil_data.dart';
-import 'package:teste_telas/screens/dashboard/dashboard_page.dart';
-import 'package:teste_telas/screens/travelling_data/travelling_data_page.dart';
-import 'package:teste_telas/screens/typesTrip/foodPage.dart';
 import 'package:teste_telas/screens/typesTrip/barPage.dart';
 import 'package:teste_telas/screens/typesTrip/culturePage.dart';
 import 'package:teste_telas/screens/typesTrip/esportPage.dart';
 import 'package:teste_telas/screens/typesTrip/eventsPage.dart';
+import 'package:teste_telas/screens/typesTrip/foodPage.dart';
 import 'package:teste_telas/screens/typesTrip/hotelPage.dart';
 import 'package:teste_telas/screens/typesTrip/outingPage.dart';
 import 'package:teste_telas/screens/welcome/welcome_page.dart';
-import 'package:teste_telas/widgets/elements/dashboard_form.dart';
 import 'screens/forgot_password/forgot_password_page.dart';
 import 'screens/login/login_page.dart';
 import 'screens/profile_page/profile_page.dart';
+import 'screens/save_local_page/save_local_page.dart';
+import 'screens/save_travel_page/save_travel_page.dart';
 import 'screens/sign_up/sign_up_page.dart';
 import 'screens/splash/splash_screen.dart';
+import 'screens/travel_filter_page/travel_filter_page.dart';
 import 'screens/travel_page/travel_page.dart';
 
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // await Firebase.initializeApp();
+  await Supabase.initialize(
+    url: 'https://stwidkgzdzfsqtswlwhd.supabase.co',
+    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0d2lka2d6ZHpmc3F0c3dsd2hkIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTk5NjYzMDgsImV4cCI6MjAxNTU0MjMwOH0.8jcwVzCLnaNikRNjzgPTwrAAfQcKPzeTKkiYeL5_6iQ',
+  );
   runApp(const MyApp());
 }
-
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -41,13 +43,13 @@ class MyApp extends StatelessWidget {
         '/': (context) => SplashScreen(),
         '/login': (context) => LogInPage(),
         '/signup': (context) => SignUpPage(),
-        '/forgot_password': (context) => ForgotPasswordPage(),
-        '/home_page': (context) => DashboardForm(),
-        '/dashboard_page': (context) => DashboardPage(),
-        '/profile_page': (context) => ProfilePage(),
-        '/travel_page': (context) => TravelPage(),
-        '/travelling_data_page': (context) => TravellingDataPage(),
         '/welcome_page': (context) => WelcomePage(perfilUsuario),
+        '/forgot_password': (context) => ForgotPasswordPage(),
+        '/save_local_page': (context) => SaveLocalPage(),
+        '/save_travel_page': (context) => SaveTravelPage(),
+        '/travel_filter_page': (context) => TravelFilterPage(),
+        '/travel_page': (context) => TravelPage(),
+        '/profile_page': (context) => ProfilePage(),
         '/alimentationPage': (context) => FoodPage(),
         '/outingPage': (context) => OutingPage(),
         '/culturePage': (context) => CulturePage(),
@@ -55,6 +57,7 @@ class MyApp extends StatelessWidget {
         '/esportPage': (context) => EsportPage(),
         '/hotelPage': (context) => HotelPage(),
         '/eventsPage': (context) => EventsPage(),
+
       },
     );
   }
