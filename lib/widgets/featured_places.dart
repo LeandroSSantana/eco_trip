@@ -1,25 +1,17 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
-import 'package:teste_telas/model/places/places.dart';
-import 'package:teste_telas/screens/featured_places/featured_places_page.dart';
 
 class FeaturedPlaces extends StatelessWidget {
-  final Places places;
+  final Map<String, dynamic>? viagem;
 
   FeaturedPlaces({
-    required this.places,
+    required this.viagem,
   });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (context) => FeaturedPlacesPage(places: places),
-          ),
-        );
+        // Navegação para a página de detalhes da viagem, se necessário
       },
       child: Padding(
         padding: EdgeInsets.all(8),
@@ -31,18 +23,18 @@ class FeaturedPlaces extends StatelessWidget {
             border: Border.all(color: Color(0xFF0047AB)),
             borderRadius: BorderRadius.circular(10.0),
           ),
-          child: Stack(
+          child: viagem != null
+              ? Stack(
             children: [
               Positioned.fill(
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(10.0),
-                  child: Image.asset(
-                    places.placeImage,
+                  child: Image.network(
+                    viagem!['imagem_url'],
                     fit: BoxFit.cover,
                   ),
                 ),
               ),
-
               Positioned(
                 top: 10,
                 right: 10,
@@ -59,7 +51,6 @@ class FeaturedPlaces extends StatelessWidget {
                   ),
                 ),
               ),
-
               Positioned(
                 top: 10,
                 left: 10,
@@ -78,7 +69,7 @@ class FeaturedPlaces extends StatelessWidget {
                       ),
                       SizedBox(width: 2),
                       Text(
-                        '${places.rating.toStringAsFixed(1)}',
+                        '${viagem!['nota'].toStringAsFixed(1)}',
                         style: TextStyle(
                           fontSize: 16,
                           color: Colors.white,
@@ -88,7 +79,6 @@ class FeaturedPlaces extends StatelessWidget {
                   ),
                 ),
               ),
-
               Positioned(
                 bottom: 10,
                 left: 10,
@@ -97,7 +87,7 @@ class FeaturedPlaces extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      places.name,
+                      viagem!['destino'],
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
@@ -108,10 +98,12 @@ class FeaturedPlaces extends StatelessWidget {
                 ),
               ),
             ],
+          )
+              : Center(
+            child: Text('Viagem não disponível'),
           ),
         ),
       ),
     );
   }
 }
-

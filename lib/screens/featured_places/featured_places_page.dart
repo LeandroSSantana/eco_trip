@@ -1,12 +1,9 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
-import 'package:teste_telas/model/places/places.dart';
 
 class FeaturedPlacesPage extends StatelessWidget {
-  final Places places;
+  final Map<String, dynamic> viagem;
 
-  FeaturedPlacesPage({required this.places});
+  FeaturedPlacesPage({required this.viagem});
 
   @override
   Widget build(BuildContext context) {
@@ -16,8 +13,8 @@ class FeaturedPlacesPage extends StatelessWidget {
           SliverAppBar(
             expandedHeight: MediaQuery.of(context).size.height * 0.25,
             flexibleSpace: FlexibleSpaceBar(
-              background: Image.asset(
-                places.placeImage,
+              background: Image.network(
+                viagem['imagem_url'],
                 fit: BoxFit.cover,
               ),
             ),
@@ -29,21 +26,21 @@ class FeaturedPlacesPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    places.name,
+                    viagem['destino'],
                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(height: 8),
                   Text(
-                    places.description,
+                    viagem['descricao'],
                     style: TextStyle(fontSize: 16),
                   ),
                   SizedBox(height: 8),
                   Text(
-                    'Days: ${places.days}', // Exibir os dias
+                    'Dias: ${viagem['qtddias']}',
                     style: TextStyle(fontSize: 16),
                   ),
                   Text(
-                    'Budget: \$${places.budget.toStringAsFixed(2)}',
+                    'Gasto total: \$${viagem['gastoalimentacao'] + viagem['gastopasseios'] + viagem['gastocultura'] + viagem['gatoesporte'] + viagem['gastoeventos'] + viagem['gastohotel']}',
                     style: TextStyle(fontSize: 16),
                   ),
                   SizedBox(height: 16),
@@ -56,7 +53,7 @@ class FeaturedPlacesPage extends StatelessWidget {
                       ),
                       SizedBox(width: 2),
                       Text(
-                        '${places.rating.toStringAsFixed(1)}',
+                        '${viagem['nota'].toStringAsFixed(1)}',
                         style: TextStyle(fontSize: 16),
                       ),
                     ],
