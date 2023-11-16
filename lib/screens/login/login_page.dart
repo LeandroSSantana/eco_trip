@@ -4,12 +4,18 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:teste_telas/services/autenticacao_servico.dart';
 
 class LogInPage extends StatelessWidget {
   LogInPage({Key? key}) : super(key: key);
 
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
+
+  final _formKeyEmail = GlobalKey<FormState>();
+  final _formKeyPassword = GlobalKey<FormState>();
+
+  final AutenticacaoServico _autenServico = AutenticacaoServico();
 
   @override
   Widget build(BuildContext context) {
@@ -47,6 +53,7 @@ class LogInPage extends StatelessWidget {
                 Container(
                   margin: EdgeInsets.fromLTRB(40, 20, 40, 10),
                   child: Form(
+                    key: _formKeyEmail,
                     child: TextFormField(
                       controller: emailController,
                       decoration: InputDecoration(
@@ -57,12 +64,19 @@ class LogInPage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(30),
                         ),
                       ),
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'Por favor, insira seu email';
+                        }
+                        return null;
+                      },
                     ),
                   ),
                 ),
                 Container(
                   margin: EdgeInsets.fromLTRB(40, 10, 40, 60),
                   child: Form(
+                    key: _formKeyPassword,
                     child: TextFormField(
                       controller: passwordController,
                       decoration: InputDecoration(
@@ -74,6 +88,12 @@ class LogInPage extends StatelessWidget {
                         ),
                       ),
                       obscureText: true,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'Por favor, insira sua senha';
+                        }
+                        return null;
+                      },
                     ),
                   ),
                 ),
@@ -97,8 +117,32 @@ class LogInPage extends StatelessWidget {
                 Container(
                   margin: EdgeInsets.fromLTRB(40, 10, 40, 20),
                   child: CupertinoButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, '/profile_page');
+                    onPressed: () async {
+                      // Validate the form
+                      if (_formKeyEmail.currentState!.validate() &&
+                          _formKeyPassword.currentState!.validate()) {
+                        _formKeyEmail.currentState!.save();
+                        _formKeyPassword.currentState!.save();
+
+                        String email = emailController.text;
+                        String password = passwordController.text;
+
+                        String? loginError = await _autenServico.logarUsuario(
+                          email: email,
+                          password: password,
+                        );
+
+                        if (loginError != null) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Text(loginError),
+                              backgroundColor: Colors.red,
+                            ),
+                          );
+                        } else {
+                          Navigator.pushNamed(context, '/profile_page');
+                        }
+                      }
                     },
                     color: Color(0xFF0047AB),
                     borderRadius: BorderRadius.circular(40),

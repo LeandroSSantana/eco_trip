@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_constructors
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:teste_telas/services/autenticacao_servico.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({Key? key}) : super(key: key);
@@ -15,45 +15,12 @@ class _SignUpPageState extends State<SignUpPage> {
   final fullNameController = TextEditingController();
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
-  final confirmPasswordController = TextEditingController();
-  final FirebaseFirestore _dbFirebase = FirebaseFirestore.instance;
-
-  Future<void> _saveDataToFirebase() async {
-    try {
-      if (formKeyFullName.currentState!.validate() &&
-          formKeyEmail.currentState!.validate() &&
-          formKeyPassword.currentState!.validate() &&
-          formKeyConfirmPassword.currentState!.validate()) {
-        formKeyFullName.currentState!.save();
-        formKeyEmail.currentState!.save();
-        formKeyPassword.currentState!.save();
-        formKeyConfirmPassword.currentState!.save();
-
-        // Data validation successful, save to Firebase
-        String fullName = fullNameController.text;
-        String email = emailController.text;
-        String password = passwordController.text;
-        String confirmPassword = confirmPasswordController.text;
-
-        await _dbFirebase.collection('users').add({
-          'fullName': fullName,
-          'email': email,
-          'password': password,
-          'confirmPassword': confirmPassword,
-        });
-        // ignore: use_build_context_synchronously
-        Navigator.pushNamed(context, "/welcome_page");
-      }
-    } catch (e) {
-      // Handle any error that occurs during the registration process
-      print('Erro ao registrar usuário: $e');
-    }
-  }
 
   final formKeyFullName = GlobalKey<FormState>();
   final formKeyEmail = GlobalKey<FormState>();
   final formKeyPassword = GlobalKey<FormState>();
-  final formKeyConfirmPassword = GlobalKey<FormState>();
+
+  final AutenticacaoServico _autenServico = AutenticacaoServico();
 
   @override
   Widget build(BuildContext context) {
@@ -155,7 +122,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           validator: (String? value) {
                             if (value == null || value.isEmpty) {
                               return 'Por favor, insira um e-mail';
-                            }
+                            } 
                             return null;
                           },
                         ),
@@ -182,52 +149,50 @@ class _SignUpPageState extends State<SignUpPage> {
                           validator: (String? value) {
                             if (value == null || value.isEmpty) {
                               return 'Por favor, insira uma senha';
+                            } else if (value.length < 6) {
+                              return 'a senha deve conter pelo menos de 6 digitos!';
                             }
                             return null;
                           },
                         ),
                       )),
                   const SizedBox(height: 10),
-                  // confirmar senha
-                  Container(
-                    margin: EdgeInsets.fromLTRB(44, 15, 44, 0),
-                    child: Form(
-                      key: formKeyConfirmPassword,
-                      child: TextFormField(
-                        controller: confirmPasswordController,
-                        decoration: InputDecoration(
-                          labelText: 'Confirmar Senha',
-                          filled: true,
-                          fillColor: Colors.white,
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(30.0),
-                          ),
-                        ),
-                        style: TextStyle(color: Colors.black),
-                        keyboardType: TextInputType.text,
-                        obscureText: true,
-                        validator: (String? value) {
-                          if (value == null || value.isEmpty) {
-                            return 'Por favor, insira a senha';
-                          }
-                          if (value != passwordController.text) {
-                            return 'As senhas não coincidem';
-                          }
-                          return null;
-                        },
-                      ),
-                    ),
-                  ),
                   const SizedBox(height: 50),
                   // button registre-se
                   Container(
                     child: CupertinoButton(
-                      onPressed: () {
-                        formKeyFullName.currentState?.validate();
-                        formKeyEmail.currentState?.validate();
-                        formKeyPassword.currentState?.validate();
-                        formKeyConfirmPassword.currentState?.validate();
-                        _saveDataToFirebase();
+                      onPressed: () async {
+                        if (formKeyFullName.currentState!.validate() &&
+                            formKeyEmail.currentState!.validate() &&
+                            formKeyPassword.currentState!.validate()) {
+                          formKeyFullName.currentState!.save();
+                          formKeyEmail.currentState!.save();
+                          formKeyPassword.currentState!.save();
+
+                          String fullName = fullNameController.text;
+                          String email = emailController.text;
+                          String password = passwordController.text;
+
+                          String? registrationError =
+                              await _autenServico.cadastrarUsuario(
+                            fullName: fullName,
+                            email: email,
+                            password: password,
+                          );
+
+                          if (registrationError != null) {
+                            // ignore: use_build_context_synchronously
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text(registrationError),
+                                backgroundColor: Colors.red,
+                              ),
+                            );
+                          } else {
+                            // ignore: use_build_context_synchronously
+                            Navigator.pushNamed(context, "/welcome_page");
+                          }
+                        }
                       },
                       color: Color(0xFF0047AB),
                       borderRadius: BorderRadius.circular(40),
