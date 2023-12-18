@@ -3,17 +3,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:teste_telas/model/profile/perfil_usuario_model.dart';
 
 class WelcomePage extends StatelessWidget {
-  final PerfilUsuario perfilUsuario;
-
-  WelcomePage(this.perfilUsuario);
-
   @override
   Widget build(BuildContext context) {
+    // Receba o argumento passado da página anterior
+    final String fullName = ModalRoute.of(context)!.settings.arguments as String;
+
     return Scaffold(
-      backgroundColor: Color(0xFFdcdcdc),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -38,7 +35,7 @@ class WelcomePage extends StatelessWidget {
               ),
             ),
             Text(
-              'Olá, ${perfilUsuario.nomeUsuario}!',
+              'Olá, $fullName!', // Use o nome aqui
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,

@@ -190,7 +190,11 @@ class _SignUpPageState extends State<SignUpPage> {
                             );
                           } else {
                             // ignore: use_build_context_synchronously
-                            Navigator.pushNamed(context, "/welcome_page");
+                            Navigator.pushNamed(
+                              context,
+                              "/welcome_page",
+                              arguments: fullNameController.text,
+                            );
                           }
                         }
                       },

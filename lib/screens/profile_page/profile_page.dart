@@ -1,7 +1,19 @@
-import 'package:flutter/material.dart';
+// ignore_for_file: prefer_const_constructors
 
-class ProfilePage extends StatelessWidget {
+import 'package:flutter/material.dart';
+import 'package:teste_telas/screens/featured_travels/featured_travels_page.dart';
+import 'package:teste_telas/screens/save_travel_page/save_travel_page.dart';
+import 'package:teste_telas/widgets/header/header_page.dart';
+
+class ProfilePage extends StatefulWidget {
   const ProfilePage();
+
+  @override
+  _ProfilePageState createState() => _ProfilePageState();
+}
+
+class _ProfilePageState extends State<ProfilePage> {
+  final TextEditingController fullNameController = TextEditingController();
 
   Widget customButton(BuildContext context, String text, String route) {
     return ElevatedButton(
@@ -15,7 +27,7 @@ class ProfilePage extends StatelessWidget {
         ),
       ),
       child: Padding(
-        padding: EdgeInsets.symmetric(vertical: 30, horizontal: 30),
+        padding: EdgeInsets.symmetric(vertical: 15, horizontal: 30), // Reduzi o espaço vertical
         child: Text(
           text,
           style: TextStyle(
@@ -37,34 +49,19 @@ class ProfilePage extends StatelessWidget {
           children: [
             Stack(
               children: [
-                // Adicione aqui o código para o header
-                Container(
-                  // Exemplo de estilo para o header, ajuste conforme necessário
-                  height: 200,
-                  color: Colors.blue,
-                  child: Center(
-                    child: Text(
-                      'Header',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                ),
+                ProfileHeader(),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: EdgeInsets.fromLTRB(30, 270, 0, 10),
+                      padding: EdgeInsets.fromLTRB(30, 290, 0, 10),
                       child: Text(
                         'Minhas Viagens',
                         style: TextStyle(
                           color: Color(0xFF0047AB),
                           fontFamily: 'Roboto-light',
                           fontSize: 25,
-                          fontWeight: FontWeight.w400,
+                          fontWeight: FontWeight.w500,
                         ),
                       ),
                     ),
@@ -73,7 +70,10 @@ class ProfilePage extends StatelessWidget {
                       children: [
                         GestureDetector(
                           onTap: () {
-                            Navigator.pushNamed(context, '/featured_places_page');
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => FeaturedTravelsPage()),
+                            );
                           },
                           child: Container(
                             width: 150,
@@ -85,8 +85,8 @@ class ProfilePage extends StatelessWidget {
                             ),
                             child: Center(
                               child: Icon(
-                                Icons.add,
-                                color: Colors.white,
+                                Icons.travel_explore,
+                                color: Color(0xFF0047AB),
                                 size: 50.0,
                               ),
                             ),
@@ -94,8 +94,10 @@ class ProfilePage extends StatelessWidget {
                         ),
                         GestureDetector(
                           onTap: () {
-                            // Adicione aqui a lógica para o clique no segundo quadrado
-                            print('Segundo quadrado clicado!');
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => SaveTravelPage()),
+                            );
                           },
                           child: Container(
                             width: 150,
@@ -114,20 +116,34 @@ class ProfilePage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    // Botões de Salvar e Calcular
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(15),
-                          child: customButton(context, 'Salvar', '/save_travel_page'),
+                    SizedBox(height: 40),
+                    Container(
+                      alignment: Alignment.bottomCenter, // Alinha na parte inferior do Container
+                      padding: EdgeInsets.only(bottom: 16.0), // Adiciona espaço na parte inferior (ajuste conforme necessário)
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/travel_filter_page');
+                        },
+                        style: ElevatedButton.styleFrom(
+                          primary: Color(0xFF0047AB),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30.0),
+                          ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(15),
-                          child: customButton(context, 'Calcular', '/travel_filter_page'),
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(vertical: 12, horizontal: 24),
+                          child: Text(
+                            'Calcular Viagem',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
                         ),
-                      ],
+                      ),
                     ),
+
                   ],
                 ),
               ],

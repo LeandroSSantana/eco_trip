@@ -50,6 +50,7 @@ dependencies:
   supabase: ^1.11.11
   supabase_flutter: ^1.10.25
   http: ^1.1.0
+  file_picker: ^6.1.1
 
 
 dev_dependencies:
@@ -78,13 +79,11 @@ flutter:
   assets:
     - images/bg_01.png
     - images/bg_02.png
-    - images/foto.png
     - images/check-circle.svg
     - images/logo.svg
     - images/plane.svg
     - images/bolsa.svg
     - images/mala.svg
-    - assets/dados.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

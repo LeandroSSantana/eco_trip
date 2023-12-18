@@ -3,15 +3,8 @@ import 'package:firebase_core/firebase_core.dart';
 
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'package:teste_telas/data/perfil_data.dart';
-import 'package:teste_telas/screens/typesTrip/barPage.dart';
-import 'package:teste_telas/screens/typesTrip/culturePage.dart';
-import 'package:teste_telas/screens/typesTrip/esportPage.dart';
-import 'package:teste_telas/screens/typesTrip/eventsPage.dart';
-import 'package:teste_telas/screens/typesTrip/foodPage.dart';
-import 'package:teste_telas/screens/typesTrip/hotelPage.dart';
-import 'package:teste_telas/screens/typesTrip/outingPage.dart';
 import 'package:teste_telas/screens/welcome/welcome_page.dart';
+import 'screens/featured_travels/featured_travels_page.dart';
 import 'screens/forgot_password/forgot_password_page.dart';
 import 'screens/login/login_page.dart';
 import 'screens/profile_page/profile_page.dart';
@@ -53,21 +46,14 @@ class MyApp extends StatelessWidget {
         '/': (context) => SplashScreen(),
         '/login': (context) => LogInPage(),
         '/signup': (context) => SignUpPage(),
-        '/welcome_page': (context) => WelcomePage(perfilUsuario),
+        '/welcome_page': (context) => WelcomePage(),
         '/forgot_password': (context) => ForgotPasswordPage(),
         '/save_local_page': (context) => SaveLocalPage(),
         '/save_travel_page': (context) => SaveTravelPage(),
         '/travel_filter_page': (context) => TravelFilterPage(),
         '/travel_page': (context) => TravelPage(),
         '/profile_page': (context) => ProfilePage(),
-        '/alimentationPage': (context) => FoodPage(),
-        '/outingPage': (context) => OutingPage(),
-        '/culturePage': (context) => CulturePage(),
-        '/barPage': (context) => BarPage(),
-        '/esportPage': (context) => EsportPage(),
-        '/hotelPage': (context) => HotelPage(),
-        '/eventsPage': (context) => EventsPage(),
-
+        '/featured_travels_page': (context) => FeaturedTravelsPage(),
       },
     );
   }
